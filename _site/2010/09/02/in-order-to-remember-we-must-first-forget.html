@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<head>
+  <title>danielsjourney</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/brokeheart.ico"/>
+  <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link href="http://feeds.feedburner.com/danielsjourney" rel="alternate" title="2010.danielsjourney.com" type="application/rss+xml" />
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/autocolumn.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/date.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+    $(function(){
+        $(window).resize(function() {
+          resizeHeader();
+        });
+        
+        var $img = $("#content img:first");
+        if ($img.attr('src') != undefined) {          
+          $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
+          $title = $img.attr('title');
+          $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+          $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+          $('#content_container .attribute').html($title).attr('href', $link);
+          $img.remove();
+        } else {
+          var $media = $("#content p.media:first");
+          if ($media != []) {
+            $('#content_container').prepend($media.html());
+            $media.remove();
+          }
+        }
+        
+        resizeHeader();
+        $("body > div").css('visibility', 'visible');
+        
+        // because jekyll's date formatting no worky for me
+        $('.archive_date').each(function(){
+          $(this).html(Date.parse(($(this).html())).toString("MMM dd"));
+        });
+        
+        $('#archives').columnize();
+        
+        // next/prev b/c jekyll's pagination is dumb
+        var here = window.location.pathname;
+        if (here.match(/.html/) != null) {
+            var prev = $("#archives a[href='"+window.location.pathname+"']").closest("li").next().find("a").attr("href");
+            var next = $("#archives a[href='"+window.location.pathname+"']").closest("li").prev().find("a").attr("href");
+            if (prev != undefined) $("#prev").attr("href", prev).show();
+            if (next != undefined) $("#next").attr("href", next).show();
+            //if (next != undefined && prev != undefined) $("#nav_divider").show();
+        } else {
+            $("#prev").attr("href", $("#archives a:eq(1)").attr("href")).show();
+        }
+        
+    });
+    function resizeHeader() {
+      $('#head_overlay').css('height', $('header').height());
+    }
+    AudioPlayer.setup("/player.swf", {  
+        width: 290  
+    });
+  </script>
+</head>
+<body>
+<header>
+  In Order to Remember We Must First Forget
+</header>
+<div id="head_overlay">
+</div>
+<div id="content_container">
+  <div id="content">
+    <img src='http://farm4.static.flickr.com/3515/3255460999_672e430dec.jpg' title='photo by sam http://www.flickr.com/photos/sam-wood/3255460999/' />
+<p>Before I really get started here, there is something we all need to understand about what it is like to lose a child: it is impossible. It is impossible to comprehend. It is impossible to think about. It is impossible to even mentally <em>approach</em> the loss.</p>
+
+<p>The loss, this thing that I&#8217;ve tried many times in my mind to describe, it is like a wound that is bigger than your entire body. It is big and black and more painful than your mind can conceive. It follows me around and reaches out towards me constantly. But to reach towards it is to be immediately engulfed in emotions too overwhelming to handle, and so I am required to spend all my time doing anything but look towards it. My life has become one of constant coping mechanisms, crutches, distractions. I feel guilty for it, but I have no choice.</p>
+
+<p>Our society&#8217;s default greeting is &#8220;How are you doing?&#8221; What am I supposed to say? Usually I reply with the stock &#8220;Fine.&#8221; But sometimes I just shake my head slowly side to side and say that I&#8217;m &#8220;Hanging in there.&#8221; The truth is I&#8217;m barely hanging in there. (The truth is you should stop asking me how I&#8217;m doing.) I&#8217;m not suicidal, but even my own death would be a welcome relief from this pain. But I have an amazing partner in <a href='http://carissabyers.com'>Carissa</a> and an awesome stepson Penn and we all must continue together.</p>
+
+<p>In the meantime please don&#8217;t be offended if I space out in the middle of your story, or don&#8217;t reply to your simple greeting, or take days or weeks to reply to an email that I would normally immediately attend to, or don&#8217;t give a shit about your petty shit. Don&#8217;t hesitate to offer medications in the form of booze, chips and salsa, funny stories, creative outings. Do choose your words carefully, take a wide path around anything that has anything to do with <em>this</em>. Whatever you do, don&#8217;t project your life or belief structure onto us. You don&#8217;t want to say the wrong thing when I&#8217;m in an <a href='http://en.wikipedia.org/wiki/K%C3%BCbler-Ross_model'>anger stage</a>, just ask our old patio furniture and grill.</p>
+<p class='date'>September 2, 2010</p><p class='postscript'>All of <em>my</em> family, friends and acquaintances have been really good in terms of those things mentioned in the last paragraph, so if you are reading this, that part probably did not apply to you. It's just fair warning.</p>
+  </div><!--content-->
+  <a class="attribute"></a>
+</div><!--content_container-->
+
+<div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
+<footer>
+  <div id="colophon">
+    <h2>Colophon</h2>
+    <p>I am <a href="http://danielsjourney.com">Daniel Miller</a> and I'm writing here about my attempts to deal with the loss of my beautiful, perfect one year old daughter Margot Rose. You can read about that <a href="http://carissabyers.blogspot.com/2010/08/we-love-you-margot-rose.html">here</a>.</p>
+    <p>This site runs on <a href="http://jekyllrb.com/">Jekyll</a>, which I still haven't really figured out. Its markup and stylesheets, a cautionary tale about mixing <a href="http://en.wikipedia.org/wiki/Em_(typography)">em</a> and pixel measurements, were written entirely from scratch in <a href="http://macromates.com/">TextMate</a>. Header foreground &amp; footer background is <a href="http://www.colourlovers.com/pattern/1645/Snowy_Flora">Snowy Flora</a>. I have no idea what it might look like in Internet Explorer. If you are using IE, you should switch to <a href="http://www.google.com/chrome/">Google Chrome</a>; you will thank me later.</p>
+  </div>
+  
+  <div id="archives">
+    <h2>Posts</h2>
+    <ul>
+      
+      <li><span class="archive_date">2010-10-28 00:00:00 -0500</span> <a href="/2010/10/28/isolation.html">Isolation</a></li>
+      
+      <li><span class="archive_date">2010-10-27 00:00:00 -0500</span> <a href="/2010/10/27/tooth-fairy.html">The Real Tooth Fairy</a></li>
+      
+      <li><span class="archive_date">2010-10-24 00:00:00 -0500</span> <a href="/2010/10/24/fast-boy.html">Fast Boy</a></li>
+      
+      <li><span class="archive_date">2010-10-23 00:00:00 -0500</span> <a href="/2010/10/23/i-got-something-with-your-name-on-it.html">I Got Something with Your Name on It</a></li>
+      
+      <li><span class="archive_date">2010-10-20 00:00:00 -0500</span> <a href="/2010/10/20/its-a-bitch.html">It's a Bitch, Man</a></li>
+      
+      <li><span class="archive_date">2010-10-17 00:00:00 -0500</span> <a href="/2010/10/17/my-shits-still-fucked-up.html">My Shit's (Still) F**ked Up</a></li>
+      
+      <li><span class="archive_date">2010-10-14 00:00:00 -0500</span> <a href="/2010/10/14/Married.html">Married</a></li>
+      
+      <li><span class="archive_date">2010-10-08 00:00:00 -0500</span> <a href="/2010/10/08/Penn.html">Penn</a></li>
+      
+      <li><span class="archive_date">2010-10-04 00:00:00 -0500</span> <a href="/2010/10/04/in-the-light-of-prior-suffering.html">In the Light of Prior Suffering</a></li>
+      
+      <li><span class="archive_date">2010-10-03 00:00:00 -0500</span> <a href="/2010/10/03/no-ground.html">No Ground</a></li>
+      
+      <li><span class="archive_date">2010-10-02 00:00:00 -0500</span> <a href="/2010/10/02/denial.html">Denial</a></li>
+      
+      <li><span class="archive_date">2010-09-30 00:00:00 -0500</span> <a href="/2010/09/30/carry-the-weight.html">Carry the Weight</a></li>
+      
+      <li><span class="archive_date">2010-09-29 00:00:00 -0500</span> <a href="/2010/09/29/motivation-mood.html">Motivation &amp; Mood</a></li>
+      
+      <li><span class="archive_date">2010-09-27 00:00:00 -0500</span> <a href="/2010/09/27/the-rain.html">When the Wound Stops Hurting What Hurts is the Scar</a></li>
+      
+      <li><span class="archive_date">2010-09-22 00:00:00 -0500</span> <a href="/2010/09/22/car.html">The Epic Tale of The Car</a></li>
+      
+      <li><span class="archive_date">2010-09-20 00:00:00 -0500</span> <a href="/2010/09/20/obsessed.html">From Perfection to Obsession</a></li>
+      
+      <li><span class="archive_date">2010-09-17 00:00:00 -0500</span> <a href="/2010/09/17/insomnia.html">Insomnia</a></li>
+      
+      <li><span class="archive_date">2010-09-14 00:00:00 -0500</span> <a href="/2010/09/14/coping.html">Coping</a></li>
+      
+      <li><span class="archive_date">2010-09-12 00:00:00 -0500</span> <a href="/2010/09/12/9-years.html">9 Years</a></li>
+      
+      <li><span class="archive_date">2010-09-08 00:00:00 -0500</span> <a href="/2010/09/08/glue.html">Glue</a></li>
+      
+      <li><span class="archive_date">2010-09-05 00:00:00 -0500</span> <a href="/2010/09/05/why.html">Why? Part 1 of &#x221e;</a></li>
+      
+      <li><span class="archive_date">2010-09-02 00:00:00 -0500</span> <a href="/2010/09/02/in-order-to-remember-we-must-first-forget.html">In Order to Remember We Must First Forget</a></li>
+      
+    </ul>
+  </div>
+  
+  <!-- <div class="tags">
+      <h2>Tags</h2>
+      <p>Tags in Jekyll kind of suck, huh? If anyone wants to help me get something reasonable working with tags in Jekyll, <a href="http://twitter.com/dealingwith">let me know</a>. In the meantime, check out the cool design I made for them:
+      <ul>
+        <li>Coffee</li><li>Sugar</li><li>Cream</li>
+        
+      </ul>
+    </div> -->
+</footer>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-516566-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

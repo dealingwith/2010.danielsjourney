@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<head>
+  <title>danielsjourney</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/brokeheart.ico"/>
+  <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link href="http://feeds.feedburner.com/danielsjourney" rel="alternate" title="2010.danielsjourney.com" type="application/rss+xml" />
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/autocolumn.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/date.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+    $(function(){
+        $(window).resize(function() {
+          resizeHeader();
+        });
+        
+        var $img = $("#content img:first");
+        if ($img.attr('src') != undefined) {          
+          $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
+          $title = $img.attr('title');
+          $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+          $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+          $('#content_container .attribute').html($title).attr('href', $link);
+          $img.remove();
+        } else {
+          var $media = $("#content p.media:first");
+          if ($media != []) {
+            $('#content_container').prepend($media.html());
+            $media.remove();
+          }
+        }
+        
+        resizeHeader();
+        $("body > div").css('visibility', 'visible');
+        
+        // because jekyll's date formatting no worky for me
+        $('.archive_date').each(function(){
+          $(this).html(Date.parse(($(this).html())).toString("MMM dd"));
+        });
+        
+        $('#archives').columnize();
+        
+        // next/prev b/c jekyll's pagination is dumb
+        var here = window.location.pathname;
+        if (here.match(/.html/) != null) {
+            var prev = $("#archives a[href='"+window.location.pathname+"']").closest("li").next().find("a").attr("href");
+            var next = $("#archives a[href='"+window.location.pathname+"']").closest("li").prev().find("a").attr("href");
+            if (prev != undefined) $("#prev").attr("href", prev).show();
+            if (next != undefined) $("#next").attr("href", next).show();
+            //if (next != undefined && prev != undefined) $("#nav_divider").show();
+        } else {
+            $("#prev").attr("href", $("#archives a:eq(1)").attr("href")).show();
+        }
+        
+    });
+    function resizeHeader() {
+      $('#head_overlay').css('height', $('header').height());
+    }
+    AudioPlayer.setup("/player.swf", {  
+        width: 290  
+    });
+  </script>
+</head>
+<body>
+<header>
+  Fast Boy
+</header>
+<div id="head_overlay">
+</div>
+<div id="content_container">
+  <div id="content">
+    <img src='http://farm5.static.flickr.com/4149/5038467393_ed3dfabee9.jpg' title='home by fast boy http://www.flickr.com/photos/fastboy/5038467393/in/photostream/' />
+<p>The first thing you should know about <a href='http://www.flickr.com/photos/fastboy/'>Fast Boy</a> (aka Ezra) is: he makes bikes. <a href='http://www.flickr.com/photos/fastboy/collections/72157623961829924/'>Amazingly beautiful bikes</a>. Bikes doubling as works of art or works of art doubling as bikes, I can&#8217;t decide which. This is how I stumbled across his Flickr; I&#8217;ve found there are few bike nerds out there that do not know of his creations.</p>
+<a href='http://www.flickr.com/photos/fastboy/4606106327/' title='Untitled by fast boy, on Flickr'><img alt='' height='335' src='http://farm5.static.flickr.com/4024/4606106327_cc17338bb2.jpg' width='500' /></a>
+<p><a href='http://www.flickr.com/photos/fastboy/2678131886/in/set-72157607075926461/'>In 2008 Ezra found out he had cancer</a>. He had chemo, radiation and surgery and fought it off in knightly fashion. Last May, he celebrated <a href='http://www.fastboycycles.com/teachingcancertocry/?p=379'>one year cancer free</a>.</p>
+
+<p>Then, in September, <a href='http://www.fastboycycles.com/teachingcancertocry/?p=383'>it came back</a>. This time, <a href='http://www.fastboycycles.com/teachingcancertocry/?p=385'>the surgery even more severe</a>. More chemo starts soon.</p>
+
+<p>It&#8217;s a weird clich&#233; to experience, but this sense of knowing of someone else&#8217;s completely different but equally indescribably horrible experience is comforting. Not in a &#8220;I&#8217;m not alone&#8221; sense, though. I&#8217;m not supposing uniqueness, but people like Ezra and I, we have been forced to exist in a space that not many understand. We will never say <a href='http://twitter.com/#!/search/FML' title='&apos;fuck my life&apos; -- e.g. &apos;Missed the bus FML&apos;'>FML</a>. The fact that our lives are fucked is self evident, every day. But we still must live those days.</p>
+
+<p>And Ezra <em>lives</em>. He <a href='http://www.flickr.com/photos/fastboy/5054541856/in/photostream/'>cooks</a>, enjoys the company of friends, takes pictures of his hot wife, plays with his <a href='http://www.flickr.com/photos/fastboy/4990523812/'>dog</a> and maintains a will strong enough to say <a href='http://www.fastboycycles.com/teachingcancertocry/'>&#8220;fuck cancer&#8221;</a> in a way no one ever doubts. Even though his body cannot lift it, I know his mind is crafting new beauty from steel.</p>
+
+<p>Fast Boy&#8217;s circumstances are different than mine, but having both been burdened with the terrible fullness of what life can hold, there is a common fight to be had for the good parts. I only know him through his words and his lens, but he inspires me in that fight.</p>
+<p class='date'>October 24, 2010</p>
+  </div><!--content-->
+  <a class="attribute"></a>
+</div><!--content_container-->
+
+<div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
+<footer>
+  <div id="colophon">
+    <h2>Colophon</h2>
+    <p>I am <a href="http://danielsjourney.com">Daniel Miller</a> and I'm writing here about my attempts to deal with the loss of my beautiful, perfect one year old daughter Margot Rose. You can read about that <a href="http://carissabyers.blogspot.com/2010/08/we-love-you-margot-rose.html">here</a>.</p>
+    <p>This site runs on <a href="http://jekyllrb.com/">Jekyll</a>, which I still haven't really figured out. Its markup and stylesheets, a cautionary tale about mixing <a href="http://en.wikipedia.org/wiki/Em_(typography)">em</a> and pixel measurements, were written entirely from scratch in <a href="http://macromates.com/">TextMate</a>. Header foreground &amp; footer background is <a href="http://www.colourlovers.com/pattern/1645/Snowy_Flora">Snowy Flora</a>. I have no idea what it might look like in Internet Explorer. If you are using IE, you should switch to <a href="http://www.google.com/chrome/">Google Chrome</a>; you will thank me later.</p>
+  </div>
+  
+  <div id="archives">
+    <h2>Posts</h2>
+    <ul>
+      
+      <li><span class="archive_date">2010-10-28 00:00:00 -0500</span> <a href="/2010/10/28/isolation.html">Isolation</a></li>
+      
+      <li><span class="archive_date">2010-10-27 00:00:00 -0500</span> <a href="/2010/10/27/tooth-fairy.html">The Real Tooth Fairy</a></li>
+      
+      <li><span class="archive_date">2010-10-24 00:00:00 -0500</span> <a href="/2010/10/24/fast-boy.html">Fast Boy</a></li>
+      
+      <li><span class="archive_date">2010-10-23 00:00:00 -0500</span> <a href="/2010/10/23/i-got-something-with-your-name-on-it.html">I Got Something with Your Name on It</a></li>
+      
+      <li><span class="archive_date">2010-10-20 00:00:00 -0500</span> <a href="/2010/10/20/its-a-bitch.html">It's a Bitch, Man</a></li>
+      
+      <li><span class="archive_date">2010-10-17 00:00:00 -0500</span> <a href="/2010/10/17/my-shits-still-fucked-up.html">My Shit's (Still) F**ked Up</a></li>
+      
+      <li><span class="archive_date">2010-10-14 00:00:00 -0500</span> <a href="/2010/10/14/Married.html">Married</a></li>
+      
+      <li><span class="archive_date">2010-10-08 00:00:00 -0500</span> <a href="/2010/10/08/Penn.html">Penn</a></li>
+      
+      <li><span class="archive_date">2010-10-04 00:00:00 -0500</span> <a href="/2010/10/04/in-the-light-of-prior-suffering.html">In the Light of Prior Suffering</a></li>
+      
+      <li><span class="archive_date">2010-10-03 00:00:00 -0500</span> <a href="/2010/10/03/no-ground.html">No Ground</a></li>
+      
+      <li><span class="archive_date">2010-10-02 00:00:00 -0500</span> <a href="/2010/10/02/denial.html">Denial</a></li>
+      
+      <li><span class="archive_date">2010-09-30 00:00:00 -0500</span> <a href="/2010/09/30/carry-the-weight.html">Carry the Weight</a></li>
+      
+      <li><span class="archive_date">2010-09-29 00:00:00 -0500</span> <a href="/2010/09/29/motivation-mood.html">Motivation &amp; Mood</a></li>
+      
+      <li><span class="archive_date">2010-09-27 00:00:00 -0500</span> <a href="/2010/09/27/the-rain.html">When the Wound Stops Hurting What Hurts is the Scar</a></li>
+      
+      <li><span class="archive_date">2010-09-22 00:00:00 -0500</span> <a href="/2010/09/22/car.html">The Epic Tale of The Car</a></li>
+      
+      <li><span class="archive_date">2010-09-20 00:00:00 -0500</span> <a href="/2010/09/20/obsessed.html">From Perfection to Obsession</a></li>
+      
+      <li><span class="archive_date">2010-09-17 00:00:00 -0500</span> <a href="/2010/09/17/insomnia.html">Insomnia</a></li>
+      
+      <li><span class="archive_date">2010-09-14 00:00:00 -0500</span> <a href="/2010/09/14/coping.html">Coping</a></li>
+      
+      <li><span class="archive_date">2010-09-12 00:00:00 -0500</span> <a href="/2010/09/12/9-years.html">9 Years</a></li>
+      
+      <li><span class="archive_date">2010-09-08 00:00:00 -0500</span> <a href="/2010/09/08/glue.html">Glue</a></li>
+      
+      <li><span class="archive_date">2010-09-05 00:00:00 -0500</span> <a href="/2010/09/05/why.html">Why? Part 1 of &#x221e;</a></li>
+      
+      <li><span class="archive_date">2010-09-02 00:00:00 -0500</span> <a href="/2010/09/02/in-order-to-remember-we-must-first-forget.html">In Order to Remember We Must First Forget</a></li>
+      
+    </ul>
+  </div>
+  
+  <!-- <div class="tags">
+      <h2>Tags</h2>
+      <p>Tags in Jekyll kind of suck, huh? If anyone wants to help me get something reasonable working with tags in Jekyll, <a href="http://twitter.com/dealingwith">let me know</a>. In the meantime, check out the cool design I made for them:
+      <ul>
+        <li>Coffee</li><li>Sugar</li><li>Cream</li>
+        
+      </ul>
+    </div> -->
+</footer>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-516566-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

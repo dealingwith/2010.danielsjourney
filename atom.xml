@@ -1,0 +1,33 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>danielsjourney</title>
+  <link rel="alternate" type="text/html" href="http://2010.danielsjourney.com/" />
+  <link rel="self" type="application/atom+xml" href="http://2010.danielsjourney.com/atom.xml" />
+  <id>http://2010.danielsjourney.com/atom.xml</id>
+  <updated>{{ site.time | date_to_utc | date:"%Y-%m-%dT00:00:00Z" }}</updated>
+  <subtitle>loss</subtitle>
+
+  {% for post in site.posts limit:15 %}
+  
+  <entry>
+    <title>{{ post.title }}</title>
+    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com{{ post.url }}' />
+    <id>{{ post.id }}</id>
+    <updated>{{ post.date | date.getutc:"%Y-%m-%dT00:00:00Z" }}</updated>
+
+    <author>
+      <name>Daniel Miller</name>
+      <uri>http://danielsjourney.com</uri>
+      <email>dealingwith@gmail.com</email>
+    </author>
+
+    <summary></summary>
+    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
+      <![CDATA[{{ post.content }}{{ post.extended }}]]>
+    </content>
+  </entry>
+  {% endfor %}
+</feed>

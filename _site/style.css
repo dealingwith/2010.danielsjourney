@@ -1,0 +1,190 @@
+body {
+    font-family: 'Cardo', Georgia, serif;
+    overflow-x: hidden;
+    background: #fffffe url('images/body_bg.png');
+}
+body > div {
+    color: #272727;
+    visibility: hidden;
+}
+p, img, ul {
+    margin-bottom: 1em;
+}    
+a {
+    text-decoration: none;
+}
+blockquote {
+    margin: 0 0 1em 2em;
+    font-style: italic;
+}
+blockquote:before {
+    content: '“';
+}
+blockquote:first-letter {
+    color: #ccc;
+    float: left;
+    font-face: ;
+    font-size: 2.5em;
+    margin-bottom: -5px;
+}
+em {
+    font-style: italic;
+}
+.date {
+    float: right;
+    font-style: italic;
+}
+.postscript {
+    background: url('images/content_bg.png') center top no-repeat;
+    clear: right;
+    font-size: 0.9em;
+    line-height: 1.3em;
+    padding-top: 60px;
+}
+header {
+    background: #FFFAFC;
+    display: block;
+    font-family: 'Brandon Grotesque', Helvetica, sans;
+    font-size: 4em;
+    line-height: 1.2em;
+    margin-bottom: 30px;
+    padding: 20px 100px;
+    text-shadow: 1px 2px 2px #e9e9e9;
+    text-align: right;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+#head_overlay {
+    background: url('images/header_bg_flowers.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 40px;
+}
+#content, #nav {
+    background: #fff;
+    float: right;
+    font-size: 19px;
+    line-height: 26px;
+    margin: 0 100px 1em 1em;
+    padding: 1em 0px 2em 1em;
+    width: 500px;
+    -webkit-box-shadow: 10px 10px 10px white, -10px -10px 10px white;
+}
+/*drop cap*/
+    #content p:first-child:first-letter {
+        background: url('images/header_bg_flowers.png');
+        display: block;
+        float: left;
+        font-weight: bold;
+        font-size: 60px;
+        padding-top: 15px;
+        padding-right: 7px;
+    }
+#content_container img, #content_container object {
+    display: block;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ccc;
+    -moz-box-shadow: 1px 1px 2px #ccc;
+    -webkit-box-shadow: 1px 1px 2px #ccc;
+}
+#content_container .audioplayer object {
+    border: 0px;
+    box-shadow: 0px 0px 0px;
+    -moz-box-shadow: 0px 0px 0px;
+    -webkit-box-shadow: 0px 0px 0px;
+}
+img.callout, #content_container .attribute, #content_container object {
+    float: left;
+    margin: 20px 0 0 50px;
+}
+#content object {
+    float: none;
+    margin: 0;
+}
+img.callout {
+    max-width: 500px;
+}
+.attribute {
+    color: #ccc;
+    font-size: 0.8em;
+    clear: left;
+}
+footer {
+    background: #272727 url('images/footer_bg_flowers_flip_opac.png');
+    clear: both;
+    color: #e9e9e9;
+    display: table;
+    padding: 2em 0 1em;
+}
+footer > div {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #999;
+    float: left;
+    font-size: .9em;
+    line-height: 1.3em;
+    margin: 0px 10px 30px;
+    padding: 10px 10px 5px;
+    width: 30%;
+}
+footer > div h2 {
+    color: #999;
+    font-size: 1.5em;
+    font-style: bold;
+    margin: -26px 0 8px -10px;
+    text-shadow: 1px 1px 1px #272727;
+}
+footer a {
+    color: pink;
+}
+footer div p:last-child {
+    margin-bottom: 0;
+}
+footer div#archives {
+    width: 60%;
+}
+.tags li {
+    background: #fff url('images/heart-small-empty-black_02.png') 2px center no-repeat;
+    
+    border-bottom-left-radius: 15px 8px;
+    border-top-left-radius: 15px 8px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    
+    -moz-border-radius-bottomleft: 15px 8px;
+    -moz-border-radius-topleft: 15px 8px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 2px;
+    
+    color: #272727;
+    float: left;
+    font-family: Helvetica, sans;
+    font-size: .9em;
+    margin: 5px 10px 5px 0px;
+    padding: 2px 4px 0 14px;
+}
+.archive_date {
+    color: #999;
+}
+#nav {
+    clear: both;
+    text-align: center;
+}
+#nav * {
+    display: none;
+    font-size: .8em;
+}
+#nav a {
+    background: url('images/header_bg_flowers.png');
+    border: 1px solid #e9e9e9;
+    
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    
+    padding: 6px 6px 4px 6px;
+}
+#content li {
+    list-style-image: url('images/arrows-deluxe1.png')
+}

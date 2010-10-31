@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% for post in site.posts limit: 1 %}
+    <header>
+      {{ post.title }}
+    </header>
+    <div id="head_overlay">
+    </div>
+    <div id="content_container">
+      <div id="content">
+        {{ post.content }}
+      </div><!--content-->
+      <a class="attribute"></a>
+    </div><!--content_container-->
+{% endfor %}

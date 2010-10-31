@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<head>
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/brokeheart.ico"/>
+  <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript" charset="utf-8">
+    $(function(){
+        $(window).resize(function() {
+          resizeHeader();
+        });
+        
+        $img = $("#content img:first-child");
+        if ($img.attr('src') != undefined) {          
+          $('#content_container').prepend('<img src="' + $img.attr('src') + '">');
+          $title = $img.attr('title');
+          $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+          $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+          $('#content_container .attribute').html($title).attr('href', $link);
+        }  
+        
+        resizeHeader();
+        $("body > div").css('visibility', 'visible');
+    });
+    function resizeHeader() {
+      $('#head_overlay').css('height', $('header').height());
+    }
+  </script>
+</head>
+<body>
+  <header>
+    {{ page.title }}
+  </header>
+  <div id="head_overlay">
+  </div>
+  <div id="content_container">
+    <div id="content">
+      {{ content }}
+    </div><!--content-->
+    <a class="attribute"></a>
+  </div><!--content_container-->
+  <footer>
+    <div class="colophon">
+      <h2>Colophon</h2>
+      <p>Nullam sollicitudin, libero vel imperdiet luctus, est turpis condimentum ipsum, non sollicitudin velit dui a arcu. Duis sit amet est ut erat sagittis pharetra a non lectus. Sed cursus velit eu lacus lobortis at placerat ipsum gravida. Curabitur molestie augue vitae felis consequat eget vehicula lorem convallis.</p>
+      <p>Header foreground &amp; footer background is <a href="http://www.colourlovers.com/pattern/1645/Snowy_Flora">Snowy Flora</a>.</p>
+    </div>
+    
+    <div class="archives">
+      <h2>Recent Entries</h2>
+      <ul>
+        {% for rpost in site.posts limit:20 %}
+        <li><a href="{{ rpost.url }}">{{ rpost.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    
+    <div class="tags">
+      <h2>Tags</h2>
+      <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

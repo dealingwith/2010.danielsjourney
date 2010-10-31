@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<head>
+  <title>danielsjourney</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/brokeheart.ico"/>
+  <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link href="http://feeds.feedburner.com/danielsjourney" rel="alternate" title="2010.danielsjourney.com" type="application/rss+xml" />
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/autocolumn.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/date.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+    $(function(){
+        $(window).resize(function() {
+          resizeHeader();
+        });
+        
+        var $img = $("#content img:first");
+        if ($img.attr('src') != undefined) {          
+          $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
+          $title = $img.attr('title');
+          $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+          $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+          $('#content_container .attribute').html($title).attr('href', $link);
+          $img.remove();
+        } else {
+          var $media = $("#content p.media:first");
+          if ($media != []) {
+            $('#content_container').prepend($media.html());
+            $media.remove();
+          }
+        }
+        
+        resizeHeader();
+        $("body > div").css('visibility', 'visible');
+        
+        // because jekyll's date formatting no worky for me
+        $('.archive_date').each(function(){
+          $(this).html(Date.parse(($(this).html())).toString("MMM dd"));
+        });
+        
+        $('#archives').columnize();
+        
+        // next/prev b/c jekyll's pagination is dumb
+        var here = window.location.pathname;
+        if (here.match(/.html/) != null) {
+            var prev = $("#archives a[href='"+window.location.pathname+"']").closest("li").next().find("a").attr("href");
+            var next = $("#archives a[href='"+window.location.pathname+"']").closest("li").prev().find("a").attr("href");
+            if (prev != undefined) $("#prev").attr("href", prev).show();
+            if (next != undefined) $("#next").attr("href", next).show();
+            //if (next != undefined && prev != undefined) $("#nav_divider").show();
+        } else {
+            $("#prev").attr("href", $("#archives a:eq(1)").attr("href")).show();
+        }
+        
+    });
+    function resizeHeader() {
+      $('#head_overlay').css('height', $('header').height());
+    }
+    AudioPlayer.setup("/player.swf", {  
+        width: 290  
+    });
+  </script>
+</head>
+<body>
+<header>
+  The Epic Tale of The Car
+</header>
+<div id="head_overlay">
+</div>
+<div id="content_container">
+  <div id="content">
+    <img src='http://farm4.static.flickr.com/3166/2931990936_7c57fa31e9.jpg' title='Art by Jimmie Durham, photo by rytc http://www.flickr.com/photos/rytc/2931990936/' />
+<p>The morning after the <a href='http://carissabyers.blogspot.com/2010/08/thank-you.html'>memorial</a> there were many trucks in our neighborhood and many men up in the trees above our alleys. The electric company had decided the trees needed a <a href='http://en.wikipedia.org/wiki/High_and_tight'>haircut</a>. And that morning, despite (or perhaps because of) the direction of many men, a driver backed his Very Large Truck With Chipper Trailer into my 2002 Honda Civic (Not Very Large). The driver wanted to pay out of pocket for the repair, as apparently there would be consequences with his employer if he did not. In the end, the costs were much more than he at first estimated and/or I did not take my car to his cousin Jos&#233;, so I was left dealing with the company itself.</p>
+
+<p><em>In the meantime</em>, while I was at my body shop waiting to hear from <em>el conductor</em> about who was going to pay for the repairs, <em>another guy backed into another part of my car</em>. (This guy&#8217;s name actually <em>was</em> Jos&#233;.) He wasn&#8217;t from the body shop, though; he was from a car dealer across the street. Enter second company.</p>
+
+<p>Productivity being at an all time low during recent weeks, and getting money out of insurance companies being what it is, it has taken a month to get both repairs paid for and completed. Finally this afternoon I picked up the car. Now if I can just manage to <em>never park it again</em>.</p>
+<p class='date'>September 22, 2010</p><p class='postscript'>This post may or may not have been written while driving at high speeds down a North Texas highway.</p>
+  </div><!--content-->
+  <a class="attribute"></a>
+</div><!--content_container-->
+
+<div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
+<footer>
+  <div id="colophon">
+    <h2>Colophon</h2>
+    <p>I am <a href="http://danielsjourney.com">Daniel Miller</a> and I'm writing here about my attempts to deal with the loss of my beautiful, perfect one year old daughter Margot Rose. You can read about that <a href="http://carissabyers.blogspot.com/2010/08/we-love-you-margot-rose.html">here</a>.</p>
+    <p>This site runs on <a href="http://jekyllrb.com/">Jekyll</a>, which I still haven't really figured out. Its markup and stylesheets, a cautionary tale about mixing <a href="http://en.wikipedia.org/wiki/Em_(typography)">em</a> and pixel measurements, were written entirely from scratch in <a href="http://macromates.com/">TextMate</a>. Header foreground &amp; footer background is <a href="http://www.colourlovers.com/pattern/1645/Snowy_Flora">Snowy Flora</a>. I have no idea what it might look like in Internet Explorer. If you are using IE, you should switch to <a href="http://www.google.com/chrome/">Google Chrome</a>; you will thank me later.</p>
+  </div>
+  
+  <div id="archives">
+    <h2>Posts</h2>
+    <ul>
+      
+      <li><span class="archive_date">2010-10-28 00:00:00 -0500</span> <a href="/2010/10/28/isolation.html">Isolation</a></li>
+      
+      <li><span class="archive_date">2010-10-27 00:00:00 -0500</span> <a href="/2010/10/27/tooth-fairy.html">The Real Tooth Fairy</a></li>
+      
+      <li><span class="archive_date">2010-10-24 00:00:00 -0500</span> <a href="/2010/10/24/fast-boy.html">Fast Boy</a></li>
+      
+      <li><span class="archive_date">2010-10-23 00:00:00 -0500</span> <a href="/2010/10/23/i-got-something-with-your-name-on-it.html">I Got Something with Your Name on It</a></li>
+      
+      <li><span class="archive_date">2010-10-20 00:00:00 -0500</span> <a href="/2010/10/20/its-a-bitch.html">It's a Bitch, Man</a></li>
+      
+      <li><span class="archive_date">2010-10-17 00:00:00 -0500</span> <a href="/2010/10/17/my-shits-still-fucked-up.html">My Shit's (Still) F**ked Up</a></li>
+      
+      <li><span class="archive_date">2010-10-14 00:00:00 -0500</span> <a href="/2010/10/14/Married.html">Married</a></li>
+      
+      <li><span class="archive_date">2010-10-08 00:00:00 -0500</span> <a href="/2010/10/08/Penn.html">Penn</a></li>
+      
+      <li><span class="archive_date">2010-10-04 00:00:00 -0500</span> <a href="/2010/10/04/in-the-light-of-prior-suffering.html">In the Light of Prior Suffering</a></li>
+      
+      <li><span class="archive_date">2010-10-03 00:00:00 -0500</span> <a href="/2010/10/03/no-ground.html">No Ground</a></li>
+      
+      <li><span class="archive_date">2010-10-02 00:00:00 -0500</span> <a href="/2010/10/02/denial.html">Denial</a></li>
+      
+      <li><span class="archive_date">2010-09-30 00:00:00 -0500</span> <a href="/2010/09/30/carry-the-weight.html">Carry the Weight</a></li>
+      
+      <li><span class="archive_date">2010-09-29 00:00:00 -0500</span> <a href="/2010/09/29/motivation-mood.html">Motivation &amp; Mood</a></li>
+      
+      <li><span class="archive_date">2010-09-27 00:00:00 -0500</span> <a href="/2010/09/27/the-rain.html">When the Wound Stops Hurting What Hurts is the Scar</a></li>
+      
+      <li><span class="archive_date">2010-09-22 00:00:00 -0500</span> <a href="/2010/09/22/car.html">The Epic Tale of The Car</a></li>
+      
+      <li><span class="archive_date">2010-09-20 00:00:00 -0500</span> <a href="/2010/09/20/obsessed.html">From Perfection to Obsession</a></li>
+      
+      <li><span class="archive_date">2010-09-17 00:00:00 -0500</span> <a href="/2010/09/17/insomnia.html">Insomnia</a></li>
+      
+      <li><span class="archive_date">2010-09-14 00:00:00 -0500</span> <a href="/2010/09/14/coping.html">Coping</a></li>
+      
+      <li><span class="archive_date">2010-09-12 00:00:00 -0500</span> <a href="/2010/09/12/9-years.html">9 Years</a></li>
+      
+      <li><span class="archive_date">2010-09-08 00:00:00 -0500</span> <a href="/2010/09/08/glue.html">Glue</a></li>
+      
+      <li><span class="archive_date">2010-09-05 00:00:00 -0500</span> <a href="/2010/09/05/why.html">Why? Part 1 of &#x221e;</a></li>
+      
+      <li><span class="archive_date">2010-09-02 00:00:00 -0500</span> <a href="/2010/09/02/in-order-to-remember-we-must-first-forget.html">In Order to Remember We Must First Forget</a></li>
+      
+    </ul>
+  </div>
+  
+  <!-- <div class="tags">
+      <h2>Tags</h2>
+      <p>Tags in Jekyll kind of suck, huh? If anyone wants to help me get something reasonable working with tags in Jekyll, <a href="http://twitter.com/dealingwith">let me know</a>. In the meantime, check out the cool design I made for them:
+      <ul>
+        <li>Coffee</li><li>Sugar</li><li>Cream</li>
+        
+      </ul>
+    </div> -->
+</footer>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-516566-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Waiting"
+---
+
+<p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/11%20Isaiah%2045_23.mp3">The Mountain Goats - Isaiah 45:23</a></span></span></p>
+
+I more frequently feel like the rest of my life is just a waiting to be with her again. 
+
+<p class="date">November 13, 2010</p>
+
+<p class="postscript"></p>
+
+<script type="text/javascript">  
+  $(function(){
+    AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/11%20Isaiah%2045_23.mp3",  
+        titles: "Isaiah 45:23",  
+        artists: "The Mountain Goats"});
+  });
+</script>

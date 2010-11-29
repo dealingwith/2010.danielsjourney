@@ -9,7 +9,9 @@
   
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
+  <!--  
   <script src="/autocolumn.min.js" type="text/javascript" charset="utf-8"></script>
+  -->
   <script src="/date.js" type="text/javascript" charset="utf-8"></script>
   
   <script type="text/javascript" charset="utf-8">
@@ -42,7 +44,7 @@
           $(this).html(Date.parse(($(this).html())).toString("MMM dd"));
         });
         
-        $('#archives').columnize();
+        //$('#archives').columnize();
         
         // next/prev b/c jekyll's pagination is dumb
         var here = window.location.pathname;
@@ -92,15 +94,18 @@
 
 <div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
 <footer>
-  <div id="colophon">
-    <h2>Colophon</h2>
-    <p>I am <a href="http://danielsjourney.com">Daniel Miller</a> and I'm writing here about my attempts to deal with the loss of my beautiful, perfect one year old daughter Margot Rose. You can read about that <a href="http://carissabyers.blogspot.com/2010/08/we-love-you-margot-rose.html">here</a>.</p>
-    <p>This site runs on <a href="http://jekyllrb.com/">Jekyll</a>, which I still haven't really figured out. Its markup and stylesheets, a cautionary tale about mixing <a href="http://en.wikipedia.org/wiki/Em_(typography)">em</a> and pixel measurements, were written entirely from scratch in <a href="http://macromates.com/">TextMate</a>. Header foreground &amp; footer background is <a href="http://www.colourlovers.com/pattern/1645/Snowy_Flora">Snowy Flora</a>. I have no idea what it might look like in Internet Explorer. If you are using IE, you should switch to <a href="http://www.google.com/chrome/">Google Chrome</a>; you will thank me later.</p>
-  </div>
-  
+
   <div id="archives">
     <h2>Posts</h2>
     <ul>
+      
+      <li><span class="archive_date">2010-11-26 00:00:00 -0600</span> <a href="/2010/11/26/dislikes.html">Things That I Strongly Dislike More Now Than I Used To</a></li>
+      
+      <li><span class="archive_date">2010-11-25 00:00:00 -0600</span> <a href="/2010/11/25/give-thanks.html">Give Thanks</a></li>
+      
+      <li><span class="archive_date">2010-11-21 00:00:00 -0600</span> <a href="/2010/11/21/chris.html">Thank You Chris</a></li>
+      
+      <li><span class="archive_date">2010-11-19 00:00:00 -0600</span> <a href="/2010/11/19/memorial.html">&ldquo;Memorial&rdquo;</a></li>
       
       <li><span class="archive_date">2010-11-18 00:00:00 -0600</span> <a href="/2010/11/18/our-stars-no-longer-dance.html">Our Stars No Longer Dance</a></li>
       
@@ -159,6 +164,17 @@
       <li><span class="archive_date">2010-09-02 00:00:00 -0500</span> <a href="/2010/09/02/in-order-to-remember-we-must-first-forget.html">In Order to Remember We Must First Forget</a></li>
       
     </ul>
+  </div>
+
+  <div id="colophon">
+    <h2>Colophon</h2>
+    <p>I am <a href="http://danielsjourney.com">Daniel Miller</a> and I'm writing here about my attempts to deal with the loss of my beautiful, perfect one year old daughter Margot Rose. You can read about that <a href="http://carissabyers.blogspot.com/2010/08/we-love-you-margot-rose.html">here</a>.</p>
+    <p>This site runs on <a href="http://jekyllrb.com/">Jekyll</a>, which I still haven't really figured out. Its markup and stylesheets, a cautionary tale about mixing <a href="http://en.wikipedia.org/wiki/Em_(typography)">em</a> and pixel measurements, were written entirely from scratch in <a href="http://macromates.com/">TextMate</a>. Header foreground &amp; footer background is <a href="http://www.colourlovers.com/pattern/1645/Snowy_Flora">Snowy Flora</a>. I have no idea what it might look like in Internet Explorer. If you are using IE, you should switch to <a href="http://www.google.com/chrome/">Google Chrome</a>; you will thank me later.</p>
+  </div>
+  
+  <div style="padding-right:0; width: 310px">
+    <h2>The Record</h2>
+    <object data="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB/vis=flowers//" type="text/html" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="300" height="410"><param name="movie" value="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB/vis=flowers//"></param><param name="quality" value="high"></param><param name="allowNetworking" value="always"></param><param name="wmode" value="transparent"></param><param name="bgcolor" value="#3D3D3D"></param><param name="allowScriptAccess" value="never"></param><embed data="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB/vis=flowers//" type="text/html" width="300" height="410"></embed></object>
   </div>
   
   <!-- <div class="tags">

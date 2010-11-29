@@ -71,7 +71,6 @@ header {
     margin: 0 100px 1em 1em;
     padding: 1em 0px 2em 1em;
     width: 500px;
-    -webkit-box-shadow: 10px 10px 10px white, -10px -10px 10px white;
 }
 /*drop cap*/
     #content p:first-child:first-letter {
@@ -89,6 +88,7 @@ header {
     box-shadow: 1px 1px 2px #ccc;
     -moz-box-shadow: 1px 1px 2px #ccc;
     -webkit-box-shadow: 1px 1px 2px #ccc;
+    margin-bottom: 10px;
 }
 #content_container .audioplayer object {
     border: 0px;
@@ -98,7 +98,7 @@ header {
 }
 img.callout, #content_container .attribute, #content_container object {
     float: left;
-    margin: 20px 0 0 50px;
+    margin: 10px 0 0 50px;
 }
 #content object {
     float: none;
@@ -118,6 +118,7 @@ footer {
     color: #e9e9e9;
     display: table;
     padding: 2em 0 1em;
+    width: 100%;
 }
 footer > div {
     background: rgba(255, 255, 255, 0.1);
@@ -126,8 +127,11 @@ footer > div {
     font-size: .9em;
     line-height: 1.3em;
     margin: 0px 10px 30px;
-    padding: 10px 10px 5px;
+    padding: 10px 0px 5px 10px;
     width: 30%;
+    min-width: 310px;
+}
+#colophon {
 }
 footer > div h2 {
     color: #999;
@@ -142,8 +146,11 @@ footer a {
 footer div p:last-child {
     margin-bottom: 0;
 }
-footer div#archives {
-    width: 60%;
+#archives li {
+    margin-right: 5px;
+}
+#colophon p {
+    margin-right: 10px;
 }
 .tags li {
     background: #fff url('images/heart-small-empty-black_02.png') 2px center no-repeat;
@@ -186,5 +193,6 @@ footer div#archives {
     padding: 6px 6px 4px 6px;
 }
 #content li {
-    list-style-image: url('images/arrows-deluxe1.png')
+    list-style: circle; /*-image: url('images/arrows-deluxe1.png')*/
+    margin-bottom: 1em;
 }

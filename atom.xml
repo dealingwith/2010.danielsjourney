@@ -13,10 +13,10 @@ layout: nil
   {% for post in site.posts limit:15 %}
   
   <entry>
-    <title>{{ post.title }}</title>
+    <title type="html">{{ post.title | escape }}</title>
     <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com{{ post.url }}' />
-    <id>{{ post.id }}</id>
-    <updated>{{ post.date | date.getutc:"%Y-%m-%dT00:00:00Z" }}</updated>
+    <id>http://2010.danielsjourney.com{{ post.url }}</id>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
 
     <author>
       <name>Daniel Miller</name>
@@ -24,7 +24,7 @@ layout: nil
       <email>dealingwith@gmail.com</email>
     </author>
 
-    <summary></summary>
+    <summary>{{ post.content | strip_html | truncatewords: 20 | strip_html }}</summary>
     <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
       <![CDATA[{{ post.content }}{{ post.extended }}]]>
     </content>

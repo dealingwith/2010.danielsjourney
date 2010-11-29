@@ -1,0 +1,14 @@
+---
+layout: post
+title: "&ldquo;Memorial&rdquo;"
+---
+
+<img src="http://farm5.static.flickr.com/4147/5192182683_f4d53e64fb.jpg" title="Memorial cover art by Vladimir Zimakov http://danielmiller.bandcamp.com/album/memorial">
+
+There is a lot more to say about the why and the how of [this record](http://danielmiller.bandcamp.com/album/memorial), but for now I'll just say this: It feels a little crassumer to say but it feels good when you buy this record. I had originally planned to offer the download for free but Bandcamp instituted free download limits since then so the $1 download charge just prevents me from having to worry about those limits. Since deciding to charge for it, my thoughts about the nature of the project changed a little bit and I really felt like I wanted to be able to give back to all the artists that participated in its creation. So when you buy the record, in this really weird way, it means it mattered to you too that these artists would contribute their valuable time and considerable talent towards this artifact of remembrance.
+
+[More info at the album page](http://danielmiller.bandcamp.com/album/memorial).
+
+<p class="date">November 19, 2010</p>
+
+<p class="postscript">I've embedded the player in the footer, in case you haven't clicked through already.</p>

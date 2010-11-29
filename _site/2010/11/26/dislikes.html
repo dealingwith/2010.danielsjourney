@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<head>
+  <title>danielsjourney</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/brokeheart.ico"/>
+  <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link href="http://feeds.feedburner.com/danielsjourney" rel="alternate" title="2010.danielsjourney.com" type="application/rss+xml" />
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
+  <!--  
+  <script src="/autocolumn.min.js" type="text/javascript" charset="utf-8"></script>
+  -->
+  <script src="/date.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+    $(function(){
+        $(window).resize(function() {
+          resizeHeader();
+        });
+        
+        var $img = $("#content img:first");
+        if ($img.attr('src') != undefined) {          
+          $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
+          $title = $img.attr('title');
+          $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+          $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+          $('#content_container .attribute').html($title).attr('href', $link);
+          $img.remove();
+        } else {
+          var $media = $("#content p.media:first");
+          if ($media != []) {
+            $('#content_container').prepend($media.html());
+            $media.remove();
+          }
+        }
+        
+        resizeHeader();
+        $("body > div").css('visibility', 'visible');
+        
+        // because jekyll's date formatting no worky for me
+        $('.archive_date').each(function(){
+          $(this).html(Date.parse(($(this).html())).toString("MMM dd"));
+        });
+        
+        //$('#archives').columnize();
+        
+        // next/prev b/c jekyll's pagination is dumb
+        var here = window.location.pathname;
+        if (here.match(/.html/) != null) {
+            var prev = $("#archives a[href='"+window.location.pathname+"']").closest("li").next().find("a").attr("href");
+            var next = $("#archives a[href='"+window.location.pathname+"']").closest("li").prev().find("a").attr("href");
+            if (prev != undefined) $("#prev").attr("href", prev).show();
+            if (next != undefined) $("#next").attr("href", next).show();
+            //if (next != undefined && prev != undefined) $("#nav_divider").show();
+        } else {
+            $("#prev").attr("href", $("#archives a:eq(1)").attr("href")).show();
+        }
+        
+    });
+    function resizeHeader() {
+      $('#head_overlay').css('height', $('header').height());
+    }
+    AudioPlayer.setup("/player.swf", {  
+        width: 290  
+    });
+  </script>
+</head>
+<body>
+<header>
+  Things That I Strongly Dislike More Now Than I Used To
+</header>
+<div id="head_overlay">
+</div>
+<div id="content_container">
+  <div id="content">
+    <img src='http://farm1.static.flickr.com/229/446217012_1d28cf9705.jpg' title='Photo by Nguyen-Anh Le http://www.flickr.com/photos/36751871@N00/446217012/' />
+<p>I thought maybe this experience was going to make me a better person in many respects, but in particular my intolerance for certain things. Not so. In no particular order:</p>
+
+<ul>
+<li>People who leave voicemail. Not <em>everyone</em> who leave voicemails, but for example I was on a flight the other day and the guy next to me left the longest voicemail in the history of voicemails. It was so long I had to send Carissa a text message informing her of my bewilderment at his ability to monologue into a voice recording device. <em>However</em>, on the return flight of the same trip, another douchebag next to me, who must have become aware of the new Voicemail Message Length world record, proceeded to leave a voicemail <em>no shorter than</em> 10 minutes long! It was seriously unbelievable, and I had to continually challenge reality as he continued on and on. It was very much like the business douchebag on the plane in <a href='http://vod.fxnetworks.com/watch/louie/221105606001'>this Louie episode</a>, except much longer and as a message not a conversation.</li>
+
+<li>Related: People who have jobs that mostly involve writing emails and still hunt-and-peck type.</li>
+
+<li>People who use Twitter hashtags <a href='http://twitter.com/#!/search/%23stabmyself'>#stabmyself</a> and <a href='http://twitter.com/#!/search/%23FML'>#FML</a>. <a href='http://collecta.com/s/STFU'>STFU</a> and <a href='http://collecta.com/s/GTFOI'>GTFOI</a>.</li>
+
+<li>Related: Drama Kings and Queens. Having struggled my way into a B in Evolutionary Psychology 15 years ago, I&#8217;m well aware that our lizard brain controls us for the majority of our day and our days are the most boring of all history. No tigers chasing us through the jungle, no rival tribes to compete with over food and quality mates, so we have to make our own drama to replace the lack of actual, life-threatening drama. The continued erosion of any real meaning in our lives has caused that drama to revolve around increasingly asinine subject matter.</li>
+
+<li>Your driving. Protip: hang up the fucking phone.</li>
+
+<li>Your causes. Are just more bad replacements for that tiger chasing you. If you enact real change in this world it isn&#8217;t going to be via your goddamn Facebook account.</li>
+
+<li>Your children. Honestly. They are annoying and ugly (except when they&#8217;re perfect and beautiful but really it doesn&#8217;t matter) and worst of all (and I don&#8217;t mean this in the maniacal way it will sound) <em>still alive</em>.</li>
+
+<li>The neighbor&#8217;s dog. He seriously will. not. stop. barking.</li>
+
+<li>Opinions other than my own.</li>
+</ul>
+<p class='date'>November 26, 2010</p><p class='postscript'>Started this post a long time ago, but lately have spent enough time in the anger stage to finish it. I feel a little bit like I might punch Jesus if he walked up to me right now.</p>
+  </div><!--content-->
+  <a class="attribute"></a>
+</div><!--content_container-->
+
+<div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
+<footer>
+
+  <div id="archives">
+    <h2>Posts</h2>
+    <ul>
+      
+      <li><span class="archive_date">2010-11-26 00:00:00 -0600</span> <a href="/2010/11/26/dislikes.html">Things That I Strongly Dislike More Now Than I Used To</a></li>
+      
+      <li><span class="archive_date">2010-11-25 00:00:00 -0600</span> <a href="/2010/11/25/give-thanks.html">Give Thanks</a></li>
+      
+      <li><span class="archive_date">2010-11-21 00:00:00 -0600</span> <a href="/2010/11/21/chris.html">Thank You Chris</a></li>
+      
+      <li><span class="archive_date">2010-11-19 00:00:00 -0600</span> <a href="/2010/11/19/memorial.html">&ldquo;Memorial&rdquo;</a></li>
+      
+      <li><span class="archive_date">2010-11-18 00:00:00 -0600</span> <a href="/2010/11/18/our-stars-no-longer-dance.html">Our Stars No Longer Dance</a></li>
+      
+      <li><span class="archive_date">2010-11-15 00:00:00 -0600</span> <a href="/2010/11/15/how-it-is-these-days.html">This is about how it is these days</a></li>
+      
+      <li><span class="archive_date">2010-11-13 00:00:00 -0600</span> <a href="/2010/11/13/waiting.html">Waiting</a></li>
+      
+      <li><span class="archive_date">2010-11-11 00:00:00 -0600</span> <a href="/2010/11/11/veteran.html">Vetus</a></li>
+      
+      <li><span class="archive_date">2010-11-09 00:00:00 -0600</span> <a href="/2010/11/09/nothing-to-write.html">Nothing to Write</a></li>
+      
+      <li><span class="archive_date">2010-11-06 00:00:00 -0500</span> <a href="/2010/11/06/more-of-the-same.html">Rosabelle &mdash; answer &mdash; tell &mdash; pray, answer &mdash; look &mdash; tell &mdash; answer, answer &mdash; tell.</a></li>
+      
+      <li><span class="archive_date">2010-10-28 00:00:00 -0500</span> <a href="/2010/10/28/isolation.html">Isolation</a></li>
+      
+      <li><span class="archive_date">2010-10-27 00:00:00 -0500</span> <a href="/2010/10/27/tooth-fairy.html">The Real Tooth Fairy</a></li>
+      
+      <li><span class="archive_date">2010-10-24 00:00:00 -0500</span> <a href="/2010/10/24/fast-boy.html">Fast Boy</a></li>
+      
+      <li><span class="archive_date">2010-10-23 00:00:00 -0500</span> <a href="/2010/10/23/i-got-something-with-your-name-on-it.html">I Got Something with Your Name on It</a></li>
+      
+      <li><span class="archive_date">2010-10-20 00:00:00 -0500</span> <a href="/2010/10/20/its-a-bitch.html">It's a Bitch, Man</a></li>
+      
+      <li><span class="archive_date">2010-10-17 00:00:00 -0500</span> <a href="/2010/10/17/my-shits-still-fucked-up.html">My Shit's (Still) F**ked Up</a></li>
+      
+      <li><span class="archive_date">2010-10-14 00:00:00 -0500</span> <a href="/2010/10/14/Married.html">Married</a></li>
+      
+      <li><span class="archive_date">2010-10-08 00:00:00 -0500</span> <a href="/2010/10/08/Penn.html">Penn</a></li>
+      
+      <li><span class="archive_date">2010-10-04 00:00:00 -0500</span> <a href="/2010/10/04/in-the-light-of-prior-suffering.html">In the Light of Prior Suffering</a></li>
+      
+      <li><span class="archive_date">2010-10-03 00:00:00 -0500</span> <a href="/2010/10/03/no-ground.html">No Ground</a></li>
+      
+      <li><span class="archive_date">2010-10-02 00:00:00 -0500</span> <a href="/2010/10/02/denial.html">Denial</a></li>
+      
+      <li><span class="archive_date">2010-09-30 00:00:00 -0500</span> <a href="/2010/09/30/carry-the-weight.html">Carry the Weight</a></li>
+      
+      <li><span class="archive_date">2010-09-29 00:00:00 -0500</span> <a href="/2010/09/29/motivation-mood.html">Motivation &amp; Mood</a></li>
+      
+      <li><span class="archive_date">2010-09-27 00:00:00 -0500</span> <a href="/2010/09/27/the-rain.html">When the Wound Stops Hurting What Hurts is the Scar</a></li>
+      
+      <li><span class="archive_date">2010-09-22 00:00:00 -0500</span> <a href="/2010/09/22/car.html">The Epic Tale of The Car</a></li>
+      
+      <li><span class="archive_date">2010-09-20 00:00:00 -0500</span> <a href="/2010/09/20/obsessed.html">From Perfection to Obsession</a></li>
+      
+      <li><span class="archive_date">2010-09-17 00:00:00 -0500</span> <a href="/2010/09/17/insomnia.html">Insomnia</a></li>
+      
+      <li><span class="archive_date">2010-09-14 00:00:00 -0500</span> <a href="/2010/09/14/coping.html">Coping</a></li>
+      
+      <li><span class="archive_date">2010-09-12 00:00:00 -0500</span> <a href="/2010/09/12/9-years.html">9 Years</a></li>
+      
+      <li><span class="archive_date">2010-09-08 00:00:00 -0500</span> <a href="/2010/09/08/glue.html">Glue</a></li>
+      
+      <li><span class="archive_date">2010-09-05 00:00:00 -0500</span> <a href="/2010/09/05/why.html">Why? Part 1 of &#x221e;</a></li>
+      
+      <li><span class="archive_date">2010-09-02 00:00:00 -0500</span> <a href="/2010/09/02/in-order-to-remember-we-must-first-forget.html">In Order to Remember We Must First Forget</a></li>
+      
+    </ul>
+  </div>
+
+  <div id="colophon">
+    <h2>Colophon</h2>
+    <p>I am <a href="http://danielsjourney.com">Daniel Miller</a> and I'm writing here about my attempts to deal with the loss of my beautiful, perfect one year old daughter Margot Rose. You can read about that <a href="http://carissabyers.blogspot.com/2010/08/we-love-you-margot-rose.html">here</a>.</p>
+    <p>This site runs on <a href="http://jekyllrb.com/">Jekyll</a>, which I still haven't really figured out. Its markup and stylesheets, a cautionary tale about mixing <a href="http://en.wikipedia.org/wiki/Em_(typography)">em</a> and pixel measurements, were written entirely from scratch in <a href="http://macromates.com/">TextMate</a>. Header foreground &amp; footer background is <a href="http://www.colourlovers.com/pattern/1645/Snowy_Flora">Snowy Flora</a>. I have no idea what it might look like in Internet Explorer. If you are using IE, you should switch to <a href="http://www.google.com/chrome/">Google Chrome</a>; you will thank me later.</p>
+  </div>
+  
+  <div style="padding-right:0; width: 310px">
+    <h2>The Record</h2>
+    <object data="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB/vis=flowers//" type="text/html" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="300" height="410"><param name="movie" value="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB/vis=flowers//"></param><param name="quality" value="high"></param><param name="allowNetworking" value="always"></param><param name="wmode" value="transparent"></param><param name="bgcolor" value="#3D3D3D"></param><param name="allowScriptAccess" value="never"></param><embed data="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB/vis=flowers//" type="text/html" width="300" height="410"></embed></object>
+  </div>
+  
+  <!-- <div class="tags">
+      <h2>Tags</h2>
+      <p>Tags in Jekyll kind of suck, huh? If anyone wants to help me get something reasonable working with tags in Jekyll, <a href="http://twitter.com/dealingwith">let me know</a>. In the meantime, check out the cool design I made for them:
+      <ul>
+        <li>Coffee</li><li>Sugar</li><li>Cream</li>
+        
+      </ul>
+    </div> -->
+</footer>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-516566-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

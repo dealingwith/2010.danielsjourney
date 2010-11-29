@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<head>
+  <title>danielsjourney</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/brokeheart.ico"/>
+  <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link href="http://feeds.feedburner.com/danielsjourney" rel="alternate" title="2010.danielsjourney.com" type="application/rss+xml" />
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
+  <!--  
+  <script src="/autocolumn.min.js" type="text/javascript" charset="utf-8"></script>
+  -->
+  <script src="/date.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+    $(function(){
+        $(window).resize(function() {
+          resizeHeader();
+        });
+        
+        var $img = $("#content img:first");
+        if ($img.attr('src') != undefined) {          
+          $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
+          $title = $img.attr('title');
+          $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+          $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+          $('#content_container .attribute').html($title).attr('href', $link);
+          $img.remove();
+        } else {
+          var $media = $("#content p.media:first");
+          if ($media != []) {
+            $('#content_container').prepend($media.html());
+            $media.remove();
+          }
+        }
+        
+        resizeHeader();
+        $("body > div").css('visibility', 'visible');
+        
+        // because jekyll's date formatting no worky for me
+        $('.archive_date').each(function(){
+          $(this).html(Date.parse(($(this).html())).toString("MMM dd"));
+        });
+        
+        //$('#archives').columnize();
+        
+        // next/prev b/c jekyll's pagination is dumb
+        var here = window.location.pathname;
+        if (here.match(/.html/) != null) {
+            var prev = $("#archives a[href='"+window.location.pathname+"']").closest("li").next().find("a").attr("href");
+            var next = $("#archives a[href='"+window.location.pathname+"']").closest("li").prev().find("a").attr("href");
+            if (prev != undefined) $("#prev").attr("href", prev).show();
+            if (next != undefined) $("#next").attr("href", next).show();
+            //if (next != undefined && prev != undefined) $("#nav_divider").show();
+        } else {
+            $("#prev").attr("href", $("#archives a:eq(1)").attr("href")).show();
+        }
+        
+    });
+    function resizeHeader() {
+      $('#head_overlay').css('height', $('header').height());
+    }
+    AudioPlayer.setup("/player.swf", {  
+        width: 290  
+    });
+  </script>
+</head>
+<body>
+<header>
+  Thank You Chris
+</header>
+<div id="head_overlay">
+</div>
+<div id="content_container">
+  <div id="content">
+    <img src='http://farm5.static.flickr.com/4130/5195708177_ab4bb4384c_o.jpg' title='Photo by Kate Mackley http://www.flickr.com/photos/katemackley/5078499695/in/photostream/' />
+<p>The reason <a href='http://danielmiller.bandcamp.com/album/memorial'>the Memorial record</a> happened now instead of next year or never is because of Chris Holt. We planned the Memorial service in just a couple of days, during a time that I can barely remember, and Chris was incredibly helpful during that time. His new record <a href='http://chrisholt.bandcamp.com/album/a-cosmic-joke'>A Cosmic Joke</a> wasn&#8217;t quite out yet, but he sent us a couple songs from it as possibilities to play at the memorial and we were just floored by them. He continued to go above and beyond by reworking the lyrics of <a href='http://chrisholt.bandcamp.com/track/always-in-awe'>Always in Awe</a>* and learning a new arrangement of <a href='http://danielmiller.bandcamp.com/track/ill-fly-away'>I&#8217;ll Fly Away</a> within about 24 hours.</p>
+<p><object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' data='http://bandcamp.com/EmbeddedPlayer/track=1911303341/size=venti/bgcol=FFFFFF/linkcol=4285BB//' height='100' type='text/html' width='400'><param name='movie' value='http://bandcamp.com/EmbeddedPlayer/track=1911303341/size=venti/bgcol=FFFFFF/linkcol=4285BB//' /><param name='quality' value='high' /><param name='allowNetworking' value='always' /><param name='wmode' value='transparent' /><param name='bgcolor' value='#FFFFFF' /><param name='allowScriptAccess' value='never' /><embed data='http://bandcamp.com/EmbeddedPlayer/track=1911303341/size=venti/bgcol=FFFFFF/linkcol=4285BB//' height='100' type='text/html' width='400' /></object></p>
+<p>I later told Chris I had a thought to create a collection of the songs played that night. A couple of weeks later he sent me a message that he had made arrangements with <a href='http://www.salimnourallah.com/'>Salim</a> to go into <a href='http://www.pleasantrylane.com/'>Pleasantry Lane</a> to record his tunes. It took a few weeks to finally get into the studio, during which time I sent messages to Doug, The Beaten Sea and Salim, who all agreed to participate in the project. Doug already had some acoustic recordings of the songs from <a href='http://www.amazon.com/gp/product/B001Q8GBVM?ie=UTF8&amp;tag=wwwdanielsjou-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B001Q8GBVM'>The Shawl</a>. Salim recorded acoustic versions of his two songs during the sessions with Chris. And Benj from The Beaten Sea came in one night to record his version of <a href='http://danielmiller.bandcamp.com/track/adios-au-revoir-auf-wiedersehen'>Adios, Au Revoir, Auf Wiedersehen</a>, which will now forever win as most beautiful sad song of all time.</p>
+<p><object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' data='http://bandcamp.com/EmbeddedPlayer/track=2818574578/size=venti/bgcol=FFFFFF/linkcol=4285BB//' height='100' type='text/html' width='400'><param name='movie' value='http://bandcamp.com/EmbeddedPlayer/track=2818574578/size=venti/bgcol=FFFFFF/linkcol=4285BB//' /><param name='quality' value='high' /><param name='allowNetworking' value='always' /><param name='wmode' value='transparent' /><param name='bgcolor' value='#FFFFFF' /><param name='allowScriptAccess' value='never' /><embed data='http://bandcamp.com/EmbeddedPlayer/track=2818574578/size=venti/bgcol=FFFFFF/linkcol=4285BB//' height='100' type='text/html' width='400' /></object></p>
+<p>It even turned out that The Beaten Sea and I use the same mastering engineer, so he already had the original of <a href='http://danielmiller.bandcamp.com/track/its-hard-to-resist'>It&#8217;s Hard to Resist</a> that he could master to the same level as the rest of the record. Oh, and he donated his time to the project as well, despite never having met me in real life. The hardest part was deciding on a title, choosing between the four different cover art versions <a href='http://vladimirzimakov.com/'>Vladimir</a> sent (I included two in the download) and listening to the masters when they came back.</p>
+
+<p>The record that means the most to me, I can&#8217;t even listen to.</p>
+<p class='date'>November 21, 2010</p><p class='postscript'>* i.e., <a href='http://danielmiller.bandcamp.com/track/say-goodbye-always-in-awe'>the version on the Memorial collection</a> is one of a kind, available nowhere else. This is actually true of all the tracks on the record except one, but <span style='font-style:italic'>Always in Awe</span> is the only one with different lyrics than the original.</p>
+  </div><!--content-->
+  <a class="attribute"></a>
+</div><!--content_container-->
+
+<div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
+<footer>
+
+  <div id="archives">
+    <h2>Posts</h2>
+    <ul>
+      
+      <li><span class="archive_date">2010-11-26 00:00:00 -0600</span> <a href="/2010/11/26/dislikes.html">Things That I Strongly Dislike More Now Than I Used To</a></li>
+      
+      <li><span class="archive_date">2010-11-25 00:00:00 -0600</span> <a href="/2010/11/25/give-thanks.html">Give Thanks</a></li>
+      
+      <li><span class="archive_date">2010-11-21 00:00:00 -0600</span> <a href="/2010/11/21/chris.html">Thank You Chris</a></li>
+      
+      <li><span class="archive_date">2010-11-19 00:00:00 -0600</span> <a href="/2010/11/19/memorial.html">&ldquo;Memorial&rdquo;</a></li>
+      
+      <li><span class="archive_date">2010-11-18 00:00:00 -0600</span> <a href="/2010/11/18/our-stars-no-longer-dance.html">Our Stars No Longer Dance</a></li>
+      
+      <li><span class="archive_date">2010-11-15 00:00:00 -0600</span> <a href="/2010/11/15/how-it-is-these-days.html">This is about how it is these days</a></li>
+      
+      <li><span class="archive_date">2010-11-13 00:00:00 -0600</span> <a href="/2010/11/13/waiting.html">Waiting</a></li>
+      
+      <li><span class="archive_date">2010-11-11 00:00:00 -0600</span> <a href="/2010/11/11/veteran.html">Vetus</a></li>
+      
+      <li><span class="archive_date">2010-11-09 00:00:00 -0600</span> <a href="/2010/11/09/nothing-to-write.html">Nothing to Write</a></li>
+      
+      <li><span class="archive_date">2010-11-06 00:00:00 -0500</span> <a href="/2010/11/06/more-of-the-same.html">Rosabelle &mdash; answer &mdash; tell &mdash; pray, answer &mdash; look &mdash; tell &mdash; answer, answer &mdash; tell.</a></li>
+      
+      <li><span class="archive_date">2010-10-28 00:00:00 -0500</span> <a href="/2010/10/28/isolation.html">Isolation</a></li>
+      
+      <li><span class="archive_date">2010-10-27 00:00:00 -0500</span> <a href="/2010/10/27/tooth-fairy.html">The Real Tooth Fairy</a></li>
+      
+      <li><span class="archive_date">2010-10-24 00:00:00 -0500</span> <a href="/2010/10/24/fast-boy.html">Fast Boy</a></li>
+      
+      <li><span class="archive_date">2010-10-23 00:00:00 -0500</span> <a href="/2010/10/23/i-got-something-with-your-name-on-it.html">I Got Something with Your Name on It</a></li>
+      
+      <li><span class="archive_date">2010-10-20 00:00:00 -0500</span> <a href="/2010/10/20/its-a-bitch.html">It's a Bitch, Man</a></li>
+      
+      <li><span class="archive_date">2010-10-17 00:00:00 -0500</span> <a href="/2010/10/17/my-shits-still-fucked-up.html">My Shit's (Still) F**ked Up</a></li>
+      
+      <li><span class="archive_date">2010-10-14 00:00:00 -0500</span> <a href="/2010/10/14/Married.html">Married</a></li>
+      
+      <li><span class="archive_date">2010-10-08 00:00:00 -0500</span> <a href="/2010/10/08/Penn.html">Penn</a></li>
+      
+      <li><span class="archive_date">2010-10-04 00:00:00 -0500</span> <a href="/2010/10/04/in-the-light-of-prior-suffering.html">In the Light of Prior Suffering</a></li>
+      
+      <li><span class="archive_date">2010-10-03 00:00:00 -0500</span> <a href="/2010/10/03/no-ground.html">No Ground</a></li>
+      
+      <li><span class="archive_date">2010-10-02 00:00:00 -0500</span> <a href="/2010/10/02/denial.html">Denial</a></li>
+      
+      <li><span class="archive_date">2010-09-30 00:00:00 -0500</span> <a href="/2010/09/30/carry-the-weight.html">Carry the Weight</a></li>
+      
+      <li><span class="archive_date">2010-09-29 00:00:00 -0500</span> <a href="/2010/09/29/motivation-mood.html">Motivation &amp; Mood</a></li>
+      
+      <li><span class="archive_date">2010-09-27 00:00:00 -0500</span> <a href="/2010/09/27/the-rain.html">When the Wound Stops Hurting What Hurts is the Scar</a></li>
+      
+      <li><span class="archive_date">2010-09-22 00:00:00 -0500</span> <a href="/2010/09/22/car.html">The Epic Tale of The Car</a></li>
+      
+      <li><span class="archive_date">2010-09-20 00:00:00 -0500</span> <a href="/2010/09/20/obsessed.html">From Perfection to Obsession</a></li>
+      
+      <li><span class="archive_date">2010-09-17 00:00:00 -0500</span> <a href="/2010/09/17/insomnia.html">Insomnia</a></li>
+      
+      <li><span class="archive_date">2010-09-14 00:00:00 -0500</span> <a href="/2010/09/14/coping.html">Coping</a></li>
+      
+      <li><span class="archive_date">2010-09-12 00:00:00 -0500</span> <a href="/2010/09/12/9-years.html">9 Years</a></li>
+      
+      <li><span class="archive_date">2010-09-08 00:00:00 -0500</span> <a href="/2010/09/08/glue.html">Glue</a></li>
+      
+      <li><span class="archive_date">2010-09-05 00:00:00 -0500</span> <a href="/2010/09/05/why.html">Why? Part 1 of &#x221e;</a></li>
+      
+      <li><span class="archive_date">2010-09-02 00:00:00 -0500</span> <a href="/2010/09/02/in-order-to-remember-we-must-first-forget.html">In Order to Remember We Must First Forget</a></li>
+      
+    </ul>
+  </div>
+
+  <div id="colophon">
+    <h2>Colophon</h2>
+    <p>I am <a href="http://danielsjourney.com">Daniel Miller</a> and I'm writing here about my attempts to deal with the loss of my beautiful, perfect one year old daughter Margot Rose. You can read about that <a href="http://carissabyers.blogspot.com/2010/08/we-love-you-margot-rose.html">here</a>.</p>
+    <p>This site runs on <a href="http://jekyllrb.com/">Jekyll</a>, which I still haven't really figured out. Its markup and stylesheets, a cautionary tale about mixing <a href="http://en.wikipedia.org/wiki/Em_(typography)">em</a> and pixel measurements, were written entirely from scratch in <a href="http://macromates.com/">TextMate</a>. Header foreground &amp; footer background is <a href="http://www.colourlovers.com/pattern/1645/Snowy_Flora">Snowy Flora</a>. I have no idea what it might look like in Internet Explorer. If you are using IE, you should switch to <a href="http://www.google.com/chrome/">Google Chrome</a>; you will thank me later.</p>
+  </div>
+  
+  <div style="padding-right:0; width: 310px">
+    <h2>The Record</h2>
+    <object data="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB/vis=flowers//" type="text/html" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="300" height="410"><param name="movie" value="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB/vis=flowers//"></param><param name="quality" value="high"></param><param name="allowNetworking" value="always"></param><param name="wmode" value="transparent"></param><param name="bgcolor" value="#3D3D3D"></param><param name="allowScriptAccess" value="never"></param><embed data="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB/vis=flowers//" type="text/html" width="300" height="410"></embed></object>
+  </div>
+  
+  <!-- <div class="tags">
+      <h2>Tags</h2>
+      <p>Tags in Jekyll kind of suck, huh? If anyone wants to help me get something reasonable working with tags in Jekyll, <a href="http://twitter.com/dealingwith">let me know</a>. In the meantime, check out the cool design I made for them:
+      <ul>
+        <li>Coffee</li><li>Sugar</li><li>Cream</li>
+        
+      </ul>
+    </div> -->
+</footer>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-516566-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

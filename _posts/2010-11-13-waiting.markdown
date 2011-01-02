@@ -9,8 +9,6 @@ I more frequently feel like the rest of my life is just a waiting to be with her
 
 <p class="date">November 13, 2010</p>
 
-<p class="postscript"></p>
-
 <script type="text/javascript">  
   $(function(){
     AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/11%20Isaiah%2045_23.mp3",  

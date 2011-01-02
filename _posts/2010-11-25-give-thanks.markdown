@@ -3,7 +3,7 @@ layout: post
 title: "Give Thanks"
 ---
 
-<p class="media"><object data="http://bandcamp.com/EmbeddedPlayer/track=2635195972/size=venti/bgcol=FFFFFF/linkcol=4285BB//" type="text/html" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="100"><param name="movie" value="http://bandcamp.com/EmbeddedPlayer/track=2635195972/size=venti/bgcol=FFFFFF/linkcol=4285BB/"></param><param name="quality" value="high"></param><param name="allowNetworking" value="always"></param><param name="wmode" value="transparent"></param><param name="bgcolor" value="#FFFFFF"></param><param name="allowScriptAccess" value="never" /><embed data="http://bandcamp.com/EmbeddedPlayer/track=2635195972/size=venti/bgcol=FFFFFF/linkcol=4285BB//" type="text/html" width="400" height="100"></embed></object></p>
+<p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/07%20The%20Wind%20Has%20Left%20My%20Sail%20mp3.mp3">Chris Holt - The Wind Has Left My Sail</a></span></span></p>
 
 All you  
 whose whole family  
@@ -45,3 +45,11 @@ without pain
 give thanks  
 
 <p class="date">November 25, 2010</p>
+
+<script type="text/javascript">  
+  $(function(){
+    AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/07%20The%20Wind%20Has%20Left%20My%20Sail%20mp3.mp3",  
+        titles: "The Wind Has Left My Sail",  
+        artists: "Chris Holt"});
+  });
+</script>

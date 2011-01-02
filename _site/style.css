@@ -1,4 +1,4 @@
-body {
+body, html {
     font-family: 'Cardo', Georgia, serif;
     overflow-x: hidden;
     background: #fffffe url('images/body_bg.png');
@@ -14,18 +14,15 @@ a {
     text-decoration: none;
 }
 blockquote {
-    margin: 0 0 1em 2em;
+    margin: 0 0 1em 1.5em;
     font-style: italic;
 }
-blockquote:before {
-    content: '“';
-}
-blockquote:first-letter {
+.blockquote_quotation {
     color: #ccc;
     float: left;
-    font-face: ;
     font-size: 2.5em;
     margin-bottom: -5px;
+    margin-left: -.5em;
 }
 em {
     font-style: italic;
@@ -64,16 +61,16 @@ header {
     padding-bottom: 40px;
 }
 #content, #nav {
-    background: #fff;
+    background: rgba(255, 255, 255, .4);
     float: right;
     font-size: 19px;
     line-height: 26px;
-    margin: 0 100px 1em 1em;
-    padding: 1em 0px 2em 1em;
+    margin: 0 80px 1em 1em;
+    padding: 1em 20px;
     width: 500px;
 }
 /*drop cap*/
-    #content p:first-child:first-letter {
+    .drop_cap {
         background: url('images/header_bg_flowers.png');
         display: block;
         float: left;
@@ -118,7 +115,6 @@ footer {
     color: #e9e9e9;
     display: table;
     padding: 2em 0 1em;
-    width: 100%;
 }
 footer > div {
     background: rgba(255, 255, 255, 0.1);
@@ -130,8 +126,6 @@ footer > div {
     padding: 10px 0px 5px 10px;
     width: 30%;
     min-width: 310px;
-}
-#colophon {
 }
 footer > div h2 {
     color: #999;

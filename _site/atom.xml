@@ -4,9 +4,35 @@
   <link rel="alternate" type="text/html" href="http://2010.danielsjourney.com/" />
   <link rel="self" type="application/atom+xml" href="http://2010.danielsjourney.com/atom.xml" />
   <id>http://2010.danielsjourney.com/atom.xml</id>
-  <updated>2011-01-01T00:00:00Z</updated>
+  <updated>2011-01-03T00:00:00Z</updated>
   <subtitle>loss</subtitle>
 
+  
+  
+  <entry>
+    <title type="html">I love how xkcd can wrap a profound observation about meaning in a penis joke</title>
+    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/01/03/pen15.html' />
+    <id>http://2010.danielsjourney.com/2011/01/03/pen15.html</id>
+    <updated>2011-01-03T00:00:00-06:00</updated>
+
+    <author>
+      <name>Daniel Miller</name>
+      <uri>http://danielsjourney.com</uri>
+      <email>dealingwith@gmail.com</email>
+    </author>
+
+    <summary>Also, if you have not seen Randall&#8217;s talk at Google, you should. djdc.connected = function() { $("img.callout").css({"max-width": "none", "padding": "5px"});...</summary>
+    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
+      <![CDATA[<img title='xkcd http://xkcd.com/842/' src='http://imgs.xkcd.com/comics/mark.png' />
+<p>Also, if you have not seen <a href='http://www.youtube.com/watch?v=zJOS0sV2a24'>Randall&#8217;s talk at Google</a>, you should.</p>
+<script type='text/javascript'>
+  djdc.connected = function() {
+    $("img.callout").css({"max-width": "none",
+                          "padding": "5px"});
+  };
+</script>]]>
+    </content>
+  </entry>
   
   
   <entry>
@@ -477,31 +503,6 @@
         artists: "The Mountain Goats"});
   });
 </script>]]>
-    </content>
-  </entry>
-  
-  
-  <entry>
-    <title type="html">Vetus</title>
-    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2010/11/11/veteran.html' />
-    <id>http://2010.danielsjourney.com/2010/11/11/veteran.html</id>
-    <updated>2010-11-11T00:00:00-06:00</updated>
-
-    <author>
-      <name>Daniel Miller</name>
-      <uri>http://danielsjourney.com</uri>
-      <email>dealingwith@gmail.com</email>
-    </author>
-
-    <summary>Mothers and fathersof those who won&#8217;t grow oldbecause of other men&#8217;s plansyou have someone to blameyou have someone to blame...</summary>
-    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
-      <![CDATA[<img title='photo by kT LindSAy http://www.flickr.com/photos/ktlindsay/2037459547' src='http://farm3.static.flickr.com/2402/2037459547_326be90f18.jpg' />
-<p>Mothers and fathers<br />of those who won&#8217;t grow old<br />because of other men&#8217;s plans<br />you have someone to blame<br />you have someone to blame</p>
-
-<p>Their hearts are so cold<br />they would kill your son<br />with a movement of their pen<br />and still you take their flag<br />and still you take their flag</p>
-
-<p>They write you a letter<br />and shoot into the air<br />and celebrate today those who escaped alive<br />the riots of their murderous machinations</p>
-<p class='date'>November 11, 2010</p><p class='postscript'><a href='http://www.warpoetry.co.uk/owen1.html' title='Dulce et Decorum est'>Wilfred Owen</a> does it infinitely better.</p>]]>
     </content>
   </entry>
   

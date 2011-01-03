@@ -1,0 +1,15 @@
+---
+layout: post
+title: "I love how xkcd can wrap a profound observation about meaning in a penis joke"
+---
+
+<img src="http://imgs.xkcd.com/comics/mark.png" title="xkcd http://xkcd.com/842/">
+
+Also, if you have not seen [Randall's talk at Google](http://www.youtube.com/watch?v=zJOS0sV2a24), you should.
+
+<script type="text/javascript">
+  djdc.connected = function() {
+    $("img.callout").css({"max-width": "none",
+                          "padding": "5px"});
+  };
+</script>

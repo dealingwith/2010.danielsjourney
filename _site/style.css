@@ -27,6 +27,9 @@ blockquote {
 em {
     font-style: italic;
 }
+strong {
+    font-weight: bold;
+}
 .date {
     float: right;
     font-style: italic;
@@ -108,6 +111,7 @@ img.callout {
     color: #ccc;
     font-size: 0.8em;
     clear: left;
+    max-width: 500px;
 }
 footer {
     background: #272727 url('images/footer_bg_flowers_flip_opac.png');
@@ -189,4 +193,13 @@ footer div p:last-child {
 #content li {
     list-style: circle; /*-image: url('images/arrows-deluxe1.png')*/
     margin-bottom: 1em;
+}
+
+hr {
+    background: url('images/header_bg_flowers.png');
+    height: 10px;
+    border: 0px;
+    margin-bottom: 1em;
+    margin-top: .5em;
+    border-bottom: 1px solid #e9e9e9;
 }

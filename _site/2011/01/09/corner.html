@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<head>
+  <title>danielsjourney</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/brokeheart.ico"/>
+  <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link href="http://feeds.feedburner.com/danielsjourney" rel="alternate" title="2010.danielsjourney.com" type="application/rss+xml" />
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/date.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+    var djdc = {};
+    $(function(){
+        $(window).resize(function() {
+          resizeHeader();
+        });
+        
+        var $img = $("#content img:first");
+        if ($img.attr('src') != undefined) {          
+          $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
+          $title = $img.attr('title');
+          $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+          $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+          $('#content_container .attribute').html($title).attr('href', $link);
+          $img.remove();
+        } else {
+          var $media = $("#content p.media:first");
+          if ($media != []) {
+            $('#content_container').prepend($media.html());
+            $media.remove();
+          }
+        }
+        
+        resizeHeader();
+        
+        // next/prev b/c jekyll's pagination is dumb
+        var here = window.location.pathname;
+        if (here.match(/.html/) != null) {
+            var prev = $("#archives a[href='"+window.location.pathname+"']").closest("li").next().find("a").attr("href");
+            var next = $("#archives a[href='"+window.location.pathname+"']").closest("li").prev().find("a").attr("href");
+            if (prev != undefined) $("#prev").attr("href", prev).show();
+            if (next != undefined) $("#next").attr("href", next).show();
+            //if (next != undefined && prev != undefined) $("#nav_divider").show();
+        } else {
+            $("#prev").attr("href", $("#archives a:eq(1)").attr("href")).show();
+        }
+        
+        //blockquote style application
+        $("blockquote:eq(0)").prepend('<span class="blockquote_quotation">&ldquo;</span>');
+        //dropcap style application
+        $("#content > p:eq(0)").fancyletter({ commonClass: 'drop_cap' });
+        
+        // my own little event system, lets javascript inside the post to run only after all the above
+        $.each(djdc, function(i, val){
+          if (typeof(val) === "function") val.apply(djdc, []);
+        });
+        
+        $("body > div").css('visibility', 'visible');
+    });
+    function resizeHeader() {
+      $('#head_overlay').css('height', $('header').height());
+    }
+    function isScrolledIntoView(elem) {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+
+        return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom)
+          && (elemBottom <= docViewBottom) &&  (elemTop >= docViewTop) );
+    }
+    AudioPlayer.setup("/player.swf", {  
+        width: 290  
+    });
+  </script>
+</head>
+<body>
+<header>
+  Turn
+</header>
+<div id="head_overlay">
+</div>
+<div id="content_container">
+  <div id="content">
+    <img title='Not exactly what I&apos;m describing in this post, but I really like this photo Carissa took at the velodrome in Frisco http://www.flickr.com/photos/carissabyers/1423220549/' src='http://farm2.static.flickr.com/1377/1423220549_7dfd4e89e7_o.jpg' />
+<p>There&#8217;s a corner being turned. The temperature is dropping. Various projects are progressing apace. <a href='http://carissabyers.blogspot.com/2011/01/new-years.html'>My wife said it well</a>:</p>
+
+<blockquote>
+<p>My goals for 2011 are to take everyone by the hand and march us all left, right, left, right, forward, quickly, eyes open for opportunity and minds open for peace. I wish for everyone personal growth in relationships and careers and health and blessings on all people. May you all be filled with real strength and love.</p>
+</blockquote>
+
+<p>Carissa is an amazingly strong person for whom I am very grateful. I could not navigate these waters without her. I&#8217;m also attracted to her each day more than the last. I don&#8217;t have a lot of relationship advice to give, but I think that&#8217;s the way this thing called love is supposed to work.</p>
+<hr />
+<blockquote>
+<p>&#8230;when people are truly sinking&#8230;they have no idea what mix of character, connections and dumb luck will be enough to pull through</p>
+</blockquote>
+
+<p>In reading <em><a href='http://nyti.ms/hBgUlt'>On Road to Recovery, Past Adversity Provides a Map</a></em> I thought about all the difficult times we&#8217;ve both had prior to being together. In this, the most difficult search for meaning, it might be thought that those past hardships were to prepare us for this. Or it could just be, as she put it:</p>
+
+<blockquote>
+<p>&#8230;this is the era where everyone around me has had enough time to create something important. Celebrations are more meaningful and loss is more profound because in either direction there is such investment.</p>
+</blockquote>
+
+<p>In any case, to consider all this random and meaningless, while valid, is a path to madness.</p>
+<hr />
+<p>I recently started riding my bike a bit more. I got sick of my gut hanging over my belt. Counting calories has once again become a habit. Riding is the only way to keep those calories in the negative enough to really make a difference. I need to drink less too. I&#8217;m trying.</p>
+
+<p><a href='http://www.rapha.cc/the-rapha-festive-500'>Rapha has provided some motivation</a>:</p>
+
+<blockquote>
+<p>Riding hard at Christmas is not a paradox. As you stuff your belly with food and soak yourself with booze, the roads may seem empty. But they aren&#8217;t. This year, riders across the globe will be squeezing themselves like oversized elves into tights and overshoes and heading out to go the distance, leaving the turbo trainer in the garage.</p>
+</blockquote>
+
+<p>My goal was to do half of the Rapha 500. I got to maybe 200k instead. But I went on the longest ride I&#8217;d done since the 90&#8217;s. I rode more days than I had in any given week since the 90&#8217;s. I&#8217;m noticeably faster now than I was two weeks before Christmas. I haven&#8217;t lost any weight. But when I&#8217;m on my bicycle my mind clears and fills with good ideas and sometimes, even, a little hope. I still miss good opportunities to ride, but I&#8217;m getting better about not letting those pass me by.</p>
+
+<p>Guiding a well built bicycle through a turn at speed is one of the most enjoyable things a man can do. If practiced, there becomes a sequence trained into the body that makes it feel as if it has joined with the machine beneath it, one entity with one mind. There is a cadence to the movements: the shifting of weight on the saddle and then on the pedals, the eyes&#8217; line moves further ahead, then the body initiates the turn and the bicycle obeys.</p>
+
+<p>It is starting to feel like the first beats of that cadence.</p>
+<p class='date'>January 09, 2011</p><p class='postscript'>While I have not splurged for any Rapha clothing, they do help <a href='http://www.velodramatic.com/archives/6266'>perpetuate an aesthetic</a> that accentuates all the things I've loved about cycling. It is, after all, one of the most beautiful sports in the world. It should be no surprise that so many designers are drawn to it.<br /><br /><object height='270' width='480'><param name='allowfullscreen' value='true' /><param name='allowscriptaccess' value='always' /><param name='movie' value='http://vimeo.com/moogaloop.swf?clip_id=15197531&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1&amp;autoplay=0&amp;loop=0' /><embed src='http://vimeo.com/moogaloop.swf?clip_id=15197531&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1&amp;autoplay=0&amp;loop=0' allowfullscreen='true' type='application/x-shockwave-flash' allowscriptaccess='always' height='270' width='480' /></object></p>
+  </div><!--content-->
+  <a class="attribute"></a>
+</div><!--content_container-->
+
+<div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
+<footer>
+
+  <div id="archives">
+    <h2>Posts</h2>
+    <ul>
+      
+      <li><span class="archive_date">Jan 21</span> <a href="/2011/01/21/the-laughing-heart.html">The Laughing Heart</a></li>
+      
+      <li><span class="archive_date">Jan 20</span> <a href="/2011/01/20/maranatha.html">Maranatha</a></li>
+      
+      <li><span class="archive_date">Jan 17</span> <a href="/2011/01/17/in-the-name.html">I Once was Found</a></li>
+      
+      <li><span class="archive_date">Jan 11</span> <a href="/2011/01/11/pendulum.html">Pendulum</a></li>
+      
+      <li><span class="archive_date">Jan 09</span> <a href="/2011/01/09/corner.html">Turn</a></li>
+      
+      <li><span class="archive_date">Jan 08</span> <a href="/2011/01/08/frankie.html">Frankie...</a></li>
+      
+      <li><span class="archive_date">Jan 05</span> <a href="/2011/01/05/the-machine.html">Tweetage Wasteland: You Can't Turn Off The Machine</a></li>
+      
+      <li><span class="archive_date">Jan 04</span> <a href="/2011/01/04/dreams.html">Dreams</a></li>
+      
+      <li><span class="archive_date">Jan 03</span> <a href="/2011/01/03/pen15.html">I love how xkcd can wrap a profound observation about meaning in a penis joke</a></li>
+      
+      <li><span class="archive_date">Jan 01</span> <a href="/2011/01/01/out-with-the-old.html">Out with the old, in with the really old</a></li>
+      
+      <li><span class="archive_date">Dec 30</span> <a href="/2010/12/30/hi-beautiful.html">Hi Beautiful</a></li>
+      
+      <li><span class="archive_date">Dec 21</span> <a href="/2010/12/21/the-gathering-gloom.html">The Gathering Gloom in the Stable Room</a></li>
+      
+      <li><span class="archive_date">Dec 13</span> <a href="/2010/12/13/the-refugees.html">The Refugees</a></li>
+      
+      <li><span class="archive_date">Dec 10</span> <a href="/2010/12/10/the-guests.html">The Guests</a></li>
+      
+      <li><span class="archive_date">Dec 08</span> <a href="/2010/12/08/boulder.html">&#9829; Boulder</a></li>
+      
+      <li><span class="archive_date">Nov 29</span> <a href="/2010/11/29/connected.html">The Infinitely Connected Triggers of Her Memory and the Dumb Machines of the Technopathocracy</a></li>
+      
+      <li><span class="archive_date">Nov 26</span> <a href="/2010/11/26/dislikes.html">Things That I Strongly Dislike More Now Than I Used To</a></li>
+      
+      <li><span class="archive_date">Nov 25</span> <a href="/2010/11/25/give-thanks.html">Give Thanks</a></li>
+      
+      <li><span class="archive_date">Nov 21</span> <a href="/2010/11/21/chris.html">Thank You Chris</a></li>
+      
+      <li><span class="archive_date">Nov 19</span> <a href="/2010/11/19/memorial.html">&ldquo;Memorial&rdquo;</a></li>
+      
+      <li><span class="archive_date">Nov 18</span> <a href="/2010/11/18/our-stars-no-longer-dance.html">Our Stars No Longer Dance</a></li>
+      
+      <li><span class="archive_date">Nov 15</span> <a href="/2010/11/15/how-it-is-these-days.html">This is about how it is these days</a></li>
+      
+      <li><span class="archive_date">Nov 13</span> <a href="/2010/11/13/waiting.html">Waiting</a></li>
+      
+      <li><span class="archive_date">Nov 11</span> <a href="/2010/11/11/veteran.html">Vetus</a></li>
+      
+      <li><span class="archive_date">Nov 09</span> <a href="/2010/11/09/nothing-to-write.html">Nothing to Write</a></li>
+      
+      <li><span class="archive_date">Nov 06</span> <a href="/2010/11/06/more-of-the-same.html">Rosabelle &mdash; answer &mdash; tell &mdash; pray, answer &mdash; look &mdash; tell &mdash; answer, answer &mdash; tell.</a></li>
+      
+      <li><span class="archive_date">Oct 28</span> <a href="/2010/10/28/isolation.html">Isolation</a></li>
+      
+      <li><span class="archive_date">Oct 27</span> <a href="/2010/10/27/tooth-fairy.html">The Real Tooth Fairy</a></li>
+      
+      <li><span class="archive_date">Oct 24</span> <a href="/2010/10/24/fast-boy.html">Fast Boy</a></li>
+      
+      <li><span class="archive_date">Oct 23</span> <a href="/2010/10/23/i-got-something-with-your-name-on-it.html">I Got Something with Your Name on It</a></li>
+      
+      <li><span class="archive_date">Oct 20</span> <a href="/2010/10/20/its-a-bitch.html">It's a Bitch, Man</a></li>
+      
+      <li><span class="archive_date">Oct 17</span> <a href="/2010/10/17/my-shits-still-fucked-up.html">My Shit's (Still) F**ked Up</a></li>
+      
+      <li><span class="archive_date">Oct 14</span> <a href="/2010/10/14/Married.html">Married</a></li>
+      
+      <li><span class="archive_date">Oct 08</span> <a href="/2010/10/08/Penn.html">Penn</a></li>
+      
+      <li><span class="archive_date">Oct 04</span> <a href="/2010/10/04/in-the-light-of-prior-suffering.html">In the Light of Prior Suffering</a></li>
+      
+      <li><span class="archive_date">Oct 03</span> <a href="/2010/10/03/no-ground.html">No Ground</a></li>
+      
+      <li><span class="archive_date">Oct 02</span> <a href="/2010/10/02/denial.html">Denial</a></li>
+      
+      <li><span class="archive_date">Sep 30</span> <a href="/2010/09/30/carry-the-weight.html">Carry the Weight</a></li>
+      
+      <li><span class="archive_date">Sep 29</span> <a href="/2010/09/29/motivation-mood.html">Motivation &amp; Mood</a></li>
+      
+      <li><span class="archive_date">Sep 27</span> <a href="/2010/09/27/the-rain.html">When the Wound Stops Hurting What Hurts is the Scar</a></li>
+      
+      <li><span class="archive_date">Sep 22</span> <a href="/2010/09/22/car.html">The Epic Tale of The Car</a></li>
+      
+      <li><span class="archive_date">Sep 20</span> <a href="/2010/09/20/obsessed.html">From Perfection to Obsession</a></li>
+      
+      <li><span class="archive_date">Sep 17</span> <a href="/2010/09/17/insomnia.html">Insomnia</a></li>
+      
+      <li><span class="archive_date">Sep 14</span> <a href="/2010/09/14/coping.html">Coping</a></li>
+      
+      <li><span class="archive_date">Sep 12</span> <a href="/2010/09/12/9-years.html">9 Years</a></li>
+      
+      <li><span class="archive_date">Sep 08</span> <a href="/2010/09/08/glue.html">Glue</a></li>
+      
+      <li><span class="archive_date">Sep 05</span> <a href="/2010/09/05/why.html">Why? Part 1 of &#x221e;</a></li>
+      
+      <li><span class="archive_date">Sep 02</span> <a href="/2010/09/02/in-order-to-remember-we-must-first-forget.html">In Order to Remember We Must First Forget</a></li>
+      
+    </ul>
+  </div>
+
+  <div id="colophon">
+    <h2>Colophon</h2>
+    <p>I am <a href="http://danielsjourney.com">Daniel Miller</a> and I'm writing here about my attempts to deal with the loss of my beautiful, perfect one year old daughter Margot Rose. You can read about that <a href="http://carissabyers.blogspot.com/2010/08/we-love-you-margot-rose.html">here</a>.</p>
+    <p>This site runs on <a href="http://jekyllrb.com/">Jekyll</a>, which I still haven't really figured out. Header foreground &amp; footer background is <a href="http://www.colourlovers.com/pattern/1645/Snowy_Flora">Snowy Flora</a>. If you are using IE, you should switch to <a href="http://www.google.com/chrome/">Google Chrome</a>; you will thank me later.</p>
+  </div>
+  
+  <div style="padding-right:0; width: 310px">
+    <h2>The Record</h2>
+    
+    <object data="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB//" type="text/html" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="300" height="410"><param name="movie" value="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB//"><param name="quality" value="high"><param name="allowNetworking" value="always"><param name="wmode" value="transparent"><param name="bgcolor" value="#3D3D3D"><param name="allowScriptAccess" value="never"><object data="http://bandcamp.com/EmbeddedPlayer/album=3576096955/size=grande3/bgcol=3D3D3D/linkcol=FFC0CB//" type="text/html" width="300" height="410"></object></object>
+    
+  </div>
+  
+  <!-- <div class="tags">
+      <h2>Tags</h2>
+      <p>Tags in Jekyll kind of suck, huh? If anyone wants to help me get something reasonable working with tags in Jekyll, <a href="http://twitter.com/dealingwith">let me know</a>. In the meantime, check out the cool design I made for them:
+      <ul>
+        <li>Coffee</li><li>Sugar</li><li>Cream</li>
+        
+      </ul>
+    </div> -->
+</footer>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-516566-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

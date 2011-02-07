@@ -30,6 +30,9 @@ em {
 strong {
     font-weight: bold;
 }
+blockquote strong {
+    font-style: italic;
+}
 .date {
     float: right;
     font-style: italic;

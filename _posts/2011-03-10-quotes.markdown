@@ -1,0 +1,54 @@
+---
+layout: post
+title: '&ldquo;quote&hellip;unquote&rdquo;'
+---
+
+<img src="http://farm6.static.flickr.com/5011/5517585612_4fe37f046d.jpg" title="# http://www.flickr.com/photos/dealingwith/5517585612/">
+
+Alfred North Whitehead:
+
+<hr style="clear: left; margin-top: 1.5em; border: 0px; background: transparent;">
+
+> An enormous part of our mature experience cannot not be expressed in words.
+
+<hr style="margin-top: 0px; margin-bottom: 1.15em">
+
+> In formal logic, a contradiction is the signal of defeat, but in the evolution of real knowledge it marks the first step in progress toward a victory.
+
+<hr style="margin-top: 0px; margin-bottom: 1.15em">
+
+> Knowledge shrinks as wisdom grows. 
+
+<hr style="margin-top: 0px; margin-bottom: 1.15em">
+
+> The deepest definition of youth is life as yet untouched by tragedy.
+
+<hr style="margin-top: 0px; margin-bottom: 1.15em">
+
+> The art of progress is to preserve order amid change and to preserve change amid order.
+
+<hr style="margin-top: 0px; margin-bottom: 1.15em">
+
+> There are no whole truths: all truths are half-truths. It is trying to treat them as whole truths that plays to the devil.
+
+<hr style="margin-top: 0px; margin-bottom: 1.15em">
+
+> We think in generalities, but we live in detail.
+
+<hr style="margin-top: 0px; margin-bottom: 1.15em">
+
+> I have suffered a great deal from writers who have quoted this or that sentence of mine either out of its context or in juxtaposition to some incongruous matter which quite distorted my meaning, or destroyed it altogether.
+
+<p class="date">March 10, 2011</p>
+
+<p class="postscript">I was searching for the Whitehead quote &ldquo;It is the business of the future to be dangerous&rdquo; about a year ago because of the DJ Spooky song <em>Synchronic Disjecta</em>.</p>
+
+<p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/02%20Synchronic%20Disjecta.mp3">DJ Spooky - Synchronic Disjecta</a></span></span></p>
+
+<script type="text/javascript">  
+  $(function(){
+    AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/02%20Synchronic%20Disjecta.mp3",  
+        titles: "Synchronic Disjecta",  
+        artists: "DJ Spooky"});
+  });
+</script>

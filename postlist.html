@@ -1,0 +1,9 @@
+---
+layout: nil
+---
+
+<ul>
+  {% for post in site.posts %}
+  <li><span class="archive_date">{{ post.date | date:"%b %d" }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>

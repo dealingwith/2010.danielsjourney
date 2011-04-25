@@ -9,8 +9,7 @@
   <meta property="fb:admins" content="dealingwith">
 </head>
 <body>
-{{ content }}  
-<div id="fbcomments_main" class="fbcomments"><fb:comments href="http://2010.danielsjourney.com{{ page.url }}" width="500"></fb:comments></div>
+{{ content }}
 <div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
 <footer>
 
@@ -76,12 +75,6 @@
       $("body > div").css('visibility', 'visible');
       
       var at_permalink = window.location.pathname.match(/.html/) !== null;
-      
-      if (at_permalink) {
-        $("#fbcomments_main").show();
-      } else {
-        $("#fbcomments_index").show();
-      }
       
       $.ajax({
         url: '/postlist.html',

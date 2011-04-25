@@ -26,8 +26,9 @@
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
-  
-<div id="fbcomments_main" class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/11/11/veteran.html" width="500"></fb:comments></div>
+
+<div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/11/11/veteran.html" width="500"></fb:comments></div>
+
 <div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
 <footer>
 
@@ -93,12 +94,6 @@
       $("body > div").css('visibility', 'visible');
       
       var at_permalink = window.location.pathname.match(/.html/) !== null;
-      
-      if (at_permalink) {
-        $("#fbcomments_main").show();
-      } else {
-        $("#fbcomments_index").show();
-      }
       
       $.ajax({
         url: '/postlist.html',

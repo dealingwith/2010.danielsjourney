@@ -6,6 +6,7 @@
   <link rel="shortcut icon" href="/brokeheart.ico"/>
   <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link href="http://feeds.feedburner.com/danielsjourney" rel="alternate" title="2010.danielsjourney.com" type="application/rss+xml" />
+  <meta property="fb:admins" content="dealingwith">
 </head>
 <body>
 <header>
@@ -23,7 +24,8 @@
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
-
+  
+<div id="fbcomments_main" class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/02/28/I-can-not-go-on.html" width="500"></fb:comments></div>
 <div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
 <footer>
 
@@ -63,7 +65,7 @@
         $title = $img.attr('title');
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#content_container .attribute').html($title).attr('href', $link);
+        $('#attribute').html($title).attr('href', $link);
         $img.remove();
       } else {
         var $media = $("#content p.media:first");
@@ -88,13 +90,20 @@
       
       $("body > div").css('visibility', 'visible');
       
+      var at_permalink = window.location.pathname.match(/.html/) !== null;
+      
+      if (at_permalink) {
+        $("#fbcomments_main").show();
+      } else {
+        $("#fbcomments_index").show();
+      }
+      
       $.ajax({
         url: '/postlist.html',
         success: function(data) {
           $('#postlist').html(data);
           // next/prev b/c jekyll's pagination is dumb
-          var here = window.location.pathname;
-          if (here.match(/.html/) != null) {
+          if (at_permalink) {
               var prev = $("#archives a[href='"+window.location.pathname+"']").closest("li").next().find("a").attr("href");
               var next = $("#archives a[href='"+window.location.pathname+"']").closest("li").prev().find("a").attr("href");
               if (prev != undefined) $("#prev").attr("href", prev).show();
@@ -112,6 +121,8 @@
   AudioPlayer.setup("/player.swf", {  
       width: 290  
   });
+</script>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1">
 </script>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

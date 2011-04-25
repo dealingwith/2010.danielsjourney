@@ -12,6 +12,9 @@ layout: default
       <div id="content">
         {{ post.content }}
       </div><!--content-->
-      <a class="attribute"></a>
+      <a id="attribute"></a>
+      
     </div><!--content_container-->
+    
+    <div id="fbcomments_index" class="fbcomments"><fb:comments href="http://2010.danielsjourney.com{{ post.url }}" width="500"></fb:comments></div>
 {% endfor %}

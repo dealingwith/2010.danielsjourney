@@ -4,9 +4,61 @@
   <link rel="alternate" type="text/html" href="http://2010.danielsjourney.com/" />
   <link rel="self" type="application/atom+xml" href="http://2010.danielsjourney.com/atom.xml" />
   <id>http://2010.danielsjourney.com/atom.xml</id>
-  <updated>2011-04-25T00:00:00Z</updated>
+  <updated>2011-04-28T00:00:00Z</updated>
   <subtitle>loss</subtitle>
 
+  
+  
+  <entry>
+    <title type="html">Baby</title>
+    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/04/28/baby.html' />
+    <id>http://2010.danielsjourney.com/2011/04/28/baby.html</id>
+    <updated>2011-04-28T00:00:00-05:00</updated>
+
+    <author>
+      <name>Daniel Miller</name>
+      <uri>http://danielsjourney.com</uri>
+      <email>dealingwith@gmail.com</email>
+    </author>
+
+    <summary>Obviously we are thrilled to announce that Carissa is pregnant. I had hoped that this announcement, whenever it came, might...</summary>
+    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
+      <![CDATA[<img title='http://www.flickr.com/photos/carissabyers/5661852854/ 7 weeks 5 days sonogram' src='http://farm6.static.flickr.com/5225/5661852854_2b85931e1b_z.jpg' alt='7 weeks 5 days sonogram' />
+<p>Obviously we are thrilled to announce that Carissa is pregnant.</p>
+
+<p>I had hoped that this announcement, whenever it came, might be the final post of this blog. I&#8217;m realizing that is probably not the case. There are still some things I&#8217;m going to have to figure out about this experience and this blog has been a half decent place to work out some of those things. (That said, clearly I won&#8217;t be posting here past December, at the latest.)</p>
+
+<p>I&#8217;m hoping Lucy&#8217;s* development, arrival and life is the most beautiful and amazing thing ever experienced by mankind. It will be. It has to be. She has a perfect big sister to make proud.</p>
+<p class='date'>April 28, 2011</p><p class='postscript'>* &ldquo;<a href='http://carissabyers.blogspot.com/2011/04/baby-miller.html'>Think girl thoughts</a>.&rdquo;</p>]]>
+    </content>
+  </entry>
+  
+  
+  <entry>
+    <title type="html">Fathers do you want...</title>
+    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/04/26/fathers.html' />
+    <id>http://2010.danielsjourney.com/2011/04/26/fathers.html</id>
+    <updated>2011-04-26T00:00:00-05:00</updated>
+
+    <author>
+      <name>Daniel Miller</name>
+      <uri>http://danielsjourney.com</uri>
+      <email>dealingwith@gmail.com</email>
+    </author>
+
+    <summary>
+  djdc.connected = function() {
+    $("img.callout").css("max-width","640px");
+  };
+</summary>
+    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
+      <![CDATA[<img title='Photo by niznoz http://www.flickr.com/photos/niznoz/5658108216' src='http://farm6.static.flickr.com/5190/5658108216_01d21a540e_z.jpg' /><script type='text/javascript'>
+  djdc.connected = function() {
+    $("img.callout").css("max-width","640px");
+  };
+</script>]]>
+    </content>
+  </entry>
   
   
   <entry>
@@ -421,98 +473,6 @@ All aims get forgotten</blockquote></p><script type='text/javascript'>
     AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/13%20Scars%20On%20Land.mp3",  
         titles: "Scars on Land",  
         artists: "Kings of Convenience"});
-  });
-</script>]]>
-    </content>
-  </entry>
-  
-  
-  <entry>
-    <title type="html">The Week That Was</title>
-    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/03/21/the-week-that-was.html' />
-    <id>http://2010.danielsjourney.com/2011/03/21/the-week-that-was.html</id>
-    <updated>2011-03-21T00:00:00-05:00</updated>
-
-    <author>
-      <name>Daniel Miller</name>
-      <uri>http://danielsjourney.com</uri>
-      <email>dealingwith@gmail.com</email>
-    </author>
-
-    <summary>The last week in Michigan was awesome for so many reasons. The weather was perfect. I enjoyed being out in...</summary>
-    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
-      <![CDATA[<img title='photo by Carissa http://www.flickr.com/photos/carissabyers/5541721448/in/set-72157626178939455/' src='http://farm6.static.flickr.com/5091/5541721448_53e1c9a0f8.jpg' />
-<p>The last week in Michigan was awesome for so many reasons. The weather was perfect. I enjoyed being out in the country. It reminded me very much of where I grew up in Pennsylvania. I enjoyed getting to know Carissa&#8217;s family more, including meeting relatives I&#8217;d never met before and seeing <a href='http://twitpic.com/4a2oe0'>where</a> Carissa&#8217;s brother and stepfather make their pizza ovens as well as <a href='http://maps.google.com/maps?q=buchanan+mi'>where</a> they are going to have their restaurant. We had <a href='http://twitpic.com/49wt4n'>fresh roasted</a> coffee every morning, either <a href='http://twitpic.com/49x0c7'>pour-over</a> or via their new industrial <a href='http://twitpic.com/4aou8e'>espresso machine</a>. We had <a href='http://twitpic.com/4a5fwr'>home-made pizza</a> one evening, made with home-made cheese, home-made dough, washed down with locally brewed <a href='http://twitpic.com/4a50w3'>10% IPA</a> (that might have made me a little bit belligerent&#8230;oops). We went to awesome stores and to the dunes by Lake Michigan. We ate homemade <a href='http://twitpic.com/4a395a'>crepes</a> for lunch&#8230;twice. After relatively painless drives/flights back we all quickly fell asleep Friday night. Penn slept for over 12 hours that night.</p>
-<hr />
-<p>Saturday was a day at the velodrome for me. At the <a href='http://superdrome.com/'>Superdrome</a> here in Texas you are required to take the developmental class, which is about 4 hours long. After that you are free to ride on the track during open track times or race (assuming you also obtain a racing license). I took a track developmental class in Pennsylvania&#8230;in 1994. Last time I rode on a track was (I think) 1996.</p>
-
-<p>The beginning of the class was a little mind-numbing but an expected and necessary evil to get onto the track. The Superdrome is <a href='http://www.flickr.com/photos/carissabyers/1423220549/in/set-72157602121750885/'>steeper</a> than anything I&#8217;d ridden before and did take some getting used to. But once open track was declared and I could take a couple laps at speed, I started to get hooked again. There is just nothing like the feel of the g-forces when really hammering through a turn on a velodrome. Especially one with turns that steep.</p>
-
-<p>After the open track session we practiced <a href='http://www.youtube.com/watch?v=jCPfxsbp8Ig&amp;feature=related' title='Not at ALL as awesome as this one, but damn it is so beautiful to watch and gives you the idea'>pacelining</a> for 20 laps. Then we finished the day with a 10 lap <a href='http://en.wikipedia.org/wiki/Scratch_race' title='&quot;A scratch race is a cycling race in which all contestants start from scratch (on equal terms)&quot;'>scratch</a>* race, which I won! Back in 1994 I won the developmental class race, too, and I was hooked. I feel the same things now, just with the more weathered enthusiasm and caution of age.</p>
-
-<p>Sunday, possibly inspired by Saturday&#8217;s tiny success, I rode to the morning ride in Oak Cliff, then lobbied for a longer route than normal. The combination allowed me to break the 50 mile mark for the first time in 15 or so years.</p>
-<hr />
-<p>While we were in Michigan I just couldn&#8217;t stop thinking about Margot. How much she would have loved it there and loved meeting her extended family and hanging out with them. There are so many things that are continuously covered with the smell of loss. Things I wanted her to experience, things I wanted to experience with her. Things that while enjoyable, were made alive in an unfathomable way for me with her there, and are now made dark with her absence.</p>
-
-<p>When I ride I am traveling back in time. I am in a place she never inhabited. A place she couldn&#8217;t inhabit. I think that&#8217;s why I like it so much.</p>
-<p class='date'>March 21, 2011</p><p class='postscript'>* I always thought it was a race <em>to</em> the scratch, or the line &ldquo;scratched&rdquo; across the track to indicate the finish line. Sounds more poetic to me.</p>]]>
-    </content>
-  </entry>
-  
-  
-  <entry>
-    <title type="html">&amp;ldquo;quote&amp;hellip;unquote&amp;rdquo;</title>
-    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/03/10/quotes.html' />
-    <id>http://2010.danielsjourney.com/2011/03/10/quotes.html</id>
-    <updated>2011-03-10T00:00:00-06:00</updated>
-
-    <author>
-      <name>Daniel Miller</name>
-      <uri>http://danielsjourney.com</uri>
-      <email>dealingwith@gmail.com</email>
-    </author>
-
-    <summary>Alfred North Whitehead: An enormous part of our mature experience cannot not be expressed in words. In formal logic, a...</summary>
-    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
-      <![CDATA[<img title='# http://www.flickr.com/photos/dealingwith/5517585612/' src='http://farm6.static.flickr.com/5011/5517585612_4fe37f046d.jpg' />
-<p>Alfred North Whitehead:</p>
-<hr style='clear: left; margin-top: 1.5em; border: 0px; background: transparent;' />
-<blockquote>
-<p>An enormous part of our mature experience cannot not be expressed in words.</p>
-</blockquote>
-<hr style='margin-top: 0px; margin-bottom: 1.15em' />
-<blockquote>
-<p>In formal logic, a contradiction is the signal of defeat, but in the evolution of real knowledge it marks the first step in progress toward a victory.</p>
-</blockquote>
-<hr style='margin-top: 0px; margin-bottom: 1.15em' />
-<blockquote>
-<p>Knowledge shrinks as wisdom grows.</p>
-</blockquote>
-<hr style='margin-top: 0px; margin-bottom: 1.15em' />
-<blockquote>
-<p>The deepest definition of youth is life as yet untouched by tragedy.</p>
-</blockquote>
-<hr style='margin-top: 0px; margin-bottom: 1.15em' />
-<blockquote>
-<p>The art of progress is to preserve order amid change and to preserve change amid order.</p>
-</blockquote>
-<hr style='margin-top: 0px; margin-bottom: 1.15em' />
-<blockquote>
-<p>There are no whole truths: all truths are half-truths. It is trying to treat them as whole truths that plays to the devil.</p>
-</blockquote>
-<hr style='margin-top: 0px; margin-bottom: 1.15em' />
-<blockquote>
-<p>We think in generalities, but we live in detail.</p>
-</blockquote>
-<hr style='margin-top: 0px; margin-bottom: 1.15em' />
-<blockquote>
-<p>I have suffered a great deal from writers who have quoted this or that sentence of mine either out of its context or in juxtaposition to some incongruous matter which quite distorted my meaning, or destroyed it altogether.</p>
-</blockquote>
-<p class='date'>March 10, 2011</p><p class='postscript'>I was searching for the Whitehead quote &ldquo;It is the business of the future to be dangerous&rdquo; about a year ago because of the DJ Spooky song <em>Synchronic Disjecta</em>.</p><p class='media'><span class='audioplayer'><span id='audioplayer_1'><a href='http://2010.danielsjourney.com/files/02%20Synchronic%20Disjecta.mp3'>DJ Spooky - Synchronic Disjecta</a></span></span></p><script type='text/javascript'>  
-  $(function(){
-    AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/02%20Synchronic%20Disjecta.mp3",  
-        titles: "Synchronic Disjecta",  
-        artists: "DJ Spooky"});
   });
 </script>]]>
     </content>

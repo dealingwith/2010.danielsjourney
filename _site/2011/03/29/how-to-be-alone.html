@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link href="http://feeds.feedburner.com/danielsjourney" rel="alternate" title="2010.danielsjourney.com" type="application/rss+xml" />
   <meta property="fb:admins" content="dealingwith">
+  <script type="text/javascript" charset="utf-8">
+    var djdc = {};
+  </script>
 </head>
 <body>
 <header>
@@ -51,7 +54,6 @@
 <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
-  var djdc = {};
   $(function(){
       $(window).resize(function() {
         resizeHeader();
@@ -81,11 +83,6 @@
       //dropcap style application
       $("#content > p:eq(0)").fancyletter({ commonClass: 'drop_cap' });
       
-      // my own little event system, lets javascript inside the post to run only after all the above
-      $.each(djdc, function(i, val){
-        if (typeof(val) === "function") val.apply(djdc, []);
-      });
-      
       $("body > div").css('visibility', 'visible');
       
       var at_permalink = window.location.pathname.match(/.html/) !== null;
@@ -106,6 +103,12 @@
           }
         }
       });
+
+      // my own little event system, lets javascript inside the post to run only after all the above
+      $.each(djdc, function(i, val){
+        if (typeof(val) === "function") val.apply(djdc, []);
+      });
+
   });
   function resizeHeader() {
     $('#head_overlay').css('height', $('header').height());

@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Fathers do you want..."
+---
+
+<img src="http://farm6.static.flickr.com/5190/5658108216_01d21a540e_z.jpg" title="Photo by niznoz http://www.flickr.com/photos/niznoz/5658108216">
+
+<script type="text/javascript">
+  djdc.connected = function() {
+    $("img.callout").css("max-width","640px");
+  };
+</script>

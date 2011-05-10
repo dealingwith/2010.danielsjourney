@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<head>
+  <title>danielsjourney</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="brokeheart.ico"/>
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript" charset="utf-8">
+    $(function(){
+        $(window).resize(function() {
+          resizeHeader();
+        });
+        
+        $img = $("#content img:first-child");
+        $('#content_container').prepend('<img src="' + $img.attr('src') + '">');
+        $title = $img.attr('title');
+        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#content_container .attribute').html($title).attr('href', $link);
+        resizeHeader();
+        
+        $("body > div").css('visibility', 'visible');
+    });
+    function resizeHeader() {
+      $('#head_overlay').css('height', $('header').height());
+    }
+  </script>
+</head>
+<body>
+  <header>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </header>
+  <div id="head_overlay">
+  </div>
+  <div id="content_container">
+    <div id="content">
+        <img src="http://farm4.static.flickr.com/3515/3255460999_672e430dec.jpg" title="photo by sam http://www.flickr.com/photos/sam-wood/3255460999/">
+        <p>Darem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nunc felis, porttitor ac vehicula a, euismod ac urna. Pellentesque aliquet ullamcorper felis, et tincidunt metus venenatis nec. Vivamus et est mi, ut ultrices orci. Donec risus justo, ultricies sit amet sodales in, fringilla ut orci. Vestibulum faucibus ultrices sem ac adipiscing. Integer vel mauris nec ante suscipit interdum. Donec sagittis pellentesque sem ut ultricies. Cras posuere molestie lacinia. Suspendisse sed congue nisi. Sed ante dui, gravida eu iaculis id, tempus in nisl. Proin consequat dapibus diam, sed pulvinar ipsum laoreet ac. <a href="http://example.com">Aliquam iaculis</a>, dolor at fermentum cursus, metus dolor faucibus lectus, vitae lobortis velit elit at velit. Mauris porttitor mauris nec odio varius et gravida urna mattis.</p>
+
+        <p>Cras consequat gravida laoreet. In hac habitasse platea dictumst. Donec vitae condimentum velit. Pellentesque neque libero, placerat sit amet interdum ut, ultrices imperdiet erat. Cras enim nibh, viverra at vehicula sit amet, aliquet ut urna. Ut quis mi elit, eu lobortis augue. Morbi ut diam malesuada elit vestibulum luctus eget eget turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id tincidunt felis. Nulla facilisi: <blockquote>Phasellus ut feugiat lorem. Aenean ipsum est, lacinia at condimentum eget, placerat vel odio. Curabitur magna tellus, cursus non elementum at, mattis a massa. Etiam commodo sollicitudin elit egestas mattis. Etiam elementum sodales sapien quis ultricies. In eget elit eget lorem congue dignissim.</blockquote> Quisque a erat augue, a rutrum velit. Mauris commodo fringilla faucibus. Duis sed massa eu magna malesuada bibendum id a justo. Proin ut tellus lacus.</p>
+
+        <p>Etiam mauris orci, adipiscing non pulvinar ut, convallis at massa. Donec dictum tempus cursus. Aenean vitae nibh turpis. Aenean quis eros nec lectus fermentum lobortis. Aliquam erat volutpat. Morbi laoreet dapibus bibendum. In venenatis accumsan mauris vitae laoreet. Maecenas suscipit rutrum erat, eget porttitor urna accumsan id. Donec sagittis dignissim volutpat. Nunc tempus placerat dolor et euismod. Ut congue, leo pellentesque placerat ultrices, sapien libero dictum velit, a ultrices eros lorem sed metus. Quisque fringilla velit et felis sollicitudin laoreet.</p>
+    </div><!--content-->
+    <a class="attribute"></a>
+  </div><!--content_container-->
+  <footer>
+    <div class="colophon">
+      <h2>Colophon</h2>
+      <p>Nullam sollicitudin, libero vel imperdiet luctus, est turpis condimentum ipsum, non sollicitudin velit dui a arcu. Duis sit amet est ut erat sagittis pharetra a non lectus. Sed cursus velit eu lacus lobortis at placerat ipsum gravida. Curabitur molestie augue vitae felis consequat eget vehicula lorem convallis.</p>
+      <p>Header-foreground/footer-background image a modified <a href="http://www.colourlovers.com/pattern/1645/Snowy_Flora">Snowy Flora</a>.</p>
+    </div>
+    
+    <div class="archives">
+      <h2>Recent Entries</h2>
+      <ul>
+        {% for rpost in site.posts limit:20 %}
+        <li><a href="{{ rpost.url }}">{{ rpost.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    
+    <div class="tags">
+      <h2>Tags</h2>
+      <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

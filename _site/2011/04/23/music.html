@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,11 +21,15 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='Dandee Fleming and Joey Gonzales of Lousy Robot, photo by Kate Mackley http://www.flickr.com/photos/katemackley/5645792898/in/photostream' src='http://farm6.static.flickr.com/5064/5645792898_2cd64f2237_z.jpg' />
-<p>My friends from Albuquerque, <a href='http://music.lousyrobot.com/'><em>Lousy Robot</em></a>, were in town last night and I rather enjoyed their set of music at the Double Wide. I had a lot of profound thoughts during the show but I must have washed them all away with IPA. Simply put: music is awesome.</p>
+    <p><img src="http://farm6.static.flickr.com/5064/5645792898_2cd64f2237_z.jpg" title="Dandee Fleming and Joey Gonzales of Lousy Robot, photo by Kate Mackley http://www.flickr.com/photos/katemackley/5645792898/in/photostream"></p>
+
+<p>My friends from Albuquerque, <a href="http://music.lousyrobot.com/"><em>Lousy Robot</em></a>, were in town last night and I rather enjoyed their set of music at the Double Wide. I had a lot of profound thoughts during the show but I must have washed them all away with IPA. Simply put: music is awesome.</p>
 
 <p>Dandee (pictured) really enjoys playing and it shows when he is on stage. The world could do for a few more musicians like Dandee and a few more bands like Lousy Robot.</p>
-<p class='date'>April 23, 2011</p>
+
+<p class="date">April 23, 2011</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -53,8 +59,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -69,12 +73,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

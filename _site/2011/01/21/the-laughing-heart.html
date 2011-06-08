@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,11 +21,34 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='Illustration by aeneastudio http://www.flickr.com/photos/90282319@N00/4253530070/' src='http://farm5.static.flickr.com/4040/4253530070_fb31ffee15.jpg' />
-<p>Your life is your life<br />don&#8217;t let it be clubbed into dank submission.<br />be on the watch.<br />there are ways out.<br />there is a light somewhere.<br />it may not be much light but<br />it beats the darkness.<br />be on the watch.<br />the gods will offer you chances.<br />know them.<br />take them.<br />you can&#8217;t beat death but<br />you can beat death in life, sometimes.<br />and the more often you learn to do it,<br />the more light there will be.<br />your life is your life.<br />know it while you have it.<br />you are marvelous<br />the gods wait to delight<br />in you.</p>
+    <p><img src="http://farm5.static.flickr.com/4040/4253530070_fb31ffee15.jpg" title="Illustration by aeneastudio http://www.flickr.com/photos/90282319@N00/4253530070/"></p>
 
-<p>&#8211; Charles Bukowski</p>
-<p class='date'>January 21, 2011</p>
+<p>Your life is your life<br/>
+don't let it be clubbed into dank submission.<br/>
+be on the watch.<br/>
+there are ways out.<br/>
+there is a light somewhere.<br/>
+it may not be much light but<br/>
+it beats the darkness.<br/>
+be on the watch.<br/>
+the gods will offer you chances.<br/>
+know them.<br/>
+take them.<br/>
+you can't beat death but<br/>
+you can beat death in life, sometimes.<br/>
+and the more often you learn to do it,<br/>
+the more light there will be.<br/>
+your life is your life.<br/>
+know it while you have it.<br/>
+you are marvelous<br/>
+the gods wait to delight<br/>
+in you.</p>
+
+<p>-- Charles Bukowski</p>
+
+<p class="date">January 21, 2011</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -53,8 +78,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -69,12 +92,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

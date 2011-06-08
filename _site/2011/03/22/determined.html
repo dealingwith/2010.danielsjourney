@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,29 +21,42 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <p class='media'><span class='audioplayer'><span id='audioplayer_1'><a href='http://2010.danielsjourney.com/files/13%20Scars%20On%20Land.mp3'>Kings of Convenience - Scars on Land</a></span></span></p>
-<p>I&#8217;ve said before that there are certain questions that are now &#8220;<a href='http://2010.danielsjourney.com/2011/02/24/what-now.html'>best escorted out of the park by security</a>&#8221; &#8230;and maybe you noticed that was the first of a trilogy: &#8220;What now?&#8221; &#8220;<a href='http://2010.danielsjourney.com/2011/02/28/I-can-not-go-on.html'>I&#8217;ll go on.</a>&#8221; &#8220;<a href='http://2010.danielsjourney.com/2011/03/07/bikes.html'>Not because [I want] to but because [I have] to.</a>&#8221;</p>
+    <p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/13%20Scars%20On%20Land.mp3">Kings of Convenience - Scars on Land</a></span></span></p>
 
-<p>The problem with the deeper questions surrounding our loss and our lives is that they are the questions that have existed for all time and our answers&#8211;or lack thereof&#8211;are the same as well. The search for meaning evolves into a search to be more human, to connect to&#8211;not a Truth&#8211;but the truth of what it means to here with others.</p>
 
-<p>So today I was reading some posts by my friend Kester Brewin and he wrote <a href='http://www.kesterbrewin.com/2011/03/15/free-will-determinism-heaven-hell/'>something that made a tiny bit of sense</a>:</p>
+<p>I've said before that there are certain questions that are now &ldquo;<a href="http://2010.danielsjourney.com/2011/02/24/what-now.html">best escorted out of the park by security</a>&rdquo; ...and maybe you noticed that was the first of a trilogy: "What now?" &ldquo;<a href="http://2010.danielsjourney.com/2011/02/28/I-can-not-go-on.html">I'll go on.</a>&rdquo; &ldquo;<a href="http://2010.danielsjourney.com/2011/03/07/bikes.html">Not because [I want] to but because [I have] to.</a>&rdquo;</p>
 
-<blockquote>
-<p>&#8230;we cannot prove if heaven and hell exist, but it&#8217;s a natural response to want the world to be fair, to be sorted out and judged at some point so that justice is done. A deterministic universe it might be&#8211;just chemicals and electrons&#8211;but this is not a world that we find &#8220;human&#8221; precisely because it makes a nonsense of ideas of love&#8211;and hate too.</p>
-</blockquote>
-<p class='date'>March 22, 2011</p><p class='postscript'><blockquote style='font-style:italic'>The weight of lead<br />
-On floors of sand<br />
-The idea reduced again<br />
-To outcome<br />
-<br />
-No chain stays unbroken<br />
-All aims get forgotten</blockquote></p><script type='text/javascript'>  
+<p>The problem with the deeper questions surrounding our loss and our lives is that they are the questions that have existed for all time and our answers--or lack thereof--are the same as well. The search for meaning evolves into a search to be more human, to connect to--not a Truth--but the truth of what it means to here with others.</p>
+
+<p>So today I was reading some posts by my friend Kester Brewin and he wrote <a href="http://www.kesterbrewin.com/2011/03/15/free-will-determinism-heaven-hell/">something that made a tiny bit of sense</a>:</p>
+
+<blockquote><p>...we cannot prove if heaven and hell exist, but it's a natural response to want the world to be fair, to be sorted out and judged at some point so that justice is done. A deterministic universe it might be--just chemicals and electrons--but this is not a world that we find "human" precisely because it makes a nonsense of ideas of love--and hate too.</p></blockquote>
+
+<p class="date">March 22, 2011</p>
+
+
+
+
+<p class="postscript"><blockquote style="font-style:italic">The weight of lead<br>
+On floors of sand<br>
+The idea reduced again<br>
+To outcome<br>
+<br>
+No chain stays unbroken<br>
+All aims get forgotten</blockquote></p>
+
+
+
+
+<script type="text/javascript">  
   $(function(){
     AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/13%20Scars%20On%20Land.mp3",  
         titles: "Scars on Land",  
         artists: "Kings of Convenience"});
   });
 </script>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -71,8 +86,6 @@ All aims get forgotten</blockquote></p><script type='text/javascript'>
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -87,12 +100,12 @@ All aims get forgotten</blockquote></p><script type='text/javascript'>
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

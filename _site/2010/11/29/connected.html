@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,13 +21,15 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='Pattern image from Patrick Hoesly http://www.flickr.com/photos/zooboing/4580408068/' src='/images/puzzle.png' />
-<p>Someday I want to be able to sit and look at her pictures, even watch the videos, and remember how great it was when she was here. For now, accidentally seeing a thumbnail image in a directory on my computer or on my phone or on Flickr or on Facebook is enough to spawn an hours-long cycle of anxiety and depression. But it&#8217;s not just the obvious things like pictures. Everything is connected to her. Each part of the house, each note of every song, an extremely large array of words that are spoken every day. Even a train of thought about something completely unrelated might get close enough to be drawn off the tracks by the cosmic magnet of her absence.</p>
+    <p><img src="/images/puzzle.png" title="Pattern image from Patrick Hoesly http://www.flickr.com/photos/zooboing/4580408068/"></p>
 
-<p>The <a href='http://www.youtube.com/watch?v=i3HyRtdu1o0'>technopathocracy</a> contributes more than just as a container for images that I might stumble upon. It actually goes out of its way to confront me with my pain. Facebook wants to show me &#8220;memories&#8221; in the sidebar. <a href='http://mint.com'>Mint</a> tracks a college fund that&#8211;until I worked up the energy to change it&#8211;bared her name. My mother, the angel, worked on all the medical bills and insurance paperwork while she and my father were in town last week; but now Mint sends alerts to my phone informing me that I have &#8220;High Spending&#8221; in &#8220;Doctor&#8221; &amp; &#8220;Health&#8221;. Old sound recordings still on my iPhone and synced to iTunes sit there waiting to be stumbled upon.</p>
+<p>Someday I want to be able to sit and look at her pictures, even watch the videos, and remember how great it was when she was here. For now, accidentally seeing a thumbnail image in a directory on my computer or on my phone or on Flickr or on Facebook is enough to spawn an hours-long cycle of anxiety and depression. But it's not just the obvious things like pictures. Everything is connected to her. Each part of the house, each note of every song, an extremely large array of words that are spoken every day. Even a train of thought about something completely unrelated might get close enough to be drawn off the tracks by the cosmic magnet of her absence.</p>
 
-<p>As discourteous as people can be, the machines are worse, they are just too dumb to understand. In a previous age the machines didn&#8217;t talk. Now they chatter on like children unaware of their words.</p>
-<script type='text/javascript' charset='utf-8'>
+<p>The <a href="http://www.youtube.com/watch?v=i3HyRtdu1o0">technopathocracy</a> contributes more than just as a container for images that I might stumble upon. It actually goes out of its way to confront me with my pain. Facebook wants to show me "memories" in the sidebar. <a href="http://mint.com">Mint</a> tracks a college fund that--until I worked up the energy to change it--bared her name. My mother, the angel, worked on all the medical bills and insurance paperwork while she and my father were in town last week; but now Mint sends alerts to my phone informing me that I have "High Spending" in "Doctor" &amp; "Health". Old sound recordings still on my iPhone and synced to iTunes sit there waiting to be stumbled upon.</p>
+
+<p>As discourteous as people can be, the machines are worse, they are just too dumb to understand. In a previous age the machines didn't talk. Now they chatter on like children unaware of their words.</p>
+
+<script type="text/javascript" charset="utf-8">
     djdc.connected = function() {
       $("body").css("background","url('/images/puzzle.png')");
       $(".callout").css("opacity",".4").hover(function(){
@@ -34,7 +38,14 @@
         $(this).css("opacity",".4");
       });
     };
-</script><p class='date'>November 29, 2010</p>
+</script>
+
+
+
+
+<p class="date">November 29, 2010</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -64,8 +75,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -80,12 +89,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

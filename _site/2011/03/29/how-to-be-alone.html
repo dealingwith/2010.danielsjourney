@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,8 +21,11 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <p class='media'><object height='390' width='640'><param name='movie' value='http://www.youtube.com/v/k7X7sZzSXYs?fs=1&amp;hl=en_US&amp;rel=0' /><param name='allowFullScreen' value='true' /><param name='allowscriptaccess' value='always' /><embed src='http://www.youtube.com/v/k7X7sZzSXYs?fs=1&amp;hl=en_US&amp;rel=0' allowfullscreen='true' type='application/x-shockwave-flash' allowscriptaccess='always' height='390' width='640' /></object></p>
-<p>I feel like I&#8217;ve posted this already, I think because I&#8217;ve tweeted it twice now. It was good to be reminded of it again today.</p>
+    <p class="media"><object width="640" height="390"><param name="movie" value="http://www.youtube.com/v/k7X7sZzSXYs?fs=1&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/k7X7sZzSXYs?fs=1&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="390"></embed></object></p>
+
+
+<p>I feel like I've posted this already, I think because I've tweeted it twice now. It was good to be reminded of it again today.</p>
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -50,8 +55,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -66,12 +69,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

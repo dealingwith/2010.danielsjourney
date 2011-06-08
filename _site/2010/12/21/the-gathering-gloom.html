@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,17 +21,24 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='Photo by Kelsey Foster http://kelseyfoster.net' src='http://2010.danielsjourney.com/files/MG_9765.jpg' />
-<p>Last Sunday we had the privilege of attending <a href='http://dallasfamilyband.com/'>The Dallas Family Band</a>&#8217;s &#8220;christmas/carol-singing/merrymaking festivities&#8221; at <a href='http://murraystreetcoffee.com/'>Murray Street Coffee</a>. There was also plentiful, tasty food provided by the attendees.</p>
+    <p><img src="http://2010.danielsjourney.com/files/MG_9765.jpg" title="Photo by Kelsey Foster http://kelseyfoster.net"></p>
+
+<p>Last Sunday we had the privilege of attending <a href="http://dallasfamilyband.com/">The Dallas Family Band</a>'s "christmas/carol-singing/merrymaking festivities" at <a href="http://murraystreetcoffee.com/">Murray Street Coffee</a>. There was also plentiful, tasty food provided by the attendees.</p>
 
 <p>The Dallas Family Band is doing something very authentic and beautiful here, and it is an honor to know some of them, and experience their music. Sunday was no exception.</p>
 
-<p>On Monday, <a href='http://thebeatensea.com/'>The Beaten Sea</a> released a Christmas single, <a href='http://purchase.thebeatensea.com/track/the-gathering-gloom-in-the-stable-room'>The Gathering Gloom in the Stable Room</a>, a song that somehow completely ignores decades of crap Christmas music and harkens to the classic Christmas hymns that had both real meaning and musical substance.</p>
+<p>On Monday, <a href="http://thebeatensea.com/">The Beaten Sea</a> released a Christmas single, <a href="http://purchase.thebeatensea.com/track/the-gathering-gloom-in-the-stable-room">The Gathering Gloom in the Stable Room</a>, a song that somehow completely ignores decades of crap Christmas music and harkens to the classic Christmas hymns that had both real meaning and musical substance.</p>
 
-<p>The Dallas Observer <a href='http://blogs.dallasobserver.com/dc9/2010/12/bonus_mp3_the_beaten_sea_--_th.php'>commented</a>:</p>
-<blockquote>...a Christmas-themed tune penned by co-frontman Jamie Wilson called "The Gathering Gloom in the Stable Room" and featuring Wilson, his co-leader Benj Pocta and backing vocalist Ashley Myrick (known now to many around town under her own performance moniker, Lalagray) each taking turns on lead vocals. The song also features backing efforts from drummer Daniel Hall, Spooky Folk violinist Petra Kelly and Fox &amp; The Bird player Wheeler Sparks.<br /><br />It's a classic-sounding tune, filled with spiritual lyricism and the same kind of authenticity heard throughout the rest of the band's catalog...[and] the first recorded in the band's new home studios in Deep Ellum...</blockquote>
-<p><a href='http://purchase.thebeatensea.com/track/the-gathering-gloom-in-the-stable-room'>Go pick it up</a>.</p>
-<p class='date'>December 21, 2010</p>
+<p>The Dallas Observer <a href="http://blogs.dallasobserver.com/dc9/2010/12/bonus_mp3_the_beaten_sea_--_th.php">commented</a>:</p>
+
+<blockquote>...a Christmas-themed tune penned by co-frontman Jamie Wilson called "The Gathering Gloom in the Stable Room" and featuring Wilson, his co-leader Benj Pocta and backing vocalist Ashley Myrick (known now to many around town under her own performance moniker, Lalagray) each taking turns on lead vocals. The song also features backing efforts from drummer Daniel Hall, Spooky Folk violinist Petra Kelly and Fox &amp; The Bird player Wheeler Sparks.<br><br>It's a classic-sounding tune, filled with spiritual lyricism and the same kind of authenticity heard throughout the rest of the band's catalog...[and] the first recorded in the band's new home studios in Deep Ellum...</blockquote>
+
+
+<p><a href="http://purchase.thebeatensea.com/track/the-gathering-gloom-in-the-stable-room">Go pick it up</a>.</p>
+
+<p class="date">December 21, 2010</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -59,8 +68,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -75,12 +82,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

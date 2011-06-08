@@ -10,23 +10,46 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 
     <header>
-      Jonathan Harris: Today
+      Panda Bear
     </header>
     <div id="head_overlay">
     </div>
     <div id="content_container">
       <div id="content">
-        <p class='media'><object height='510' width='640'><param name='movie' value='http://www.youtube.com/v/AH7YxbuZQs8?fs=1&amp;hl=en_US&amp;hd=1' /><param name='allowFullScreen' value='true' /><param name='allowscriptaccess' value='always' /><embed src='http://www.youtube.com/v/AH7YxbuZQs8?fs=1&amp;hl=en_US&amp;hd=1' allowfullscreen='true' type='application/x-shockwave-flash' allowscriptaccess='always' height='510' width='640' /></object></p>
+        <p><img src="http://farm5.static.flickr.com/4001/4394761412_24b6877a8d.jpg" width="500" height="337" alt="13A by yukilife http://www.flickr.com/photos/yukilife/4394761412/" title="13A by yukilife http://www.flickr.com/photos/yukilife/4394761412/"></p>
+
+<p>It's weird the things that will set me off. This picture breaks</p>
+
+<p style="text-align:center">my fucking</p>
+
+
+
+
+<p style="text-align:right">heart.</p>
+
+
+
+
+<p class="date">June 07, 2011</p>
+
+
+
+
+<p class="postscript">Lately I've been busy enough to forget about things for large chunks of my day. Then something will trigger a thought or a memory and the wave of emotions, the front load washer spin cycle kicks into high gear and it'll even throw in some guilt about having forgotten. Just for good measure. I'm having to just plow through; and I wonder what it's doing to me.</p>
+
+
       </div><!--content-->
       <a id="attribute"></a>
       
     </div><!--content_container-->
     
-    <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/05/10/today.html" width="500"></fb:comments></div>
+    <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/06/07/T_T.html" width="500"></fb:comments></div>
 
 
 <div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
@@ -52,8 +75,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -68,12 +89,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

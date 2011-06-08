@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,21 +21,25 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='# http://www.flickr.com/photos/dealingwith/5034311951/' src='http://farm5.static.flickr.com/4130/5034311951_56be087c86.jpg' />
-<p>It&#8217;s hard to stay motivated when the only thing I want in life I can&#8217;t have. It&#8217;s difficult to do anything when the reason I did everything is gone.</p>
+    <p><img src="http://farm5.static.flickr.com/4130/5034311951_56be087c86.jpg" title="# http://www.flickr.com/photos/dealingwith/5034311951/"></p>
 
-<p>It&#8217;s hard to concentrate when so many things can carry my mind down a path that robs it of any focus. It&#8217;s impossible to think when all I can think about is her and to think about her is to experience the loss.</p>
+<p>It's hard to stay motivated when the only thing I want in life I can't have. It's difficult to do anything when the reason I did everything is gone.</p>
+
+<p>It's hard to concentrate when so many things can carry my mind down a path that robs it of any focus. It's impossible to think when all I can think about is her and to think about her is to experience the loss.</p>
 
 <p>The random show we watch on television might have a split second moment that reminds us of her or of the tragedy. Or that starts a thread that leads to the same.</p>
 
-<p>I would be lying if I said I didn&#8217;t wonder, when I see other children her age, why it wasn&#8217;t them. She&#8217;d be walking now. Saying words.</p>
+<p>I would be lying if I said I didn't wonder, when I see other children her age, why it wasn't them. She'd be walking now. Saying words.</p>
 
 <p>Certain random things sometimes help lead me away into sanity. Sometimes the more narrow the subject, the better the results. The frustrating vagaries of CSS have never been so welcome.</p>
 
-<p>I&#8217;m at once grateful and infuriated that life continues along with or without me. I can&#8217;t keep up, but bills continue to arrive, Penn&#8217;s school life continues apace, responsibilities don&#8217;t disappear, hair continues to grow, health problems don&#8217;t defer to grief.</p>
+<p>I'm at once grateful and infuriated that life continues along with or without me. I can't keep up, but bills continue to arrive, Penn's school life continues apace, responsibilities don't disappear, hair continues to grow, health problems don't defer to grief.</p>
 
-<p>You all have moved on, more or less. You might remember her when you read this blog or when I post something weird to Twitter. But we are still in the midst of this. It is only getting harder. The pain-over-time graph has not peaked. And there&#8217;s no way to know when it will, how far we are from that apex.</p>
-<p class='date'>September 29, 2010</p>
+<p>You all have moved on, more or less. You might remember her when you read this blog or when I post something weird to Twitter. But we are still in the midst of this. It is only getting harder. The pain-over-time graph has not peaked. And there's no way to know when it will, how far we are from that apex.</p>
+
+<p class="date">September 29, 2010</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -63,8 +69,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -79,12 +83,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

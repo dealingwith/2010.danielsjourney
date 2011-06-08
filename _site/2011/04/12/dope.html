@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,11 +21,15 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='http://www.flickr.com/photos/slabbers/23072082/ Photo by Bastiaan Slabbers' src='http://farm1.static.flickr.com/18/23072082_0571604453.jpg' />
-<p>I <a href='http://2010.danielsjourney.com/2011/02/07/super-bowl.html'>mentioned a while ago</a> that I might write a long post about the doping issue in professional cycling. At the time I was catching up on all the information available, specifically about Lance Armstrong and in light of the <a href='http://nyvelocity.com/content/interviews/2011/landiskimmage'>very long interview of Floyd Landis</a> I spent quite a few days reading and analyzing. If you&#8217;re really interested in this subject, I suggest you read it.</p>
+    <p><img src="http://farm1.static.flickr.com/18/23072082_0571604453.jpg" title="http://www.flickr.com/photos/slabbers/23072082/ Photo by Bastiaan Slabbers"></p>
 
-<p>In the meantime, Bicycling magazine&#8217;s Bill Strickland has <a href='https://www.readability.com/articles/hfwviezu'>published a really well done piece in their latest issue</a> which says everything I wanted to say but with more writing talent, insight and experience than I have.</p>
-<p class='date'>April 12, 2011</p>
+<p>I <a href="http://2010.danielsjourney.com/2011/02/07/super-bowl.html">mentioned a while ago</a> that I might write a long post about the doping issue in professional cycling. At the time I was catching up on all the information available, specifically about Lance Armstrong and in light of the <a href="http://nyvelocity.com/content/interviews/2011/landiskimmage">very long interview of Floyd Landis</a> I spent quite a few days reading and analyzing. If you're really interested in this subject, I suggest you read it.</p>
+
+<p>In the meantime, Bicycling magazine's Bill Strickland has <a href="https://www.readability.com/articles/hfwviezu">published a really well done piece in their latest issue</a> which says everything I wanted to say but with more writing talent, insight and experience than I have.</p>
+
+<p class="date">April 12, 2011</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -53,8 +59,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -69,12 +73,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

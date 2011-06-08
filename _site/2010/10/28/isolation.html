@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,15 +21,20 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <p class='media'><object height='340' width='560'><param name='movie' value='http://www.youtube.com/v/i3HyRtdu1o0?fs=1&amp;hl=en_US' /><param name='allowFullScreen' value='true' /><param name='allowscriptaccess' value='always' /><embed src='http://www.youtube.com/v/i3HyRtdu1o0?fs=1&amp;hl=en_US' allowfullscreen='true' type='application/x-shockwave-flash' allowscriptaccess='always' height='340' width='560' /></object></p>
-<p>First, some errata: I realized only after a night&#8217;s sleep that I did not go on anti-depressants 9 months after my divorce (<a href='http://2010.danielsjourney.com/2010/10/27/tooth-fairy.html'>as I said</a>) but rather 18 or so. It was after <em>yet another</em> critical experience following my relocation to Texas. It was this double beat-down (as it were) that led to a kind of retreat/regroup that involved, eventually, anti-depressants.</p>
+    <p class="media"><object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/i3HyRtdu1o0?fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/i3HyRtdu1o0?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object></p>
 
-<p>Another thing that occurred to me only after a day&#8217;s passing was in regard to a private conversation I had. I was asked if I felt isolated (within a specific context) and I replied that I did; but I realized today that it&#8217;s not that context&#8211;I feel isolated in this experience. <a href='http://2010.danielsjourney.com/2010/09/29/motivation-mood.html' title='You all have moved on, more or less.'>I subconsciously mention this fact in this post</a>. <a href='http://2010.danielsjourney.com/2010/10/24/fast-boy.html' title='Ezra and I, we have been forced to exist in a space that not many understand.'>It is also the theme of the Fast Boy post</a>.</p>
 
-<p>The experience of this loss, it is this constant contrast to everything else in life. All the pleasure those around me experience, even their pathetic losses (especially their pathetic losses), even that pleasure I attempt to experience myself, I can&#8217;t help but measure it against this pain. In a time when living in the moment might be more important than ever, I am able only to look backwards and forwards, this spiral of desire and loss, isolation and depression. <a href='http://2010.danielsjourney.com/2010/10/04/in-the-light-of-prior-suffering.html'>That I previously wrote about suffering is absurd</a>, that I write about this even now is equally so. In the face of the ultimate mystery of our existence, what is there to say, how is one to think, behave, speak? How does one coexist?</p>
+<p>First, some errata: I realized only after a night's sleep that I did not go on anti-depressants 9 months after my divorce (<a href="http://2010.danielsjourney.com/2010/10/27/tooth-fairy.html">as I said</a>) but rather 18 or so. It was after <em>yet another</em> critical experience following my relocation to Texas. It was this double beat-down (as it were) that led to a kind of retreat/regroup that involved, eventually, anti-depressants.</p>
+
+<p>Another thing that occurred to me only after a day's passing was in regard to a private conversation I had. I was asked if I felt isolated (within a specific context) and I replied that I did; but I realized today that it's not that context--I feel isolated in this experience. <a href="http://2010.danielsjourney.com/2010/09/29/motivation-mood.html" title="You all have moved on, more or less.">I subconsciously mention this fact in this post</a>. <a href="http://2010.danielsjourney.com/2010/10/24/fast-boy.html" title="Ezra and I, we have been forced to exist in a space that not many understand.">It is also the theme of the Fast Boy post</a>.</p>
+
+<p>The experience of this loss, it is this constant contrast to everything else in life. All the pleasure those around me experience, even their pathetic losses (especially their pathetic losses), even that pleasure I attempt to experience myself, I can't help but measure it against this pain. In a time when living in the moment might be more important than ever, I am able only to look backwards and forwards, this spiral of desire and loss, isolation and depression. <a href="http://2010.danielsjourney.com/2010/10/04/in-the-light-of-prior-suffering.html">That I previously wrote about suffering is absurd</a>, that I write about this even now is equally so. In the face of the ultimate mystery of our existence, what is there to say, how is one to think, behave, speak? How does one coexist?</p>
 
 <p>Returning to some of the thinkers that have influenced me in the past is being of some help today, hence the video I share here.</p>
-<p class='date'>October 28, 2010</p>
+
+<p class="date">October 28, 2010</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -57,8 +64,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -73,12 +78,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

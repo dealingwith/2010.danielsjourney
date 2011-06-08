@@ -70,7 +70,7 @@ header {
     float: right;
     font-size: 19px;
     line-height: 26px;
-    margin: 0 80px 10px 10px;
+    margin: 0 80px 10px 0px;
     padding: 10px;
     width: 500px;
 }
@@ -102,7 +102,7 @@ header {
     -moz-box-shadow: 0px 0px 0px;
     -webkit-box-shadow: 0px 0px 0px;
 }
-img.callout, #attribute, #content_container object {
+img.callout, #attribute, #content_container object, #content_container iframe {
     float: left;
     margin: 10px 0 0 50px;
 }

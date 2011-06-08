@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,19 +21,28 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='I keep banging my head against the bottom of this question but nothing ever comes popping out of the top. Photo by Bob Prosser http://www.flickr.com/photos/44986108@N00/5032931614/' src='http://farm5.static.flickr.com/4129/5032931614_a60572eaf6_z.jpg' />
-<p>There are many obvious questions in my situation, most of which cycle through my mind like a ferris wheel, each taking their turn stopped in the loading and unloading area. <em>Why?</em> is one <a href='http://2010.danielsjourney.com/2010/09/05/why.html'>I&#8217;ve mentioned before</a>; I have to some extent decided that question is best escorted out of the park by security. <em>What now?</em> however, that one has made a couple trips around now. I wonder if when that one has left the ride if maybe the ride won&#8217;t stop going around for a while. That would be nice.</p>
+    <p><img src="http://farm5.static.flickr.com/4129/5032931614_a60572eaf6_z.jpg" title="I keep banging my head against the bottom of this question but nothing ever comes popping out of the top. Photo by Bob Prosser http://www.flickr.com/photos/44986108@N00/5032931614/"></p>
 
-<p>On one hand, so many things haven&#8217;t changed. My personality hasn&#8217;t changed that much&#8211;at least not that I can tell. I&#8217;m not more patient or kind or understanding. I&#8217;m not significantly less vain. I&#8217;m not more or less secure.</p>
+<p>There are many obvious questions in my situation, most of which cycle through my mind like a ferris wheel, each taking their turn stopped in the loading and unloading area. <em>Why?</em> is one <a href="http://2010.danielsjourney.com/2010/09/05/why.html">I've mentioned before</a>; I have to some extent decided that question is best escorted out of the park by security. <em>What now?</em> however, that one has made a couple trips around now. I wonder if when that one has left the ride if maybe the ride won't stop going around for a while. That would be nice.</p>
 
-<p>Some things have changed for the worse. There are now a thousand triggers that might make something in my brain misfire. I care less about what other people think. I drop the f-bomb with more frequency and drink more than I used to&#8230;and I was pretty bad on both counts already.</p>
+<p>On one hand, so many things haven't changed. My personality hasn't changed that much--at least not that I can tell. I'm not more patient or kind or understanding. I'm not significantly less vain. I'm not more or less secure.</p>
+
+<p>Some things have changed for the worse. There are now a thousand triggers that might make something in my brain misfire. I care less about what other people think. I drop the f-bomb with more frequency and drink more than I used to...and I was pretty bad on both counts already.</p>
 
 <p>One thing that <em>might</em> have changed for the better is, in the words Jim Uhls added to <em>Fight Club</em>, the ability to let that which does not matter truly slide.</p>
 
-<p>So what now? There is never any way but forward. Life is shit and life is sweet. We all know that. You just don&#8217;t know how sweet yours is.*</p>
+<p>So what now? There is never any way but forward. Life is shit and life is sweet. We all know that. You just don't know how sweet yours is.*</p>
 
-<p><a href='http://www.flickr.com/photos/33602849@N00/63732753/'><img src='http://farm1.static.flickr.com/29/63732753_ac69ceb2d2.jpg' alt='Question mark bomb image by niznoz' /></a></p>
-<p class='date'>February 24, 2011</p><p class='postscript'>*Ha ha. No. You really don't.</p>
+<p><a href="http://www.flickr.com/photos/33602849@N00/63732753/"><img src="http://farm1.static.flickr.com/29/63732753_ac69ceb2d2.jpg" title="Question mark bomb image by niznoz" alt="Question mark bomb image by niznoz" /></a></p>
+
+<p class="date">February 24, 2011</p>
+
+
+
+
+<p class="postscript">*Ha ha. No. You really don't.</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -61,8 +72,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -77,12 +86,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

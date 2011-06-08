@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,27 +21,24 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='Photo by Bethan Phillips http://www.flickr.com/photos/beth19/4236918239/' src='http://farm3.static.flickr.com/2651/4236918239_57a2b6a385.jpg' />
+    <p><img src="http://farm3.static.flickr.com/2651/4236918239_57a2b6a385.jpg" title="Photo by Bethan Phillips http://www.flickr.com/photos/beth19/4236918239/"></p>
+
 <ul>
-<li>I&#8217;m still mostly sad.</li>
-
+<li>I'm still mostly sad.</li>
 <li>I still miss my daughter all the time.</li>
-
 <li>Happy times are still marked by her absence.</li>
-
 <li>Everything would be perfect if she were still here.</li>
-
-<li>I&#8217;m still ready for a fight that won&#8217;t come and wouldn&#8217;t help anything anyway.</li>
-
+<li>I'm still ready for a fight that won't come and wouldn't help anything anyway.</li>
 <li>I still exist in a world that continues on despite all these things.</li>
-
 <li>I still struggle to resist the urge to just totally drop out.</li>
-
-<li>I still feel really betrayed but I&#8217;m not sure with whom.</li>
-
+<li>I still feel really betrayed but I'm not sure with whom.</li>
 <li>I would still do anything to have her back again.</li>
 </ul>
-<p class='date'>November 06, 2010</p>
+
+
+<p class="date">November 06, 2010</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -69,8 +68,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -85,12 +82,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

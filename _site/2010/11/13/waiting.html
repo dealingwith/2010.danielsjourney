@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,15 +21,25 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <p class='media'><span class='audioplayer'><span id='audioplayer_1'><a href='http://2010.danielsjourney.com/files/11%20Isaiah%2045_23.mp3'>The Mountain Goats - Isaiah 45:23</a></span></span></p>
+    <p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/11%20Isaiah%2045_23.mp3">The Mountain Goats - Isaiah 45:23</a></span></span></p>
+
+
 <p>I more frequently feel like the rest of my life is just a waiting to be with her again.</p>
-<p class='date'>November 13, 2010</p><script type='text/javascript'>  
+
+<p class="date">November 13, 2010</p>
+
+
+
+
+<script type="text/javascript">  
   $(function(){
     AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/11%20Isaiah%2045_23.mp3",  
         titles: "Isaiah 45:23",  
         artists: "The Mountain Goats"});
   });
 </script>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -57,8 +69,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -73,12 +83,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

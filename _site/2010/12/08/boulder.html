@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,15 +21,19 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='# http://www.flickr.com/photos/dealingwith/tags/boulder/' src='http://farm6.static.flickr.com/5289/5247302520_f49f2017e8.jpg' />
-<p>Had the opportunity to visit Boulder, CO, for the first time last week and I immediately fell in love. From the <a href='http://www.illegalpetes.com/'>tacos</a> to the somehow always <a href='http://atlaspurveyors.com/'>excellent</a> <a href='http://tridentcafe.com/'>espresso</a> to the <a href='http://www.happynoodlehouse.com/TheBitterBar/tabid/464/Default.aspx'>fancy drinks</a> to the mountains. Mostly the mountains. Since moving away from Tucson at the end of 1997 I&#8217;ve only been in the (real) mountains a couple of times, and I&#8217;d forgotten how good they are for my soul.</p>
+    <p><img src="http://farm6.static.flickr.com/5289/5247302520_f49f2017e8.jpg" title="# http://www.flickr.com/photos/dealingwith/tags/boulder/"></p>
+
+<p>Had the opportunity to visit Boulder, CO, for the first time last week and I immediately fell in love. From the <a href="http://www.illegalpetes.com/">tacos</a> to the somehow always <a href="http://atlaspurveyors.com/">excellent</a> <a href="http://tridentcafe.com/">espresso</a> to the <a href="http://www.happynoodlehouse.com/TheBitterBar/tabid/464/Default.aspx">fancy drinks</a> to the mountains. Mostly the mountains. Since moving away from Tucson at the end of 1997 I've only been in the (real) mountains a couple of times, and I'd forgotten how good they are for my soul.</p>
 
 <p>Now I have a huge city crush on Boulder and am trying to figure out how to move there so I can go up into those mountains whenever I need sanity, peace or comfort.</p>
 
-<p><img src='http://farm6.static.flickr.com/5003/5247319516_f04fc7b527.jpg' alt='yes please' /></p>
+<p><img src="http://farm6.static.flickr.com/5003/5247319516_f04fc7b527.jpg" alt="yes please" /></p>
 
-<p><img src='http://farm6.static.flickr.com/5123/5245393700_ccf4cc7b59.jpg' alt='mountain lakes are fun' /></p>
-<p class='date'>December 08, 2010</p>
+<p><img src="http://farm6.static.flickr.com/5123/5245393700_ccf4cc7b59.jpg" alt="mountain lakes are fun" /></p>
+
+<p class="date">December 08, 2010</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -57,8 +63,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -73,12 +77,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

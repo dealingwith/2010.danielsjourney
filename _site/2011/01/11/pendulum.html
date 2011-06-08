@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,27 +21,29 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='Photo by fliegender http://www.flickr.com/photos/fliegender/166781144/' src='http://farm1.static.flickr.com/62/166781144_3105e46712.jpg' />
+    <p><img src="http://farm1.static.flickr.com/62/166781144_3105e46712.jpg" title="Photo by fliegender http://www.flickr.com/photos/fliegender/166781144/"></p>
+
 <p>Saturday night the news of the day was still being processed and Carissa and I had a date which included experiencing a set of music that did amazing things the likes of which I had not seen in a long time. It seemed as if maybe God was still with us.</p>
 
-<p>Sunday the Texas weather changed, snow fell from the sky. And story after story of the shooting was published. Some of these stories have been about conservative rhetoric, others about gun laws. While the former subject is merely a frustrating annoyance, the latter can really tear me apart. It is clear to me that we as a society have lost our right to bear arms. I&#8217;ve heard all the arguments to the contrary and they are all absurd.</p>
+<p>Sunday the Texas weather changed, snow fell from the sky. And story after story of the shooting was published. Some of these stories have been about conservative rhetoric, others about gun laws. While the former subject is merely a frustrating annoyance, the latter can really tear me apart. It is clear to me that we as a society have lost our right to bear arms. I've heard all the arguments to the contrary and they are all absurd.</p>
 
-<p>It seems like I shouldn&#8217;t have to explain that I am more sensitive to the subject of death. But it does seem like I need to explain that these objects, that our country&#8217;s founders protected as life-sustaining and revolutionary, have become fetish objects. And if you fetishize a gun, you fetishize death. You mock life. You deny loss.</p>
+<p>It seems like I shouldn't have to explain that I am more sensitive to the subject of death. But it does seem like I need to explain that these objects, that our country's founders protected as life-sustaining and revolutionary, have become fetish objects. And if you fetishize a gun, you fetishize death. You mock life. You deny loss.</p>
 
 <p>But I did not start this post to say that.</p>
 
-<p>Yesterday I found out about some even more disturbing news (even though it happened over a week ago). It&#8217;s so disturbing that I&#8217;m not going to share a link. Part of the reason it was so was because it was so true. So honest. Part of what I read was this:</p>
+<p>Yesterday I found out about some even more disturbing news (even though it happened over a week ago). It's so disturbing that I'm not going to share a link. Part of the reason it was so was because it was so true. So honest. Part of what I read was this:</p>
 
-<blockquote>
-<p>Maybe a God who operates by those rules does exist. If so, fuck Him.</p>
-</blockquote>
+<blockquote><p>Maybe a God who operates by those rules does exist. If so, fuck Him.</p></blockquote>
 
 <p>If there is a God I hope he is with the person who wrote that, showing him justice and comfort.</p>
 
-<p>Saturday night&#8217;s God feels very far away.</p>
+<p>Saturday night's God feels very far away.</p>
 
-<p>I guess I&#8217;m hoping getting this out might make a call for better weather.</p>
-<p class='date'>January 11, 2011</p>
+<p>I guess I'm hoping getting this out might make a call for better weather.</p>
+
+<p class="date">January 11, 2011</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -69,8 +73,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -85,12 +87,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

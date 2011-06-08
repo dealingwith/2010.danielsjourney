@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,13 +21,17 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='G.O. Kimmell, gentleman, scholar, patriarch. 1913-2008. http://www.flickr.com/photos/dealingwith/5324515434/' src='http://farm6.static.flickr.com/5243/5324515434_0b05fe1a59.jpg' />
-<p>It took a while for her to show up in my dreams, but apparently it&#8217;s started. Last night I had a dream that we were having a party and she was there, and I was <strong>so</strong> happy and just held her and nuzzled her and she giggled that amazing giggle and was soft and perfect and beautiful and happy like always. I kept saying, &#8220;She&#8217;s back! She&#8217;s back!&#8221; in between big facefulls of her stomach and back and thighs.</p>
+    <p><img src="http://farm6.static.flickr.com/5243/5324515434_0b05fe1a59.jpg" title="G.O. Kimmell, gentleman, scholar, patriarch. 1913-2008. http://www.flickr.com/photos/dealingwith/5324515434/"></p>
 
-<p>I had to hand her off to Carissa and I was moving towards the door when my grandfather walked in. My confusion turned to comfort and he just sauntered in like he&#8217;d been there a hundred times. I said to whoever was standing next to me at the time, &#8220;There are dead people at my party and it&#8217;s making me happy.&#8221;</p>
+<p>It took a while for her to show up in my dreams, but apparently it's started. Last night I had a dream that we were having a party and she was there, and I was <strong>so</strong> happy and just held her and nuzzled her and she giggled that amazing giggle and was soft and perfect and beautiful and happy like always. I kept saying, "She's back! She's back!" in between big facefulls of her stomach and back and thighs.</p>
 
-<p>The dream didn&#8217;t really bother me when I first woke up, but its effects seem to be lingering. I&#8217;m not sure if writing this post is going to help or not. I&#8217;m trying to take it as a comfort. I probably just need to go ride my bike and then get focused on something else.</p>
-<p class='date'>January 04, 2011</p>
+<p>I had to hand her off to Carissa and I was moving towards the door when my grandfather walked in. My confusion turned to comfort and he just sauntered in like he'd been there a hundred times. I said to whoever was standing next to me at the time, "There are dead people at my party and it's making me happy."</p>
+
+<p>The dream didn't really bother me when I first woke up, but its effects seem to be lingering. I'm not sure if writing this post is going to help or not. I'm trying to take it as a comfort. I probably just need to go ride my bike and then get focused on something else.</p>
+
+<p class="date">January 04, 2011</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -55,8 +61,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -71,12 +75,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

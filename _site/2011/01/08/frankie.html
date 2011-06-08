@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,9 +21,18 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='Photo by Danny Fulgencio for the Dallas Observer http://blogs.dallasobserver.com/dc9/2011/01/last_night_the_frankie_45_memo.php' src='http://blogs.dallasobserver.com/dc9/frankiefrankdanny.jpg' />
-<p>I hope at this point anyone in Dallas reading this blog knows about <a href='http://www.dallasobserver.com/2011-01-06/music/remembering-frankie-45/'>what happened in our community</a> this week. If you don&#8217;t, go read that fitting tribute by Pete Freedman, as well as <a href='http://frontrow.dmagazine.com/2011/01/bill-holston-frankie-45-left-it-on-the-stage/'>this one by our friend Bill Holston</a>. I only knew Frankie and only know Frank from seeing them at the Kettle gallery and Dada. Obviously I now feel connected to Frank. I don&#8217;t know what else to say about this, or how to possibly reach out to him. The place he now inhabits, and will be, where I still am, it is indescribable and unknowable and unique for each person within it.</p>
-<p><object height='295' width='480'><param name='movie' value='http://www.youtube.com/v/MGWA2Y9v0pM?fs=1&amp;hl=en_US&amp;rel=0' /><param name='allowFullScreen' value='true' /><param name='allowscriptaccess' value='always' /><embed src='http://www.youtube.com/v/MGWA2Y9v0pM?fs=1&amp;hl=en_US&amp;rel=0' allowfullscreen='true' type='application/x-shockwave-flash' allowscriptaccess='always' height='295' width='480' /></object></p><p class='date' style='clear:all'>January 08, 2011</p>
+    <p><img src="http://blogs.dallasobserver.com/dc9/frankiefrankdanny.jpg" title="Photo by Danny Fulgencio for the Dallas Observer http://blogs.dallasobserver.com/dc9/2011/01/last_night_the_frankie_45_memo.php"></p>
+
+<p>I hope at this point anyone in Dallas reading this blog knows about <a href="http://www.dallasobserver.com/2011-01-06/music/remembering-frankie-45/">what happened in our community</a> this week. If you don't, go read that fitting tribute by Pete Freedman, as well as <a href="http://frontrow.dmagazine.com/2011/01/bill-holston-frankie-45-left-it-on-the-stage/">this one by our friend Bill Holston</a>. I only knew Frankie and only know Frank from seeing them at the Kettle gallery and Dada. Obviously I now feel connected to Frank. I don't know what else to say about this, or how to possibly reach out to him. The place he now inhabits, and will be, where I still am, it is indescribable and unknowable and unique for each person within it.</p>
+
+<p><object width="480" height="295"><param name="movie" value="http://www.youtube.com/v/MGWA2Y9v0pM?fs=1&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/MGWA2Y9v0pM?fs=1&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="295"></embed></object></p>
+
+
+
+
+<p class="date" style="clear:all">January 08, 2011</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -51,8 +62,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -67,12 +76,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

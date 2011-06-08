@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,21 +21,30 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='Carissa' src='http://farm6.static.flickr.com/5259/5417115901_accbb186d9.jpg' alt='Carissa' />
-<p>Most of you are living it as well, but after four snow days in a row, having gotten out once since Monday (and Monday I went on a mountain bike ride in regular shorts and jersey) and then only to get <a href='http://twitpic.com/3w60vp'>my tire fixed</a> and re-stock on milk and beer&#8230;well, I&#8217;m over it. I am normally a fan of colder weather but the bike being a rare refuge of late, Texans in general&#8211;and specifically civically&#8211;unprepared for such conditions and 7-year-olds being particularly prone to the more annoying strains of cabin fever have all taken their toll.</p>
+    <p><img src="http://farm6.static.flickr.com/5259/5417115901_accbb186d9.jpg" title="Carissa" alt="Carissa"></p>
 
-<p><img src='http://farm6.static.flickr.com/5060/5417115985_4ae612d9bd.jpg' alt='The fire' /></p>
+<p>Most of you are living it as well, but after four snow days in a row, having gotten out once since Monday (and Monday I went on a mountain bike ride in regular shorts and jersey) and then only to get <a href="http://twitpic.com/3w60vp">my tire fixed</a> and re-stock on milk and beer...well, I'm over it. I am normally a fan of colder weather but the bike being a rare refuge of late, Texans in general--and specifically civically--unprepared for such conditions and 7-year-olds being particularly prone to the more annoying strains of cabin fever have all taken their toll.</p>
 
-<p>Last night when the snow started to fall about midnight I kind of resigned to it all. And today our good friend and neighbor Brix had another one of his famous impromptu front porch fetes. Standing by a fire with a beer and a cigar as big flakes continued to fall throughout the afternoon, it wasn&#8217;t so bad. The sun even came out. For about 15 minutes.</p>
+<p><img src="http://farm6.static.flickr.com/5060/5417115985_4ae612d9bd.jpg" title="The fire" alt="The fire" /></p>
 
-<p><img src='http://farm6.static.flickr.com/5220/5417116055_905384a83b.jpg' alt='Penn' /></p>
+<p>Last night when the snow started to fall about midnight I kind of resigned to it all. And today our good friend and neighbor Brix had another one of his famous impromptu front porch fetes. Standing by a fire with a beer and a cigar as big flakes continued to fall throughout the afternoon, it wasn't so bad. The sun even came out. For about 15 minutes.</p>
 
-<p>Ringo, of course, <strong>loves</strong> it. He&#8217;s the Kenneth Parcell of our family.</p>
+<p><img src="http://farm6.static.flickr.com/5220/5417116055_905384a83b.jpg" title="Penn" alt="Penn" /></p>
 
-<p><img src='http://farm6.static.flickr.com/5012/5417312822_ac8679dc22.jpg' alt='Ringo' /></p>
+<p>Ringo, of course, <strong>loves</strong> it. He's the Kenneth Parcell of our family.</p>
 
-<p><a href='http://www.flickr.com/photos/carissabyers/sets/72157625852615671/'>Carissa&#8217;s pictures are here</a> in case you haven&#8217;t seen them already.</p>
-<p class='date'>February 04, 2011</p><p class='postscript'>I miss her so much. I couldn't stop thinking about how much she would have loved the snow. How much better all this time stuck inside would have been, stuck inside with her.</p>
+<p><img src="http://farm6.static.flickr.com/5012/5417312822_ac8679dc22.jpg" title="ringo" alt="Ringo" /></p>
+
+<p><a href="http://www.flickr.com/photos/carissabyers/sets/72157625852615671/">Carissa's pictures are here</a> in case you haven't seen them already.</p>
+
+<p class="date">February 04, 2011</p>
+
+
+
+
+<p class="postscript">I miss her so much. I couldn't stop thinking about how much she would have loved the snow. How much better all this time stuck inside would have been, stuck inside with her.</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -63,8 +74,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -79,12 +88,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

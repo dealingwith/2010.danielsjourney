@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,25 +21,62 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <p class='media'><span class='audioplayer'><span id='audioplayer_1'><a href='http://2010.danielsjourney.com/files/07%20The%20Wind%20Has%20Left%20My%20Sail%20mp3.mp3'>Chris Holt - The Wind Has Left My Sail</a></span></span></p>
-<p>All you<br />whose whole family<br />gathers around the table<br />give thanks</p>
+    <p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/07%20The%20Wind%20Has%20Left%20My%20Sail%20mp3.mp3">Chris Holt - The Wind Has Left My Sail</a></span></span></p>
 
-<p>All you<br />who kiss your sons<br />and daughters this day<br />give thanks</p>
 
-<p>All you<br />burdened only by things<br />of this world, room and board<br />give thanks</p>
+<p>All you<br/>
+whose whole family<br/>
+gathers around the table<br/>
+give thanks</p>
 
-<p>All you<br />sent to sea by things<br />less than this, get over yourself<br />give thanks</p>
+<p>All you<br/>
+who kiss your sons<br/>
+and daughters this day<br/>
+give thanks</p>
 
-<p>All you<br />for whom death is an idea<br />who can argue for its machines&#8217; perpetuation<br />give thanks</p>
+<p>All you<br/>
+burdened only by things<br/>
+of this world, room and board<br/>
+give thanks</p>
 
-<p>All you<br />who can eat<br />or laugh<br />or sleep<br />or reason<br />or type<br />or speak<br />or listen<br />or breathe<br />or work<br />or think<br />without pain<br />give thanks</p>
-<p class='date'>November 25, 2010</p><script type='text/javascript'>  
+<p>All you<br/>
+sent to sea by things<br/>
+less than this, get over yourself<br/>
+give thanks</p>
+
+<p>All you<br/>
+for whom death is an idea<br/>
+who can argue for its machines' perpetuation<br/>
+give thanks</p>
+
+<p>All you<br/>
+who can eat<br/>
+or laugh<br/>
+or sleep<br/>
+or reason<br/>
+or type<br/>
+or speak<br/>
+or listen<br/>
+or breathe<br/>
+or work<br/>
+or think<br/>
+without pain<br/>
+give thanks</p>
+
+<p class="date">November 25, 2010</p>
+
+
+
+
+<script type="text/javascript">  
   $(function(){
     AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/07%20The%20Wind%20Has%20Left%20My%20Sail%20mp3.mp3",  
         titles: "The Wind Has Left My Sail",  
         artists: "Chris Holt"});
   });
 </script>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -67,8 +106,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -83,12 +120,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

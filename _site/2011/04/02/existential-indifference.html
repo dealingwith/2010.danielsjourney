@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,19 +21,21 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='http://www.flickr.com/photos/92661859@N00/2311071031/ I like Mike Bitzenhofer&apos;s approach to existentialism: &apos;Eggistentialism&apos;' src='http://farm4.static.flickr.com/3129/2311071031_d977ff5c1c.jpg' />
-<p>I somewhat recently discovered <a href='http://twitter.com/oliverburkeman'>Oliver Burkeman</a> and have found his columns rather good. This week&#8217;s is no exception:</p>
+    <p><img src="http://farm4.static.flickr.com/3129/2311071031_d977ff5c1c.jpg" title="http://www.flickr.com/photos/92661859@N00/2311071031/ I like Mike Bitzenhofer's approach to existentialism: 'Eggistentialism'"></p>
 
-<blockquote>
-<p>&#8230;Garcin is having an existential crisis, as people tend to do in Sartre. (These days, he could just pick up a copy of <a href='http://www.purposedrivenlife.com/en-US/Home/home.htm'>The Purpose-Driven Life</a> and be done with it.) He&#8217;s facing the Big Question: how to deal with life&#8217;s apparent meaninglessness? Of course, many other philosophers, not to mention self-help gurus, would argue that life isn&#8217;t meaningless&#8211;that meaning&#8217;s to be found in family, or work, or spirituality. But intriguing new research suggests that, for a sizeable chunk of the population, a different answer to the Big Question may be more pertinent: who cares?</p>
-</blockquote>
+<p>I somewhat recently discovered <a href="http://twitter.com/oliverburkeman">Oliver Burkeman</a> and have found his columns rather good. This week's is no exception:</p>
 
-<p><a href='https://www.readability.com/articles/00qcgokg'>&#8230;read the rest</a>.</p>
+<blockquote><p>...Garcin is having an existential crisis, as people tend to do in Sartre. (These days, he could just pick up a copy of <a href="http://www.purposedrivenlife.com/en-US/Home/home.htm">The Purpose-Driven Life</a> and be done with it.) He's facing the Big Question: how to deal with life's apparent meaninglessness? Of course, many other philosophers, not to mention self-help gurus, would argue that life isn't meaningless--that meaning's to be found in family, or work, or spirituality. But intriguing new research suggests that, for a sizeable chunk of the population, a different answer to the Big Question may be more pertinent: who cares?</p></blockquote>
 
-<p>I&#8217;ve long been interested in meaning formation as a primary motivator of human behavior and a majority stakeholder in any person&#8217;s happiness (I&#8217;m a big fan of <a href='http://en.wikipedia.org/wiki/Man&apos;s_Search_for_Meaning'>Frankl</a>). As I&#8217;ve tried to parse the recent events of my life, this is often the lens I use. I&#8217;m often confused by others who appear to have this existential indifference that Burkeman refers to. On one hand, I want to be able to move through life with more aplomb. On the other hand, it sure seems like a lot of us here sharing this planet just don&#8217;t care.</p>
+<p><a href="https://www.readability.com/articles/00qcgokg">...read the rest</a>.</p>
 
-<p>Of course existential crisis is not required to do important work. I have a friend who spends a lot of time thinking about how to work better and does excellent work partly due to that intention (he&#8217;s also just a hard worker). About a year age were discussing his strategies for maintaining focus and doing meaningful work&#8211;I was just starting work on <a href='http://todoblin.com'>Todoblin</a> and particularly interested (as I always am, really) in <a href='http://en.wikipedia.org/wiki/Grok'>groking</a> how people work. I asked him, &#8220;Don&#8217;t you ever have moments of existential crisis?&#8221; He just kind of gave me a look that said something like, &#8220;You speak of this &#8216;existential crisis&#8217; like it&#8217;s something that actually happens to people.&#8221;</p>
-<p class='date'>April 02, 2011</p>
+<p>I've long been interested in meaning formation as a primary motivator of human behavior and a majority stakeholder in any person's happiness (I'm a big fan of <a href="http://en.wikipedia.org/wiki/Man's_Search_for_Meaning">Frankl</a>). As I've tried to parse the recent events of my life, this is often the lens I use. I'm often confused by others who appear to have this existential indifference that Burkeman refers to. On one hand, I want to be able to move through life with more aplomb. On the other hand, it sure seems like a lot of us here sharing this planet just don't care.</p>
+
+<p>Of course existential crisis is not required to do important work. I have a friend who spends a lot of time thinking about how to work better and does excellent work partly due to that intention (he's also just a hard worker). About a year age were discussing his strategies for maintaining focus and doing meaningful work--I was just starting work on <a href="http://todoblin.com">Todoblin</a> and particularly interested (as I always am, really) in <a href="http://en.wikipedia.org/wiki/Grok">groking</a> how people work. I asked him, "Don't you ever have moments of existential crisis?" He just kind of gave me a look that said something like, "You speak of this 'existential crisis' like it's something that actually happens to people."</p>
+
+<p class="date">April 02, 2011</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -61,8 +65,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -77,12 +79,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

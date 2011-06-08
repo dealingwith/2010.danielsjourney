@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,11 +21,20 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='photo by Seven Morris http://www.flickr.com/photos/sevenmorris/267363155/' src='http://farm1.static.flickr.com/110/267363155_7d166fb22c.jpg' />
-<p>Believe it or not, despite most of my time being spent in the depression or anger stages, I still sometimes slip into denial, now, more than a month and a half later. I fantasize about turning a corner and seeing her there, her turning towards me and smiling that amazing smile of hers. I try to comprehend how this nightmare is so real that I can&#8217;t wake up from it, and try.</p>
+    <p><img src="http://farm1.static.flickr.com/110/267363155_7d166fb22c.jpg" title="photo by Seven Morris http://www.flickr.com/photos/sevenmorris/267363155/"></p>
+
+<p>Believe it or not, despite most of my time being spent in the depression or anger stages, I still sometimes slip into denial, now, more than a month and a half later. I fantasize about turning a corner and seeing her there, her turning towards me and smiling that amazing smile of hers. I try to comprehend how this nightmare is so real that I can't wake up from it, and try.</p>
 
 <p>It just still seems so impossible.</p>
-<p class='date'>October 2, 2010</p><p class='postscript' />
+
+<p class="date">October 2, 2010</p>
+
+
+
+
+<p class="postscript"></p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -53,8 +64,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -69,12 +78,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

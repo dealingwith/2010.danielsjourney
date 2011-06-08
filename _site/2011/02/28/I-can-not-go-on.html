@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,11 +21,20 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='photo by yours truly http://www.flickr.com/photos/dealingwith/5487718406/' src='http://farm6.static.flickr.com/5018/5487718406_8dcbb88dfe.jpg' />
-<p>I said I might have gained &#8220;the ability to let that which does not matter truly slide&#8221; but I&#8217;m not so sure that is the case. Little things and big things alike will derail me for hours if not days. I guess big things should all be small things now simply by sake of comparison, or by the way my stress and pain scale has been radically recalibrated. Maybe that will be the case in time, but right now I still just feel like my skin is raw. Every little bump or brush up against something causes my pain sensors to overload, preventing my brain to think about anything else and having me reaching for the medicine cabinet.</p>
+    <p><img src="http://farm6.static.flickr.com/5018/5487718406_8dcbb88dfe.jpg" title="photo by yours truly http://www.flickr.com/photos/dealingwith/5487718406/"></p>
 
-<p>In terms of determining what is and is not important, that sensor feels like it&#8217;s been reset. I&#8217;ve lost the person that was the most important, that made anything else meaningful. The person that made all the time and pain prior to her arrival worth it. With her gone, it&#8217;s hard to consider anything worth doing or meaningful. She was my grace, and now my grace is gone.</p>
-<p class='date'>February 28, 2011</p><p class='postscript'>The title quote is Samuel Beckett, via John Ralston, whose <a href='http://johnralston.bandcamp.com/'>new record you should purchase</a>, posthaste.</p>
+<p>I said I might have gained "the ability to let that which does not matter truly slide" but I'm not so sure that is the case. Little things and big things alike will derail me for hours if not days. I guess big things should all be small things now simply by sake of comparison, or by the way my stress and pain scale has been radically recalibrated. Maybe that will be the case in time, but right now I still just feel like my skin is raw. Every little bump or brush up against something causes my pain sensors to overload, preventing my brain to think about anything else and having me reaching for the medicine cabinet.</p>
+
+<p>In terms of determining what is and is not important, that sensor feels like it's been reset. I've lost the person that was the most important, that made anything else meaningful. The person that made all the time and pain prior to her arrival worth it. With her gone, it's hard to consider anything worth doing or meaningful. She was my grace, and now my grace is gone.</p>
+
+<p class="date">February 28, 2011</p>
+
+
+
+
+<p class="postscript">The title quote is Samuel Beckett, via John Ralston, whose <a href="http://johnralston.bandcamp.com/">new record you should purchase</a>, posthaste.</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -53,8 +64,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -69,12 +78,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

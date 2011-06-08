@@ -10,6 +10,8 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -19,13 +21,22 @@
 </div>
 <div id="content_container">
   <div id="content">
-    <img title='http://www.flickr.com/photos/carissabyers/5661852854/ 7 weeks 5 days sonogram' src='http://farm6.static.flickr.com/5225/5661852854_2b85931e1b_z.jpg' alt='7 weeks 5 days sonogram' />
+    <p><img src="http://farm6.static.flickr.com/5225/5661852854_2b85931e1b_z.jpg" alt="7 weeks 5 days sonogram" title="http://www.flickr.com/photos/carissabyers/5661852854/ 7 weeks 5 days sonogram"></p>
+
 <p>Obviously we are thrilled to announce that Carissa is pregnant.</p>
 
-<p>I had hoped that this announcement, whenever it came, might be the final post of this blog. I&#8217;m realizing that is probably not the case. There are still some things I&#8217;m going to have to figure out about this experience and this blog has been a half decent place to work out some of those things. (That said, clearly I won&#8217;t be posting here past December, at the latest.)</p>
+<p>I had hoped that this announcement, whenever it came, might be the final post of this blog. I'm realizing that is probably not the case. There are still some things I'm going to have to figure out about this experience and this blog has been a half decent place to work out some of those things. (That said, clearly I won't be posting here past December, at the latest.)</p>
 
-<p>I&#8217;m hoping Lucy&#8217;s* development, arrival and life is the most beautiful and amazing thing ever experienced by mankind. It will be. It has to be. She has a perfect big sister to make proud.</p>
-<p class='date'>April 28, 2011</p><p class='postscript'>* &ldquo;<a href='http://carissabyers.blogspot.com/2011/04/baby-miller.html'>Think girl thoughts</a>.&rdquo;</p>
+<p>I'm hoping Lucy's* development, arrival and life is the most beautiful and amazing thing ever experienced by mankind. It will be. It has to be. She has a perfect big sister to make proud.</p>
+
+<p class="date">April 28, 2011</p>
+
+
+
+
+<p class="postscript">* &ldquo;<a href="http://carissabyers.blogspot.com/2011/04/baby-miller.html">Think girl thoughts</a>.&rdquo;</p>
+
+
   </div><!--content-->
   <a class="attribute"></a>
 </div><!--content_container-->
@@ -55,8 +66,6 @@
 
 </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -71,12 +80,12 @@
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
-        $img.remove();
+        $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       } else {
-        var $media = $("#content p.media:first");
+        var $media = $("#content .media:first");
         if ($media != []) {
           $('#content_container').prepend($media.html());
-          $media.remove();
+          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
         }
       }
       

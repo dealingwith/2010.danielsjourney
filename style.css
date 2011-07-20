@@ -1,5 +1,5 @@
 body, html {
-    font-family: 'Cardo', Georgia, serif;
+    font-family: 'Lora', Georgia, serif;
     overflow-x: hidden;
     background: #fffffe url('images/body_bg.png');
 }
@@ -145,7 +145,7 @@ footer > div {
 footer > div h2 {
     color: #999;
     font-size: 22px;
-    margin: -26px 0 8px -10px;
+    margin: -27px 0 8px -10px;
     text-shadow: 1px 1px 1px #272727;
 }
 footer a {

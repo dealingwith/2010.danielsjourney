@@ -2,7 +2,8 @@
 <head>
   <title>danielsjourney</title>
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css" />
-  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Lora&subset=latin&v2' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="/brokeheart.ico"/>
   <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link href="http://feeds.feedburner.com/danielsjourney" rel="alternate" title="2010.danielsjourney.com" type="application/rss+xml" />
@@ -84,19 +85,17 @@
       });
       
       var $img = $("#content img:first");
-      if ($img.attr('src') != undefined) {          
+      var $media = $("#content .media:first");
+      if ($media.length > 0) {
+        $('#content_container').prepend($media.html());
+        $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
+      } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
         $title = $img.attr('title');
         $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
         $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
         $('#attribute').html($title).attr('href', $link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
-      } else {
-        var $media = $("#content .media:first");
-        if ($media != []) {
-          $('#content_container').prepend($media.html());
-          $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
-        }
       }
       
       resizeHeader();

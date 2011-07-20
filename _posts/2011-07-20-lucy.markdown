@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Lucy"
+---
+
+<p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/12%20Lucy.mp3">Paul Slavens - Lucy</a></span></span></p>
+
+As Lucy's presence becomes more real (we had another sonogram yesterday and she's healthy and moved a little bit for us while we watched in awe) I am forced to face the coming reality that there will be another beautiful girl in our house at the same time I will still (always) feel the loss of my first child. Even as I contemplated names this morning I thought, "'Margot Rose Miller' was the perfect name. You can't top that." 
+
+I don't want to have any weird expectations on Lucy. But the part of my soul that needs this all to be woven into a mystical, meaningful narrative wants to feel like both Margot and Lucy are special and ordained, each with a place and purpose, things that from my perspective will always be linked.
+
+Margot was already such an important person, not just because she was as beautiful and perfect as a baby can be. Margot was a miracle, she was redemption, she was the fulfillment of a decade's worth of desire&hellip;and that was only in her being. As she grew she became [exceptional](http://2010.danielsjourney.com/2010/09/08/glue.html) in even more, unexpected ways.
+
+> Lucy, tell me the truth, 'cause I'm in love with you.
+
+<p class="date">July 20, 2011</p>
+
+<p class="postscript"></p>
+
+
+
+<script type="text/javascript">  
+  $(function(){
+    AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/12%20Lucy.mp3",  
+        titles: "Lucy",  
+        artists: "Paul Slavens"});
+  });
+</script>

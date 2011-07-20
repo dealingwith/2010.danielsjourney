@@ -1,9 +1,9 @@
 ---
 layout: post
-title: ""
+title: "Fear, Part 1: The Boogieman"
 ---
 
-<img src="" title="">
+<p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/The%20Fear.mp3">Travis - The Fear</a></span></span></p>
 
 Had the craziest nightmare last night, but it was so interesting to me that when I woke up from it I didn't have that residual fear and icky feeling one usually has after waking from a nightmare, but was immediately struck by the meaning of it. I wish I had jumped out of bed immediately to capture the details, but unfortunately I have been extra tired this week and could not keep myself from falling back into a much more peaceful sleep.
 
@@ -17,4 +17,13 @@ As I looked at Carissa, bewildered, I reached to touch the back of my neck and a
 
 <p class="date">June 08, 2011</p>
 
-<p class="postscript">Funny that I had this dream the night when I went to sleep watching "The Century of Self", including an audio clip of Anna Freud saying, "Dreams are the royal road to the unconscious."</p>
+<p class="postscript">Funny that I had this dream the night when I went to sleep watching <em>The Century of Self</em>, including an audio clip of Anna Freud saying, "Dreams are the royal road to the unconscious."</p>
+
+
+<script type="text/javascript">  
+  $(function(){
+    AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/The%20Fear.mp3",  
+        titles: "The Fear",  
+        artists: "Travis"});
+  });
+</script>

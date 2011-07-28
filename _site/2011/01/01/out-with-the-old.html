@@ -1,8 +1,6 @@
 <!DOCTYPE HTML>
 <head>
   <title>danielsjourney</title>
-  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css" />
-  <!-- <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'> -->
   <link href='http://fonts.googleapis.com/css?family=Lora&subset=latin&v2' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="/brokeheart.ico"/>
   <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
@@ -11,7 +9,6 @@
   <script type="text/javascript" charset="utf-8">
     var djdc = {};
   </script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/audio-player.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
@@ -135,7 +132,9 @@ A re-recording of a previously-released tune. A song about secret societies, pla
   </div>
 
 </footer>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
+<script src="/js/plugins.js"></script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -163,7 +162,7 @@ A re-recording of a previously-released tune. A song about secret societies, pla
       //blockquote style application
       $("blockquote:eq(0)").prepend('<span class="blockquote_quotation">&ldquo;</span>');
       //dropcap style application
-      $("#content > p:eq(0)").fancyletter({ commonClass: 'drop_cap' });
+      $("#content > p:eq(0)").not(".date, .no-caps").fancyletter({ commonClass: 'drop_cap' });
       
       $("body > div").css('visibility', 'visible');
       

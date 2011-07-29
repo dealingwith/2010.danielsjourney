@@ -217,9 +217,10 @@ footer div p:last-child {
 
 hr {
     background: url('images/header_bg_flowers.png');
-    height: 10px;
     border: 0px;
+    border-bottom: 1px solid #e9e9e9;
+    clear: right;
+    height: 10px;
     margin-bottom: 1em;
     margin-top: .5em;
-    border-bottom: 1px solid #e9e9e9;
 }

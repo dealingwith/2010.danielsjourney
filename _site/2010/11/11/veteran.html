@@ -22,8 +22,8 @@
     <p><img src="http://farm3.static.flickr.com/2402/2037459547_326be90f18.jpg" title="photo by kT LindSAy http://www.flickr.com/photos/ktlindsay/2037459547"></p>
 
 <p>Mothers and fathers<br/>
-of those who won't grow old<br/>
-because of other men's plans<br/>
+of those who won&rsquo;t grow old<br/>
+because of other men&rsquo;s plans<br/>
 you have someone to blame<br/>
 you have someone to blame</p>
 
@@ -47,7 +47,7 @@ the riots of their murderous machinations</p>
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/11/11/veteran.html" width="500"></fb:comments></div>
@@ -75,8 +75,7 @@ the riots of their murderous machinations</p>
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -91,10 +90,10 @@ the riots of their murderous machinations</p>
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

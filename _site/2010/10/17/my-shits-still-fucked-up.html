@@ -22,7 +22,7 @@
     <p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/01%20My%20Shit's%20Fucked%20Up.mp3">Warren Zevon -- My Shit's Fucked Up</a></span></span></p>
 
 
-<p>I have a strange anxiety with this blog that if I leave a really sad post up too long I'm putting bad energy out there, and if I leave a happier post up too long people might get the wrong impression about how well we're (not) doing. I stumbled across this Warren Zevon song yesterday in a folder full of mp3s that I've had lying around forever. It felt like it struck a nice middle ground. A reminder of reality, but with a dose of good, sardonic humor. We can always use a little comedy with our tragedy. Lord knows we can use some f-bombs to describe it.*</p>
+<p>I have a strange anxiety with this blog that if I leave a really sad post up too long I&rsquo;m putting bad energy out there, and if I leave a happier post up too long people might get the wrong impression about how well we&rsquo;re (not) doing. I stumbled across this Warren Zevon song yesterday in a folder full of mp3s that I&rsquo;ve had lying around forever. It felt like it struck a nice middle ground. A reminder of reality, but with a dose of good, sardonic humor. We can always use a little comedy with our tragedy. Lord knows we can use some f-bombs to describe it.*</p>
 
 <p class="date">October 17, 2010</p>
 
@@ -44,7 +44,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/10/17/my-shits-still-fucked-up.html" width="500"></fb:comments></div>
@@ -72,8 +72,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -88,10 +87,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

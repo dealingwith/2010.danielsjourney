@@ -22,13 +22,13 @@
     <p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/13%20Scars%20On%20Land.mp3">Kings of Convenience - Scars on Land</a></span></span></p>
 
 
-<p>I've said before that there are certain questions that are now &ldquo;<a href="http://2010.danielsjourney.com/2011/02/24/what-now.html">best escorted out of the park by security</a>&rdquo; ...and maybe you noticed that was the first of a trilogy: "What now?" &ldquo;<a href="http://2010.danielsjourney.com/2011/02/28/I-can-not-go-on.html">I'll go on.</a>&rdquo; &ldquo;<a href="http://2010.danielsjourney.com/2011/03/07/bikes.html">Not because [I want] to but because [I have] to.</a>&rdquo;</p>
+<p>I&rsquo;ve said before that there are certain questions that are now &ldquo;<a href="http://2010.danielsjourney.com/2011/02/24/what-now.html">best escorted out of the park by security</a>&rdquo; &hellip;and maybe you noticed that was the first of a trilogy: &ldquo;What now?&rdquo; &ldquo;<a href="http://2010.danielsjourney.com/2011/02/28/I-can-not-go-on.html">I&rsquo;ll go on.</a>&rdquo; &ldquo;[Not because [I want] to but because [I have] to.](<a href="http://2010.danielsjourney.com/2011/03/07/bikes.html">http://2010.danielsjourney.com/2011/03/07/bikes.html</a>)&rdquo;</p>
 
-<p>The problem with the deeper questions surrounding our loss and our lives is that they are the questions that have existed for all time and our answers--or lack thereof--are the same as well. The search for meaning evolves into a search to be more human, to connect to--not a Truth--but the truth of what it means to here with others.</p>
+<p>The problem with the deeper questions surrounding our loss and our lives is that they are the questions that have existed for all time and our answers&mdash;or lack thereof&mdash;are the same as well. The search for meaning evolves into a search to be more human, to connect to&mdash;not a Truth&mdash;but the truth of what it means to here with others.</p>
 
 <p>So today I was reading some posts by my friend Kester Brewin and he wrote <a href="http://www.kesterbrewin.com/2011/03/15/free-will-determinism-heaven-hell/">something that made a tiny bit of sense</a>:</p>
 
-<blockquote><p>...we cannot prove if heaven and hell exist, but it's a natural response to want the world to be fair, to be sorted out and judged at some point so that justice is done. A deterministic universe it might be--just chemicals and electrons--but this is not a world that we find "human" precisely because it makes a nonsense of ideas of love--and hate too.</p></blockquote>
+<blockquote><p>&hellip;we cannot prove if heaven and hell exist, but it&rsquo;s a natural response to want the world to be fair, to be sorted out and judged at some point so that justice is done. A deterministic universe it might be&mdash;just chemicals and electrons&mdash;but this is not a world that we find &ldquo;human&rdquo; precisely because it makes a nonsense of ideas of love&mdash;and hate too.</p></blockquote>
 
 <p class="date">March 22, 2011</p>
 
@@ -56,7 +56,7 @@ All aims get forgotten</blockquote></p>
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/03/22/determined.html" width="500"></fb:comments></div>
@@ -84,8 +84,7 @@ All aims get forgotten</blockquote></p>
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -100,10 +99,10 @@ All aims get forgotten</blockquote></p>
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

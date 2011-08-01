@@ -22,8 +22,8 @@
     <p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/13%20All%20You%20Lucky%20People.mp3">Adam Again - All You Lucky People</a></span></span></p>
 
 
-<p>I'm after it<br/>
-And you'll know<br/>
+<p>I&rsquo;m after it<br/>
+And you&rsquo;ll know<br/>
 And I keep lookin' at all you lucky people coming around<br/>
 Say hello</p>
 
@@ -42,7 +42,7 @@ Say hello</p>
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/01/23/all-you-lucky-people.html" width="500"></fb:comments></div>
@@ -70,8 +70,7 @@ Say hello</p>
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -86,10 +85,10 @@ Say hello</p>
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

@@ -21,7 +21,7 @@
   <div id="content">
     <p><img src="http://farm1.static.flickr.com/110/267363155_7d166fb22c.jpg" title="photo by Seven Morris http://www.flickr.com/photos/sevenmorris/267363155/"></p>
 
-<p>Believe it or not, despite most of my time being spent in the depression or anger stages, I still sometimes slip into denial, now, more than a month and a half later. I fantasize about turning a corner and seeing her there, her turning towards me and smiling that amazing smile of hers. I try to comprehend how this nightmare is so real that I can't wake up from it, and try.</p>
+<p>Believe it or not, despite most of my time being spent in the depression or anger stages, I still sometimes slip into denial, now, more than a month and a half later. I fantasize about turning a corner and seeing her there, her turning towards me and smiling that amazing smile of hers. I try to comprehend how this nightmare is so real that I can&rsquo;t wake up from it, and try.</p>
 
 <p>It just still seems so impossible.</p>
 
@@ -34,7 +34,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/10/02/denial.html" width="500"></fb:comments></div>
@@ -62,8 +62,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -78,10 +77,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

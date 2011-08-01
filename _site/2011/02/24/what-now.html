@@ -21,15 +21,15 @@
   <div id="content">
     <p><img src="http://farm5.static.flickr.com/4129/5032931614_a60572eaf6_z.jpg" title="I keep banging my head against the bottom of this question but nothing ever comes popping out of the top. Photo by Bob Prosser http://www.flickr.com/photos/44986108@N00/5032931614/"></p>
 
-<p>There are many obvious questions in my situation, most of which cycle through my mind like a ferris wheel, each taking their turn stopped in the loading and unloading area. <em>Why?</em> is one <a href="http://2010.danielsjourney.com/2010/09/05/why.html">I've mentioned before</a>; I have to some extent decided that question is best escorted out of the park by security. <em>What now?</em> however, that one has made a couple trips around now. I wonder if when that one has left the ride if maybe the ride won't stop going around for a while. That would be nice.</p>
+<p>There are many obvious questions in my situation, most of which cycle through my mind like a ferris wheel, each taking their turn stopped in the loading and unloading area. <em>Why?</em> is one <a href="http://2010.danielsjourney.com/2010/09/05/why.html">I&rsquo;ve mentioned before</a>; I have to some extent decided that question is best escorted out of the park by security. <em>What now?</em> however, that one has made a couple trips around now. I wonder if when that one has left the ride if maybe the ride won&rsquo;t stop going around for a while. That would be nice.</p>
 
-<p>On one hand, so many things haven't changed. My personality hasn't changed that much--at least not that I can tell. I'm not more patient or kind or understanding. I'm not significantly less vain. I'm not more or less secure.</p>
+<p>On one hand, so many things haven&rsquo;t changed. My personality hasn&rsquo;t changed that much&mdash;at least not that I can tell. I&rsquo;m not more patient or kind or understanding. I&rsquo;m not significantly less vain. I&rsquo;m not more or less secure.</p>
 
-<p>Some things have changed for the worse. There are now a thousand triggers that might make something in my brain misfire. I care less about what other people think. I drop the f-bomb with more frequency and drink more than I used to...and I was pretty bad on both counts already.</p>
+<p>Some things have changed for the worse. There are now a thousand triggers that might make something in my brain misfire. I care less about what other people think. I drop the f-bomb with more frequency and drink more than I used to&hellip;and I was pretty bad on both counts already.</p>
 
 <p>One thing that <em>might</em> have changed for the better is, in the words Jim Uhls added to <em>Fight Club</em>, the ability to let that which does not matter truly slide.</p>
 
-<p>So what now? There is never any way but forward. Life is shit and life is sweet. We all know that. You just don't know how sweet yours is.*</p>
+<p>So what now? There is never any way but forward. Life is shit and life is sweet. We all know that. You just don&rsquo;t know how sweet yours is.*</p>
 
 <p><a href="http://www.flickr.com/photos/33602849@N00/63732753/"><img src="http://farm1.static.flickr.com/29/63732753_ac69ceb2d2.jpg" title="Question mark bomb image by niznoz" alt="Question mark bomb image by niznoz" /></a></p>
 
@@ -42,7 +42,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/02/24/what-now.html" width="500"></fb:comments></div>
@@ -70,8 +70,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -86,10 +85,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

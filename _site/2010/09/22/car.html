@@ -23,7 +23,7 @@
 
 <p>The morning after the <a href="http://carissabyers.blogspot.com/2010/08/thank-you.html">memorial</a> there were many trucks in our neighborhood and many men up in the trees above our alleys. The electric company had decided the trees needed a <a href="http://en.wikipedia.org/wiki/High_and_tight">haircut</a>. And that morning, despite (or perhaps because of) the direction of many men, a driver backed his Very Large Truck With Chipper Trailer into my 2002 Honda Civic (Not Very Large). The driver wanted to pay out of pocket for the repair, as apparently there would be consequences with his employer if he did not. In the end, the costs were much more than he at first estimated and/or I did not take my car to his cousin Jos&eacute;, so I was left dealing with the company itself.</p>
 
-<p><em>In the meantime</em>, while I was at my body shop waiting to hear from <em>el conductor</em> about who was going to pay for the repairs, <em>another guy backed into another part of my car</em>. (This guy's name actually <em>was</em> Jos&eacute;.) He wasn't from the body shop, though; he was from a car dealer across the street. Enter second company.</p>
+<p><em>In the meantime</em>, while I was at my body shop waiting to hear from <em>el conductor</em> about who was going to pay for the repairs, <em>another guy backed into another part of my car</em>. (This guy&rsquo;s name actually <em>was</em> Jos&eacute;.) He wasn&rsquo;t from the body shop, though; he was from a car dealer across the street. Enter second company.</p>
 
 <p>Productivity being at an all time low during recent weeks, and getting money out of insurance companies being what it is, it has taken a month to get both repairs paid for and completed. Finally this afternoon I picked up the car. Now if I can just manage to <em>never park it again</em>.</p>
 
@@ -36,7 +36,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/09/22/car.html" width="500"></fb:comments></div>
@@ -64,8 +64,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -80,10 +79,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

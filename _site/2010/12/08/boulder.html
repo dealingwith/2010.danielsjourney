@@ -21,7 +21,7 @@
   <div id="content">
     <p><img src="http://farm6.static.flickr.com/5289/5247302520_f49f2017e8.jpg" title="# http://www.flickr.com/photos/dealingwith/tags/boulder/"></p>
 
-<p>Had the opportunity to visit Boulder, CO, for the first time last week and I immediately fell in love. From the <a href="http://www.illegalpetes.com/">tacos</a> to the somehow always <a href="http://atlaspurveyors.com/">excellent</a> <a href="http://tridentcafe.com/">espresso</a> to the <a href="http://www.happynoodlehouse.com/TheBitterBar/tabid/464/Default.aspx">fancy drinks</a> to the mountains. Mostly the mountains. Since moving away from Tucson at the end of 1997 I've only been in the (real) mountains a couple of times, and I'd forgotten how good they are for my soul.</p>
+<p>Had the opportunity to visit Boulder, CO, for the first time last week and I immediately fell in love. From the <a href="http://www.illegalpetes.com/">tacos</a> to the somehow always <a href="http://atlaspurveyors.com/">excellent</a> <a href="http://tridentcafe.com/">espresso</a> to the <a href="http://www.happynoodlehouse.com/TheBitterBar/tabid/464/Default.aspx">fancy drinks</a> to the mountains. Mostly the mountains. Since moving away from Tucson at the end of 1997 I&rsquo;ve only been in the (real) mountains a couple of times, and I&rsquo;d forgotten how good they are for my soul.</p>
 
 <p>Now I have a huge city crush on Boulder and am trying to figure out how to move there so I can go up into those mountains whenever I need sanity, peace or comfort.</p>
 
@@ -33,7 +33,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/12/08/boulder.html" width="500"></fb:comments></div>
@@ -61,8 +61,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -77,10 +76,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

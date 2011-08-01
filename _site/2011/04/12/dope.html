@@ -21,15 +21,15 @@
   <div id="content">
     <p><img src="http://farm1.static.flickr.com/18/23072082_0571604453.jpg" title="http://www.flickr.com/photos/slabbers/23072082/ Photo by Bastiaan Slabbers"></p>
 
-<p>I <a href="http://2010.danielsjourney.com/2011/02/07/super-bowl.html">mentioned a while ago</a> that I might write a long post about the doping issue in professional cycling. At the time I was catching up on all the information available, specifically about Lance Armstrong and in light of the <a href="http://nyvelocity.com/content/interviews/2011/landiskimmage">very long interview of Floyd Landis</a> I spent quite a few days reading and analyzing. If you're really interested in this subject, I suggest you read it.</p>
+<p>I <a href="http://2010.danielsjourney.com/2011/02/07/super-bowl.html">mentioned a while ago</a> that I might write a long post about the doping issue in professional cycling. At the time I was catching up on all the information available, specifically about Lance Armstrong and in light of the <a href="http://nyvelocity.com/content/interviews/2011/landiskimmage">very long interview of Floyd Landis</a> I spent quite a few days reading and analyzing. If you&rsquo;re really interested in this subject, I suggest you read it.</p>
 
-<p>In the meantime, Bicycling magazine's Bill Strickland has <a href="https://www.readability.com/articles/hfwviezu">published a really well done piece in their latest issue</a> which says everything I wanted to say but with more writing talent, insight and experience than I have.</p>
+<p>In the meantime, Bicycling magazine&rsquo;s Bill Strickland has <a href="https://www.readability.com/articles/hfwviezu">published a really well done piece in their latest issue</a> which says everything I wanted to say but with more writing talent, insight and experience than I have.</p>
 
 <p class="date">April 12, 2011</p>
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/04/12/dope.html" width="500"></fb:comments></div>
@@ -57,8 +57,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -73,10 +72,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

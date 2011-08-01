@@ -22,7 +22,7 @@
     <p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/01%20Anthony%20Griffith_%20Best%20of%20Times%20Worst%20of%20Times.mp3">Anthony Griffith - Best of Times, Worst of Times</a></span></span></p>
 
 
-<p>I should warn you, this story* by Anthony Griffith is intense. The title does not do it justice; but then no title could. I'm not sure what prompted me to listen to it on my drive home from work today. I'm also not sure how I managed to drive through the tears. But I'm glad I did. It was very cathartic and he put into words so many things I've wished I could put into words here. I found myself shouting over my sobs, "Yes. Yes. Yes."</p>
+<p>I should warn you, this story* by Anthony Griffith is intense. The title does not do it justice; but then no title could. I&rsquo;m not sure what prompted me to listen to it on my drive home from work today. I&rsquo;m also not sure how I managed to drive through the tears. But I&rsquo;m glad I did. It was very cathartic and he put into words so many things I&rsquo;ve wished I could put into words here. I found myself shouting over my sobs, &ldquo;Yes. Yes. Yes.&rdquo;</p>
 
 <p class="date">June 13, 2011</p>
 
@@ -44,7 +44,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/06/13/best-worst-of-times.html" width="500"></fb:comments></div>
@@ -72,8 +72,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -88,10 +87,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

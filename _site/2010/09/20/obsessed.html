@@ -25,15 +25,15 @@
 
 <p><a href="http://www.flickr.com/photos/carissabyers/3099748698/"><img src="http://farm4.static.flickr.com/3174/3099748698_64c426a59d.jpg" title="Shooting Texas Ballet Theater"></a></p>
 
-<p>This love, it has been perfect in more ways than I can enumerate. But it's gone from "I can't believe we're together!" to "What the hell took me so long back then?!" It's gone from <em>knowing I somehow won the relationship lottery</em> to <em>lost all ability to think because  &hearts;&hearts;&hearts; <span style="font-variant: small-caps; font-weight:bold">omg</span> &hearts;&hearts;&hearts;</em></p>
+<p>This love, it has been perfect in more ways than I can enumerate. But it&rsquo;s gone from &ldquo;I can&rsquo;t believe we&rsquo;re together!&rdquo; to &ldquo;What the hell took me so long back then?!&rdquo; It&rsquo;s gone from <em>knowing I somehow won the relationship lottery</em> to <em>lost all ability to think because  &hearts;&hearts;&hearts; <span style="font-variant: small-caps; font-weight:bold">omg</span> &hearts;&hearts;&hearts;</em></p>
 
 <p><a href="http://www.flickr.com/photos/carissabyers/2796709835/"><img src="http://farm4.static.flickr.com/3273/2796709835_762cd7117d.jpg" title="Sunday morning coffee and paper"></a></p>
 
-<p>It's just that I can't absorb enough of it. It's the little things. The way her neck comes down and dips under her collarbones. The mole on the ball of her left foot. Her laugh, especially when she can't stop laughing. Her bread making. The way she can curl up perfectly beside me on the couch and I can curl up perfectly beside her on the bed. Her arms and hands. The way she speaks when it is quiet and the words are really important. Her eyes. Her lips. Oh. My. God. Her. Lips.</p>
+<p>It&rsquo;s just that I can&rsquo;t absorb enough of it. It&rsquo;s the little things. The way her neck comes down and dips under her collarbones. The mole on the ball of her left foot. Her laugh, especially when she can&rsquo;t stop laughing. Her bread making. The way she can curl up perfectly beside me on the couch and I can curl up perfectly beside her on the bed. Her arms and hands. The way she speaks when it is quiet and the words are really important. Her eyes. Her lips. Oh. My. God. Her. Lips.</p>
 
 <p><a href="http://www.flickr.com/photos/carissabyers/2612843503/in/photostream/"><img src="http://farm4.static.flickr.com/3025/2612843503_03bf239b8f.jpg" title="On the Florida beach, Christmas 2007"></a></p>
 
-<p>Now I not only get the perfect partner with whom to share the rest of my life, I get to enjoy the giggly, romantic comedy, overwhelmed and obsessed version of love we all grow up being taught about in the movies. I just hope the stupid cartoon eyes I give Carissa when I get busted staring at her all the time don't freak her out too much.</p>
+<p>Now I not only get the perfect partner with whom to share the rest of my life, I get to enjoy the giggly, romantic comedy, overwhelmed and obsessed version of love we all grow up being taught about in the movies. I just hope the stupid cartoon eyes I give Carissa when I get busted staring at her all the time don&rsquo;t freak her out too much.</p>
 
 <p class="date">September 20, 2010</p>
 
@@ -44,7 +44,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/09/20/obsessed.html" width="500"></fb:comments></div>
@@ -72,8 +72,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -88,10 +87,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

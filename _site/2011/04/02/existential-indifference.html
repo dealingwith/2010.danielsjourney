@@ -21,21 +21,21 @@
   <div id="content">
     <p><img src="http://farm4.static.flickr.com/3129/2311071031_d977ff5c1c.jpg" title="http://www.flickr.com/photos/92661859@N00/2311071031/ I like Mike Bitzenhofer's approach to existentialism: 'Eggistentialism'"></p>
 
-<p>I somewhat recently discovered <a href="http://twitter.com/oliverburkeman">Oliver Burkeman</a> and have found his columns rather good. This week's is no exception:</p>
+<p>I somewhat recently discovered <a href="http://twitter.com/oliverburkeman">Oliver Burkeman</a> and have found his columns rather good. This week&rsquo;s is no exception:</p>
 
-<blockquote><p>...Garcin is having an existential crisis, as people tend to do in Sartre. (These days, he could just pick up a copy of <a href="http://www.purposedrivenlife.com/en-US/Home/home.htm">The Purpose-Driven Life</a> and be done with it.) He's facing the Big Question: how to deal with life's apparent meaninglessness? Of course, many other philosophers, not to mention self-help gurus, would argue that life isn't meaningless--that meaning's to be found in family, or work, or spirituality. But intriguing new research suggests that, for a sizeable chunk of the population, a different answer to the Big Question may be more pertinent: who cares?</p></blockquote>
+<blockquote><p>&hellip;Garcin is having an existential crisis, as people tend to do in Sartre. (These days, he could just pick up a copy of <a href="http://www.purposedrivenlife.com/en-US/Home/home.htm">The Purpose-Driven Life</a> and be done with it.) He&rsquo;s facing the Big Question: how to deal with life&rsquo;s apparent meaninglessness? Of course, many other philosophers, not to mention self-help gurus, would argue that life isn&rsquo;t meaningless&mdash;that meaning&rsquo;s to be found in family, or work, or spirituality. But intriguing new research suggests that, for a sizeable chunk of the population, a different answer to the Big Question may be more pertinent: who cares?</p></blockquote>
 
-<p><a href="https://www.readability.com/articles/00qcgokg">...read the rest</a>.</p>
+<p><a href="https://www.readability.com/articles/00qcgokg">&hellip;read the rest</a>.</p>
 
-<p>I've long been interested in meaning formation as a primary motivator of human behavior and a majority stakeholder in any person's happiness (I'm a big fan of <a href="http://en.wikipedia.org/wiki/Man's_Search_for_Meaning">Frankl</a>). As I've tried to parse the recent events of my life, this is often the lens I use. I'm often confused by others who appear to have this existential indifference that Burkeman refers to. On one hand, I want to be able to move through life with more aplomb. On the other hand, it sure seems like a lot of us here sharing this planet just don't care.</p>
+<p>I&rsquo;ve long been interested in meaning formation as a primary motivator of human behavior and a majority stakeholder in any person&rsquo;s happiness (I&rsquo;m a big fan of <a href="http://en.wikipedia.org/wiki/Man's_Search_for_Meaning">Frankl</a>). As I&rsquo;ve tried to parse the recent events of my life, this is often the lens I use. I&rsquo;m often confused by others who appear to have this existential indifference that Burkeman refers to. On one hand, I want to be able to move through life with more aplomb. On the other hand, it sure seems like a lot of us here sharing this planet just don&rsquo;t care.</p>
 
-<p>Of course existential crisis is not required to do important work. I have a friend who spends a lot of time thinking about how to work better and does excellent work partly due to that intention (he's also just a hard worker). About a year age were discussing his strategies for maintaining focus and doing meaningful work--I was just starting work on <a href="http://todoblin.com">Todoblin</a> and particularly interested (as I always am, really) in <a href="http://en.wikipedia.org/wiki/Grok">groking</a> how people work. I asked him, "Don't you ever have moments of existential crisis?" He just kind of gave me a look that said something like, "You speak of this 'existential crisis' like it's something that actually happens to people."</p>
+<p>Of course existential crisis is not required to do important work. I have a friend who spends a lot of time thinking about how to work better and does excellent work partly due to that intention (he&rsquo;s also just a hard worker). About a year age were discussing his strategies for maintaining focus and doing meaningful work&mdash;I was just starting work on <a href="http://todoblin.com">Todoblin</a> and particularly interested (as I always am, really) in <a href="http://en.wikipedia.org/wiki/Grok">groking</a> how people work. I asked him, &ldquo;Don&rsquo;t you ever have moments of existential crisis?&rdquo; He just kind of gave me a look that said something like, &ldquo;You speak of this &lsquo;existential crisis&rsquo; like it&rsquo;s something that actually happens to people.&rdquo;</p>
 
 <p class="date">April 02, 2011</p>
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/04/02/existential-indifference.html" width="500"></fb:comments></div>
@@ -63,8 +63,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -79,10 +78,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

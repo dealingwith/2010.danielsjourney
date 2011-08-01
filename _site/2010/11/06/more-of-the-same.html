@@ -22,14 +22,14 @@
     <p><img src="http://farm3.static.flickr.com/2651/4236918239_57a2b6a385.jpg" title="Photo by Bethan Phillips http://www.flickr.com/photos/beth19/4236918239/"></p>
 
 <ul>
-<li>I'm still mostly sad.</li>
+<li>I&rsquo;m still mostly sad.</li>
 <li>I still miss my daughter all the time.</li>
 <li>Happy times are still marked by her absence.</li>
 <li>Everything would be perfect if she were still here.</li>
-<li>I'm still ready for a fight that won't come and wouldn't help anything anyway.</li>
+<li>I&rsquo;m still ready for a fight that won&rsquo;t come and wouldn&rsquo;t help anything anyway.</li>
 <li>I still exist in a world that continues on despite all these things.</li>
 <li>I still struggle to resist the urge to just totally drop out.</li>
-<li>I still feel really betrayed but I'm not sure with whom.</li>
+<li>I still feel really betrayed but I&rsquo;m not sure with whom.</li>
 <li>I would still do anything to have her back again.</li>
 </ul>
 
@@ -38,7 +38,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/11/06/more-of-the-same.html" width="500"></fb:comments></div>
@@ -66,8 +66,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -82,10 +81,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

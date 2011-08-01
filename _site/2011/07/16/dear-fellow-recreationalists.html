@@ -25,7 +25,7 @@
 
 <p>Additionally, in cold weather, please never wear a sleeveless jersey and arm warmers. In fact, sleeveless athletic wear should be left to women and weight lifters.</p>
 
-<p>Triathletes and those who bought and installed triathlete handlebar extensions for the road bicycle they dust off once every eight Saturdays: I would wish bad things to happen to you while you are using said handlebars but the likelihood of said bad things happening increases so much when you use said handlebars that I don't really have to wish it at all. The problem is when your absurd and unsafe riding position comes within a certain distance to my own attempts at safe, reasonable bicycling. You're a hazard. If you are really training for a competitive time trial, drive yourself and your fancy bike out to a long, flat, straight piece of road without other cyclists on it and practice there. If you're not training for a competitive time trial, then you are a complete dork.</p>
+<p>Triathletes and those who bought and installed triathlete handlebar extensions for the road bicycle they dust off once every eight Saturdays: I would wish bad things to happen to you while you are using said handlebars but the likelihood of said bad things happening increases so much when you use said handlebars that I don&rsquo;t really have to wish it at all. The problem is when your absurd and unsafe riding position comes within a certain distance to my own attempts at safe, reasonable bicycling. You&rsquo;re a hazard. If you are really training for a competitive time trial, drive yourself and your fancy bike out to a long, flat, straight piece of road without other cyclists on it and practice there. If you&rsquo;re not training for a competitive time trial, then you are a complete dork.</p>
 
 <p>Runners: while I admit my frustration with your presence and bewilderment at your choice of exercise modalities may be mirrored by your own feelings toward my bicycling, I do somewhat resent the way you can dominate a mixed-use trail like so many ants on a discarded picnic hotdog. I imagine drivers must feel the same way when stuck behind a large group ride out on the street, but at least they have air conditioning and a radio to enjoy while they wait for a moment to pass. Also, there are not 1000 large group rides all over Dallas every weekend morning.</p>
 
@@ -56,7 +56,7 @@ $(function() {
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/07/16/dear-fellow-recreationalists.html" width="500"></fb:comments></div>
@@ -84,8 +84,7 @@ $(function() {
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -100,10 +99,10 @@ $(function() {
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

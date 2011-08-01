@@ -21,7 +21,7 @@
   <div id="content">
     <p><img src="http://2010.danielsjourney.com/files/tumblr_ljyjrpJZIz1qzcq51o1_500.gif" title="&ldquo;Busy day in Manhattan&hellip;but there&rsquo;s always time for the paper.&rdquo; via From Me To You http://fromme-toyou.tumblr.com/post/4778641278/busy-day-in-manhattan-but-theres-always-time-for"></p>
 
-<p>Things have been <a href="http://twitter.com/#!/withextrasauce/status/60026226236080128">busy</a> and will continue to be so. There is more good news to come. There is work to be done. It still comes and goes in waves. There are still a couple things I wrestle with and perhaps will make observations about on this blog but for the most part this is wrapping itself up and I am trying to strategize a move back to--and re-inclusion of the archives of--my regular blog.</p>
+<p>Things have been <a href="http://twitter.com/#!/withextrasauce/status/60026226236080128">busy</a> and will continue to be so. There is more good news to come. There is work to be done. It still comes and goes in waves. There are still a couple things I wrestle with and perhaps will make observations about on this blog but for the most part this is wrapping itself up and I am trying to strategize a move back to&mdash;and re-inclusion of the archives of&mdash;my regular blog.</p>
 
 <p>Here are some pics of recent life:</p>
 
@@ -39,7 +39,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/04/20/busy.html" width="500"></fb:comments></div>
@@ -67,8 +67,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -83,10 +82,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

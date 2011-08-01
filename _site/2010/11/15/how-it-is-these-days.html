@@ -22,7 +22,7 @@
     <p class="media"><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/aCaHM1d727E?fs=1&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/aCaHM1d727E?fs=1&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object></p>
 
 
-<p>Thought of a good metaphor the other day: it's like somebody walks in every hour on the hour and punches you in the stomach. By late afternoon, you get tired of being punched in the stomach every hour and try doing something else. By early evening you decide to self medicate to try and calm the pain in your gut. By late evening the ache is keeping you up, daring you to go lie down and be quiet for a moment, long enough to not think about anything other than it.</p>
+<p>Thought of a good metaphor the other day: it&rsquo;s like somebody walks in every hour on the hour and punches you in the stomach. By late afternoon, you get tired of being punched in the stomach every hour and try doing something else. By early evening you decide to self medicate to try and calm the pain in your gut. By late evening the ache is keeping you up, daring you to go lie down and be quiet for a moment, long enough to not think about anything other than it.</p>
 
 <p>This, of course, is an improvement from being constantly punched in the gut.</p>
 
@@ -35,7 +35,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/11/15/how-it-is-these-days.html" width="500"></fb:comments></div>
@@ -63,8 +63,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -79,10 +78,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

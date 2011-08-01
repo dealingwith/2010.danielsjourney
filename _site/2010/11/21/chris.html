@@ -21,13 +21,13 @@
   <div id="content">
     <p><img src="http://farm5.static.flickr.com/4130/5195708177_ab4bb4384c_o.jpg" title="Photo by Kate Mackley http://www.flickr.com/photos/katemackley/5078499695/in/photostream/"></p>
 
-<p>The reason <a href="http://danielmiller.bandcamp.com/album/memorial">the Memorial record</a> happened now instead of next year or never is because of Chris Holt. We planned the Memorial service in just a couple of days, during a time that I can barely remember, and Chris was incredibly helpful during that time. His new record <a href="http://chrisholt.bandcamp.com/album/a-cosmic-joke">A Cosmic Joke</a> wasn't quite out yet, but he sent us a couple songs from it as possibilities to play at the memorial and we were just floored by them. He continued to go above and beyond by reworking the lyrics of <a href="http://chrisholt.bandcamp.com/track/always-in-awe">Always in Awe</a>* and learning a new arrangement of <a href="http://danielmiller.bandcamp.com/track/ill-fly-away">I'll Fly Away</a> within about 24 hours.</p>
+<p>The reason <a href="http://danielmiller.bandcamp.com/album/memorial">the Memorial record</a> happened now instead of next year or never is because of Chris Holt. We planned the Memorial service in just a couple of days, during a time that I can barely remember, and Chris was incredibly helpful during that time. His new record <a href="http://chrisholt.bandcamp.com/album/a-cosmic-joke">A Cosmic Joke</a> wasn&rsquo;t quite out yet, but he sent us a couple songs from it as possibilities to play at the memorial and we were just floored by them. He continued to go above and beyond by reworking the lyrics of <a href="http://chrisholt.bandcamp.com/track/always-in-awe">Always in Awe</a>* and learning a new arrangement of <a href="http://danielmiller.bandcamp.com/track/ill-fly-away">I&rsquo;ll Fly Away</a> within about 24 hours.</p>
 
 <p>I later told Chris I had a thought to create a collection of the songs played that night. A couple of weeks later he sent me a message that he had made arrangements with <a href="http://www.salimnourallah.com/">Salim</a> to go into <a href="http://www.pleasantrylane.com/">Pleasantry Lane</a> to record his tunes. It took a few weeks to finally get into the studio, during which time I sent messages to Doug, The Beaten Sea and Salim, who all agreed to participate in the project. Doug already had some acoustic recordings of the songs from <a href="http://www.amazon.com/gp/product/B001Q8GBVM?ie=UTF8&amp;tag=wwwdanielsjou-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B001Q8GBVM">The Shawl</a>. Salim recorded acoustic versions of his two songs during the sessions with Chris. And Benj from The Beaten Sea came in one night to record his version of <a href="http://danielmiller.bandcamp.com/track/adios-au-revoir-auf-wiedersehen">Adios, Au Revoir, Auf Wiedersehen</a>, which will now forever win as most beautiful sad song of all time.</p>
 
-<p>It even turned out that The Beaten Sea and I use the same mastering engineer, so he already had the original of <a href="http://danielmiller.bandcamp.com/track/its-hard-to-resist">It's Hard to Resist</a> that he could master to the same level as the rest of the record. Oh, and he donated his time to the project as well, despite never having met me in real life. The hardest part was deciding on a title, choosing between the four different cover art versions <a href="http://vladimirzimakov.com/">Vladimir</a> sent (I included two in the download) and listening to the masters when they came back.</p>
+<p>It even turned out that The Beaten Sea and I use the same mastering engineer, so he already had the original of <a href="http://danielmiller.bandcamp.com/track/its-hard-to-resist">It&rsquo;s Hard to Resist</a> that he could master to the same level as the rest of the record. Oh, and he donated his time to the project as well, despite never having met me in real life. The hardest part was deciding on a title, choosing between the four different cover art versions <a href="http://vladimirzimakov.com/">Vladimir</a> sent (I included two in the download) and listening to the masters when they came back.</p>
 
-<p>The record that means the most to me, I can't even listen to.</p>
+<p>The record that means the most to me, I can&rsquo;t even listen to.</p>
 
 <p class="date">November 21, 2010</p>
 
@@ -38,7 +38,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/11/21/chris.html" width="500"></fb:comments></div>
@@ -66,8 +66,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -82,10 +81,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

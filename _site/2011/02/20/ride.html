@@ -21,20 +21,20 @@
   <div id="content">
     <p><img src="http://farm3.static.flickr.com/2384/2462014101_8fed19efb6.jpg" title="http://www.flickr.com/photos/silverfingers/2462014101/in/faves-dealingwith/ Photo by Hans Hamburger"></p>
 
-<p>Today I rode for the 5th day in a row. It probably would have been 10 days except for last Monday and Tuesday off due to two separate TMI ailments. And I must have really "misunderestimated" the previous four days because today kicked my ass in the best way possible.</p>
+<p>Today I rode for the 5th day in a row. It probably would have been 10 days except for last Monday and Tuesday off due to two separate TMI ailments. And I must have really &ldquo;misunderestimated&rdquo; the previous four days because today kicked my ass in the best way possible.</p>
 
-<p>Sunday mornings I've acquired the habit of riding with the group out of <a href="http://ocbicycleco.com/">Oak Cliff Bicycle Company</a>, probably the only non-pretentious shop or group ride in town. But it's <em>hilly</em> and pretty <em>fast</em> and is a great way to take the legs to their limit especially if, like I did today, you've left yourself with not-really-enough left in your legs for such a ride.</p>
+<p>Sunday mornings I&rsquo;ve acquired the habit of riding with the group out of <a href="http://ocbicycleco.com/">Oak Cliff Bicycle Company</a>, probably the only non-pretentious shop or group ride in town. But it&rsquo;s <em>hilly</em> and pretty <em>fast</em> and is a great way to take the legs to their limit especially if, like I did today, you&rsquo;ve left yourself with not-really-enough left in your legs for such a ride.</p>
 
-<p>So I've had the odd pleasure of existing for the rest of my day in an odd haze and <a href="http://www.facebook.com/group.php?gid=5102364950">as Phil Liggett would say</a> "legs [that] have turned to rubber".</p>
+<p>So I&rsquo;ve had the odd pleasure of existing for the rest of my day in an odd haze and <a href="http://www.facebook.com/group.php?gid=5102364950">as Phil Liggett would say</a> &ldquo;legs [that] have turned to rubber&rdquo;.</p>
 
 <hr>
 
 
-<p>I've wanted a couple of times to re-post about <a href="http://2010.danielsjourney.com/2010/10/24/fast-boy.html">Fast Boy</a>. His blog and our occasional email correspondence have been a great encouragement to me. Although our pain is very different it is similar in its mere existence. He travels through his with an aplomb that is well summed up with this excerpt from <a href="http://www.fastboycycles.com/teachingcancertocry/?p=601">his latest post</a>. It is also such an eloquent description of the dichotomy that is the pain-addled life:</p>
+<p>I&rsquo;ve wanted a couple of times to re-post about <a href="http://2010.danielsjourney.com/2010/10/24/fast-boy.html">Fast Boy</a>. His blog and our occasional email correspondence have been a great encouragement to me. Although our pain is very different it is similar in its mere existence. He travels through his with an aplomb that is well summed up with this excerpt from <a href="http://www.fastboycycles.com/teachingcancertocry/?p=601">his latest post</a>. It is also such an eloquent description of the dichotomy that is the pain-addled life:</p>
 
 <blockquote><p>I hate this pattern of bringing you ever more pitiful news.  I sometimes hesitate to write at all, and yet the point is to document this bloody process.</p>
 
-<p>Meanwhile, strangely, I find that I am ever more aware of just how much I love my life.  My mind is going at warp speed with ideas..  I'm excited about getting back to building bikes, but also about lots of other things. I love making these food videos!  I've got some music video work coming up that's awfully exciting.  There are things that I want to write, pieces of hardware that I want to design. Places I want to go..  and yet I'm falling asleep writing this entry.  I'm beat.  I'm tired.  I hurt.  It is unbelievably frustrating.</p>
+<p>Meanwhile, strangely, I find that I am ever more aware of just how much I love my life.  My mind is going at warp speed with ideas..  I&rsquo;m excited about getting back to building bikes, but also about lots of other things. I love making these food videos!  I&rsquo;ve got some music video work coming up that&rsquo;s awfully exciting.  There are things that I want to write, pieces of hardware that I want to design. Places I want to go..  and yet I&rsquo;m falling asleep writing this entry.  I&rsquo;m beat.  I&rsquo;m tired.  I hurt.  It is unbelievably frustrating.</p>
 
 <p>Tonight I will make fish cakes.</p></blockquote>
 
@@ -47,7 +47,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/02/20/ride.html" width="500"></fb:comments></div>
@@ -75,8 +75,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -91,10 +90,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

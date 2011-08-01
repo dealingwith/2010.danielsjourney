@@ -21,18 +21,18 @@
   <div id="content">
     <p><img src="http://farm4.static.flickr.com/3551/3540768084_d6971c7b66.jpg" title="http://www.flickr.com/photos/lintmachine/3540768084/ Sweep by lintmachine"></p>
 
-<p>Isn't the deal with nostalgia just that if we can live in the past, then we live before all these difficult and painful things that have happened to us? We live without the memories. We live in a time that was safe. Enjoyable. Innocent.</p>
+<p>Isn&rsquo;t the deal with nostalgia just that if we can live in the past, then we live before all these difficult and painful things that have happened to us? We live without the memories. We live in a time that was safe. Enjoyable. Innocent.</p>
 
-<p>I think about the people on <em>Hoarders</em> and I wonder if it really doesn't matter what their current state is, as long as those objects they hold onto allow their minds to be somewhere else. Some kind of form of <a href="http://en.wikipedia.org/wiki/Dissociation">dissociation</a> or retrograde <a href="http://en.wikipedia.org/wiki/Fugue_state">fugue state</a>&mdash;instead of the establishment of a new identity, there is an establishment of a prior identity.</p>
+<p>I think about the people on <em>Hoarders</em> and I wonder if it really doesn&rsquo;t matter what their current state is, as long as those objects they hold onto allow their minds to be somewhere else. Some kind of form of <a href="http://en.wikipedia.org/wiki/Dissociation">dissociation</a> or retrograde <a href="http://en.wikipedia.org/wiki/Fugue_state">fugue state</a>&mdash;instead of the establishment of a new identity, there is an establishment of a prior identity.</p>
 
 <p>Just a thought.</p>
 
-<p>As I get older, and specifically throughout this experience, my desire for&mdash;or at least the elicitation of&mdash;nostalgic feelings has intensified. And they are very specific. The drum sounds in Phil Collin's <em>I Don't Care Anymore</em>. . .</p>
+<p>As I get older, and specifically throughout this experience, my desire for&mdash;or at least the elicitation of&mdash;nostalgic feelings has intensified. And they are very specific. The drum sounds in Phil Collin&rsquo;s <em>I Don&rsquo;t Care Anymore</em>&hellip;</p>
 
 <p><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/01%20I%20Don't%20Care%20Anymore.mp3">Phil Collins - I Don't Care Anymore</a></span></span></p>
 
 
-<p>Or Live's <em>Pain Lies On The Riverside</em>. . .</p>
+<p>Or Live&rsquo;s <em>Pain Lies On The Riverside</em>&hellip;</p>
 
 <p><span class="audioplayer"><span id="audioplayer_2"><a href="http://2010.danielsjourney.com/files/01%20Pain%20Lies%20On%20The%20Riverside.mp3">Live - Pain Lies on the Riverside</a></span></span></p>
 
@@ -58,7 +58,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/06/14/nostalgia.html" width="500"></fb:comments></div>
@@ -86,8 +86,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -102,10 +101,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

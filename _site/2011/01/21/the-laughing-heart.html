@@ -22,7 +22,7 @@
     <p><img src="http://farm5.static.flickr.com/4040/4253530070_fb31ffee15.jpg" title="Illustration by aeneastudio http://www.flickr.com/photos/90282319@N00/4253530070/"></p>
 
 <p>Your life is your life<br/>
-don't let it be clubbed into dank submission.<br/>
+don&rsquo;t let it be clubbed into dank submission.<br/>
 be on the watch.<br/>
 there are ways out.<br/>
 there is a light somewhere.<br/>
@@ -32,7 +32,7 @@ be on the watch.<br/>
 the gods will offer you chances.<br/>
 know them.<br/>
 take them.<br/>
-you can't beat death but<br/>
+you can&rsquo;t beat death but<br/>
 you can beat death in life, sometimes.<br/>
 and the more often you learn to do it,<br/>
 the more light there will be.<br/>
@@ -42,13 +42,13 @@ you are marvelous<br/>
 the gods wait to delight<br/>
 in you.</p>
 
-<p>-- Charles Bukowski</p>
+<p>&mdash; Charles Bukowski</p>
 
 <p class="date">January 21, 2011</p>
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/01/21/the-laughing-heart.html" width="500"></fb:comments></div>
@@ -76,8 +76,7 @@ in you.</p>
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -92,10 +91,10 @@ in you.</p>
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

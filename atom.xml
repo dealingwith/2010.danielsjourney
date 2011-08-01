@@ -24,7 +24,7 @@ layout: nil
       <email>dealingwith@gmail.com</email>
     </author>
 
-    <summary>{{ post.content | strip_html | truncatewords: 20 | strip_html }}</summary>
+    <summary>{{ post.content | strip_html | truncatewords: 20 | replace: '&rsquo;', "'" | replace: '&rdquo;', '"' | replace: '&ldquo;', '"' | replace: '&mdash;', "--" | replace: '&hellip;', '. . .' }}</summary>
     <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
       <![CDATA[{{ post.content }}{{ post.extended }}]]>
     </content>

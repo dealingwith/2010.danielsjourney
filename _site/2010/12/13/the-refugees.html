@@ -22,9 +22,9 @@
     <p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/01%20Andrew%20Solomon_%20The%20Refugees.mp3">Andrew Solomon - The Refugees</a></span></span></p>
 
 
-<p>Last week was a pretty bad week emotionally/spiritually. I'm not really sure why, it could have been the pendulum swinging back from my <a href="http://2010.danielsjourney.com/2010/12/08/boulder.html">good time in Boulder</a> or the general <a href="http://en.wikipedia.org/wiki/Fear,_uncertainty_and_doubt">FUD</a> both worldwide and locally. It might be the onset of the Christmas season and the fact that all good things are stained with this loss.</p>
+<p>Last week was a pretty bad week emotionally/spiritually. I&rsquo;m not really sure why, it could have been the pendulum swinging back from my <a href="http://2010.danielsjourney.com/2010/12/08/boulder.html">good time in Boulder</a> or the general <a href="http://en.wikipedia.org/wiki/Fear,_uncertainty_and_doubt">FUD</a> both worldwide and locally. It might be the onset of the Christmas season and the fact that all good things are stained with this loss.</p>
 
-<p>Saturday I had reason to drive to Fort Worth and on the way there and back I listened to <a href="http://www.themoth.org/">The Moth</a> podcast of stories told at their various storytelling events. I was headed back when this one came up, a story told almost a decade ago by <a href="http://www.google.com/search?q=Andrew+Solomon">Andrew Solomon</a>. I should warn you, what it describes is horrible and should only be heard at the right moment. Fortify yourself. But it is also a story of incredible strength and hope. I was somewhere in the <a href="http://en.wikipedia.org/wiki/Mid-Cities">Mid-Cities</a> when he finished and the whole thing washed over me at once--both an intense sadness and a weight-lifting, as if my own burden of sadness, pain and injustice briefly ascended to join with all those who also knew of it and more.</p>
+<p>Saturday I had reason to drive to Fort Worth and on the way there and back I listened to <a href="http://www.themoth.org/">The Moth</a> podcast of stories told at their various storytelling events. I was headed back when this one came up, a story told almost a decade ago by <a href="http://www.google.com/search?q=Andrew+Solomon">Andrew Solomon</a>. I should warn you, what it describes is horrible and should only be heard at the right moment. Fortify yourself. But it is also a story of incredible strength and hope. I was somewhere in the <a href="http://en.wikipedia.org/wiki/Mid-Cities">Mid-Cities</a> when he finished and the whole thing washed over me at once&mdash;both an intense sadness and a weight-lifting, as if my own burden of sadness, pain and injustice briefly ascended to join with all those who also knew of it and more.</p>
 
 <p class="date">December 13, 2010</p>
 
@@ -41,7 +41,7 @@
 
 
   </div><!--content-->
-  <a class="attribute"></a>
+  <a id="attribute"></a>
 </div><!--content_container-->
 
 <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2010/12/13/the-refugees.html" width="500"></fb:comments></div>
@@ -69,8 +69,7 @@
 
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
-<script src="/js/plugins.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="/jquery-1.6.1.min.js"%3E%3C/script%3E'))</script>
 <script src="/jquery.fancyletter.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function(){
@@ -85,10 +84,10 @@
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          
         $('#content_container').prepend('<img src="' + $img.attr('src') + '" class="callout">');
-        $title = $img.attr('title');
-        $link = $title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
-        $title = $title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
-        $('#attribute').html($title).attr('href', $link);
+        title = $img.attr('title');
+        link = title.match(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g);
+        title = title.replace(/http:\/\/[-a-zA-Z0-9@:%_\+.~#?&\/=]+/g, '');
+        $('#attribute').html(title).attr('href', link);
         $img.parent("p").length > 0 ? $img.parent("p").remove() : $img.remove();
       }
       

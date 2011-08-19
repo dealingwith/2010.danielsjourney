@@ -1,0 +1,10 @@
+---
+layout: post
+title: "One Year"
+---
+
+<img src="http://farm4.static.flickr.com/3278/3052763269_ec3cdc70b9.jpg" title="Photo by Ed Lisieski http://www.flickr.com/photos/redredbuttons/3052763269/">
+
+365 days ago, my daughter, my only child, died.
+
+<p class="date">August 13, 2011</p>

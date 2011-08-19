@@ -1,0 +1,32 @@
+---
+layout: post
+title: "New Year"
+---
+
+<img src="http://farm3.static.flickr.com/2026/2350547629_5c87aa4065.jpg" title="Photo by Ed Lisieski http://www.flickr.com/photos/redredbuttons/2350547629/">
+
+And so a new morning arrived. And I rode 55 miles, in the company of people I enjoy, [40 of which were on roads I'd never seen before](http://www.endomondo.com/workouts/mVQYeo7T-tg) and were rather nice for cycling. Some of them even reminded me of the roads I grew up riding on in PA. It was the perfect way to start a new year.
+
+<hr>
+
+At first I thought Lucy's conception would change something. Then the year mark. Of course things never work that way. This will stay with me forever. How I live within it changes. I wish I could be to the place where I could see her pictures. I didn't expect to yet be to the place where I could watch video or listen to the audio I'd captured of her talking and singing. But I had hoped to be able to see her beautiful, perfect face, not fear seeing it for risk of losing my shit.
+
+<hr>
+
+I had more to say but have run out of time multiple times. Thank you all for your well-portioned reaching-outs yesterday. So for now, a small mix.
+
+<p class="media"><span class="audioplayer"><span id="audioplayer_1"></span></span></p>
+
+([Here is the directory with all the tunes, for your time-shifted enjoyment](http://2010.danielsjourney.com/files/NewYear/). There is one bonus track in there, not included in the player because there is a reader of this blog for whom it would be too difficult to hear.)
+
+<p class="date">August 14, 2011</p>
+
+<script type="text/javascript">  
+  $(function(){
+    AudioPlayer.embed("audioplayer_1", 
+      {
+        soundFile: "http://2010.danielsjourney.com/files/NewYear/03%20Don't%20Stop%20Believing.mp3, http://2010.danielsjourney.com/files/NewYear/01%20New%20Years%20Day.mp3, http://2010.danielsjourney.com/files/NewYear/01%20So%20am%20I.mp3, http://2010.danielsjourney.com/files/NewYear/01%20Faithfully.mp3",  
+        titles: "Don't Stop Believing, New Years Day, So Am I, Faithfully",  
+        artists: "Clem Snide, Andy Zipf, Andy Zipf, Clem Snide"});
+  });
+</script>

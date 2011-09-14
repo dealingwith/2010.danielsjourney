@@ -13,7 +13,7 @@ body, html {
     overflow-x: hidden;
     background: #fffffe url('images/body_bg.png');
     -webkit-text-size-adjust: 200%;
-/*    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */*/
+    /* -webkit-text-stroke: 1px transparent; */
 }
 body > div {
     color: #272727;

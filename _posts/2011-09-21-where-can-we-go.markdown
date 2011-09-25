@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Where can we go to feel"
+title: "Where can we go to feel?"
 ---
 
 <img src="http://farm3.static.flickr.com/2558/3703829924_8800c4e88f.jpg" title="http://www.flickr.com/photos/37324043@N00/3703829924/ road blocks in Siberia by Copper Kettle">

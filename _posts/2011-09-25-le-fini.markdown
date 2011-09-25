@@ -1,0 +1,12 @@
+---
+layout: post
+title: '&#8220;le fini d&eacute;fini par le non fini&#8221;'
+---
+
+<img src="/images/RomanOpalka2.jpg" title="Roman Opalka">
+
+> In 1965, in his studio in Warsaw, Opa&#x142;ka began painting a process of counting &#x2013; from one to infinity. Starting in the top left-hand corner of the canvas and finishing in the bottom right-hand corner, the tiny numbers were painted in horizontal rows. Each new canvas, which the artist called a 'detail', took up counting where the last left off. Each 'detail' is the same size (196 x 135 cm), the dimension of his studio door in Warsaw. All details have the same title, "1965 / 1 &#x2013; &infin;"; the concept had no end, and the artist pledged his life to its execution: 'All my work is a single thing, the description from number one to infinity. A single thing, a single life.'
+
+> The final number he wrote was 5,607,249
+
+<p class="postscript">Via the internet via <a href="http://mlkshk.com/p/7NH7">ftrain</a>. Text from <a href="http://en.wikipedia.org/wiki/Roman_Opa%C5%82ka">wikipedia</a>. Image from <a href="http://opalka1965.com/en/index_en.php">the official website</a>.

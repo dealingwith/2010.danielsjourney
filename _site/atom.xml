@@ -4,9 +4,169 @@
   <link rel="alternate" type="text/html" href="http://2010.danielsjourney.com/" />
   <link rel="self" type="application/atom+xml" href="http://2010.danielsjourney.com/atom.xml" />
   <id>http://2010.danielsjourney.com/atom.xml</id>
-  <updated>2011-09-25T00:00:00Z</updated>
+  <updated>2011-10-02T00:00:00Z</updated>
   <subtitle>loss</subtitle>
 
+  
+  
+  <entry>
+    <title type="html">So what now? The problem with desire.</title>
+    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/10/02/desire.html' />
+    <id>http://2010.danielsjourney.com/2011/10/02/desire.html</id>
+    <updated>2011-10-02T00:00:00-05:00</updated>
+
+    <author>
+      <name>Daniel Miller</name>
+      <uri>http://danielsjourney.com</uri>
+      <email>dealingwith@gmail.com</email>
+    </author>
+
+    <summary>I now have a series of posts lined up but I'm not sure if I'll finish any of them, so...</summary>
+    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
+      <![CDATA[<p class="media"><iframe width="420" height="315" src="http://www.youtube.com/embed/HWG6VW9pkE4?rel=0" frameborder="0" allowfullscreen></iframe></p>
+
+
+<p>I now have a series of posts lined up but I&rsquo;m not sure if I&rsquo;ll finish any of them, so I&rsquo;m just going to post stuff as it becomes concise enough to post, which means it will probably be out of order and incoherent as a whole. Also please excuse me if on this post and possibly others I&rsquo;m just re-writing <a href="http://peterrollins.net/">Pete Rollins</a> in my own words and for my own benefit.</p>
+
+<p>&ldquo;Wiley Coyote Retires&rdquo; (which is NSFW unless you work somewhere awesome like Extra Sauce) does a really good job of addressing what happens when one achieves their desire, when their desire is achievable (for example, as we say in the technology startup world, &ldquo;fuck you money&rdquo;). Of course those who have had success rarely retire early to their <a href="http://www.youtube.com/watch?v=gqjGPIYJsh0">special island</a>, they usually insert themselves into others' brilliance by becoming an angel investor or venture capitalist or special advisor (which somehow seems like retiring from porn to become a fluffer), or they just go do <a href="http://denniscrowley.com/">the exact same thing over again</a>.</p>
+
+<p><a href="http://mlkshk.com/p/7TL4"><img src="http://mlkshk.com/r/7TL4"></a></p>
+
+<p>Or, as my former business partner Dan and I used to joke, they develop a mandatory coke habit. And the idea that having enough money means a freedom from anxiety about money <a href="http://www.dailymotion.com/video/x1xdq0_notorious-big-mo-money-mo-problem_music">just isn&rsquo;t true</a>. Besides, where would you be without all that misplaced anxiety? You&rsquo;d simply misplace it elsewhere. Billionaires and soccer moms and spoiled children are all pretty much the same thing.</p>
+
+<iframe width="490" height="279" src="http://www.youtube.com/embed/R8vJgYQU_lY?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<p><a href="http://peterrollins.net/?p=1795">Pete&rsquo;s answer to this problem is</a>:</p>
+
+<blockquote><p>Perhaps there is another possibility, if we are lucky enough to find it. And that is in finding and being with the one we love. In being with the one we love we gain what we desire while remaining at a distance from it. When we love someone they are present to us as a mystery. They are the opening to, and encounter with, otherness itself. They are a vast and endless ocean.</p></blockquote>
+
+<p>Which at the moment just leaves me here in my loss, and in my fears of potential loss. (Pete is probably talking about an existential love with some more abstract &ldquo;other&rdquo; but I&rsquo;ll allow him his own continued thinking on these matters and not conjecture further on his conclusions.)</p>
+
+<p>I feel like I&rsquo;m close to wrapping my head around a third way that might illuminate a way forward. This stuff gets all smashed together with meaning and identity formation&hellip; [to be continued]</p>
+
+<p class="date">October 02, 2011</p>
+
+]]>
+    </content>
+  </entry>
+  
+  
+  <entry>
+    <title type="html">This is the Problem</title>
+    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/09/29/the-problem.html' />
+    <id>http://2010.danielsjourney.com/2011/09/29/the-problem.html</id>
+    <updated>2011-09-29T00:00:00-05:00</updated>
+
+    <author>
+      <name>Daniel Miller</name>
+      <uri>http://danielsjourney.com</uri>
+      <email>dealingwith@gmail.com</email>
+    </author>
+
+    <summary>Tracy Chapman - Mountain O' Things All I want is to have Margot back. I don't want anything else. I...</summary>
+    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
+      <![CDATA[<p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/06%20Mountains%20O'%20Things.mp3">Tracy Chapman - Mountain O' Things</a></span></span></p>
+
+
+<p>All I want is to have Margot back.</p>
+
+<br><br>
+
+
+<p>I don&rsquo;t want anything else.</p>
+
+<p>I would give up every penny I have, every penny I will ever have, to have her back.</p>
+
+<p>I would give up everything, every last moment of pleasure, to have her back.</p>
+
+<p>Hell. I would give up all of it for 5 minutes with her.</p>
+
+<p>It&rsquo;s hard to be motivated by desire when your only desire is impossible.</p>
+
+<p class="date">September 29, 2011</p>
+
+
+
+
+<script type="text/javascript">  
+  $(function(){
+    AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/06%20Mountains%20O'%20Things.mp3,http://2010.danielsjourney.com/files/11%20For%20You.mp3",  
+        titles: "Mountains O' Things, For You",  
+        artists: "Tracy Chapman"});
+  });
+</script>
+
+]]>
+    </content>
+  </entry>
+  
+  
+  <entry>
+    <title type="html">...an interesting case study in how life never allows for clear distinctions, or for real existential comfort whatsoever</title>
+    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/09/28/different-values.html' />
+    <id>http://2010.danielsjourney.com/2011/09/28/different-values.html</id>
+    <updated>2011-09-28T00:00:00-05:00</updated>
+
+    <author>
+      <name>Daniel Miller</name>
+      <uri>http://danielsjourney.com</uri>
+      <email>dealingwith@gmail.com</email>
+    </author>
+
+    <summary>In conversation yesterday the date December 8th came up and I slipped, "December 8th is Margot's--I mean Lucy's--due date." I...</summary>
+    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
+      <![CDATA[<p><img src="http://farm1.static.flickr.com/69/202159949_eac7a631df.jpg" title="http://www.flickr.com/photos/zenitram/202159949/ photo by susie martinez"></p>
+
+<p>In conversation yesterday the date December 8th came up and I slipped, &ldquo;December 8th is Margot&rsquo;s&mdash;I mean Lucy&rsquo;s&mdash;due date.&rdquo; I was smiling&mdash;the emotion and anticipation of Lucy&rsquo;s arrival thrown across my face&mdash;as I made the mistake and the dissonance between what I was thinking and what my ears heard my mouth say was distinct.</p>
+
+<p>Certainly, things are getting easier, in terms of emotionally surviving every day, in terms of emotionally surviving the constant reminders and triggers. But Lucy being both an unspeakable joy and a trigger is certainly an interesting case study in how life never allows for clear distinctions, or for real existential comfort whatsoever.</p>
+
+<hr>
+
+
+<p>On the other hand, I often feel oddly privileged by my lack of concern for those things that often trouble those untouched by such unfortunate experiences. But while I&rsquo;m much more able to exist in the moment, I also live in constant fear of what the following moment could contain.</p>
+
+<p>Money, and its concerns either in abundance or decline? No problem! My family driving <em>anywhere</em> without me? Horror at the innumerable threats that stand between them and their safe return.</p>
+
+<p>Strife&mdash;others' conflicts, stressors, disfunctions&mdash;when it finds its way into my experience? Ha! But let your toddler wander farther than five feet from you and I get a shot of fear-induced adrenaline through my veins.</p>
+
+<hr>
+
+
+<p>But those concerns reflect values, and I&rsquo;m left observing my own from a strange distance, noticing how they have changed in a way I probably would have never known except perhaps through old age. Still, these values won&rsquo;t make me more successful in the world&rsquo;s eyes (although I&rsquo;m open to the chance, don&rsquo;t get me wrong). They don&rsquo;t make me immune to anything in particular. They&rsquo;ve just given me access&hellip;to what I&rsquo;m still trying to determine.</p>
+
+<p class="date">September 28, 2011</p>
+
+]]>
+    </content>
+  </entry>
+  
+  
+  <entry>
+    <title type="html">L'Eroica</title>
+    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/09/27/leroica.html' />
+    <id>http://2010.danielsjourney.com/2011/09/27/leroica.html</id>
+    <updated>2011-09-27T00:00:00-05:00</updated>
+
+    <author>
+      <name>Daniel Miller</name>
+      <uri>http://danielsjourney.com</uri>
+      <email>dealingwith@gmail.com</email>
+    </author>
+
+    <summary>Finally we realize, that people nowadays still like cycling as a formative discipline. . .Cycling, above all, is about effort. It is...</summary>
+    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
+      <![CDATA[<div class="media"><iframe src="http://player.vimeo.com/video/20622427?portrait=0" width="640" height="360" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe></div>
+
+
+<blockquote><p>Finally we realize, that people nowadays still like cycling as a formative discipline&hellip;Cycling, above all, is about effort. It is also about adventure and travel but above all, the effort.</p></blockquote>
+
+<p class="date">September 27, 2011</p>
+
+]]>
+    </content>
+  </entry>
   
   
   <entry>
@@ -413,173 +573,6 @@ August 13, 2011
 <p>365 days ago, my daughter, my only child, died.</p>
 
 <p class="date">August 13, 2011</p>
-
-]]>
-    </content>
-  </entry>
-  
-  
-  <entry>
-    <title type="html">New Day</title>
-    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/08/11/new-day.html' />
-    <id>http://2010.danielsjourney.com/2011/08/11/new-day.html</id>
-    <updated>2011-08-11T00:00:00-05:00</updated>
-
-    <author>
-      <name>Daniel Miller</name>
-      <uri>http://danielsjourney.com</uri>
-      <email>dealingwith@gmail.com</email>
-    </author>
-
-    <summary>Yesterday improved. My meeting went really well and then I took the opportunity to visit my new friend Gerhard in...</summary>
-    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
-      <![CDATA[<p><img src="http://mlkshk.com/r/60D0" title="# http://mlkshk.com/p/60D0"></p>
-
-<p>Yesterday improved. My meeting went really well and then I took the opportunity to visit my new friend Gerhard in <a href="http://maps.google.com/maps?q=Roanoke,+tx">Roanoke</a>. Gerhard is the person I vaguely mentioned <a href="http://2010.danielsjourney.com/2011/08/03/get-over-yourself.html">in the footnote of this post</a> and the story is long and important and I don&rsquo;t want to do it injustice so I&rsquo;m not going to attempt to tell it right now.</p>
-
-<p>Had a cigar, talked about life, <a href="http://mlkshk.com/p/5ZM5">ate too much</a>, drank delicious German beer. Soul restorage.</p>
-
-<p class="date">August 11, 2011</p>
-
-]]>
-    </content>
-  </entry>
-  
-  
-  <entry>
-    <title type="html">This Day</title>
-    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/08/10/this-day.html' />
-    <id>http://2010.danielsjourney.com/2011/08/10/this-day.html</id>
-    <updated>2011-08-10T00:00:00-05:00</updated>
-
-    <author>
-      <name>Daniel Miller</name>
-      <uri>http://danielsjourney.com</uri>
-      <email>dealingwith@gmail.com</email>
-    </author>
-
-    <summary>This morning I had to get up and get downtown to appear in court for a ticket I got while...</summary>
-    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
-      <![CDATA[<p><img src="http://farm7.static.flickr.com/6124/6014958642_e9e0aca1a6.jpg" title="http://www.flickr.com/photos/beth19/6014958642 photo by Bethan"></p>
-
-<p>This morning I had to get up and get downtown to appear in court for a ticket I got while riding my bike around White Rock Lake. The Dallas Police enjoy hiding out near the stop signs on the roads cyclist frequent, especially on the weekend when they know they will be able to pick off rider after rider rolling through stop signs. Fortunately my case was dismissed.</p>
-
-<p>365 days ago I woke up from the first of a number of nights sleeping in the ICU.</p>
-
-<p>Today I&rsquo;m just trying to find some focus. I have client meetings today and tomorrow. I have two huge deliverables in the next five days. I&rsquo;ve only ridden my bike twice in the last five days.</p>
-
-<p>But it&rsquo;s hard.</p>
-
-<p class="date">August 10, 2011</p>
-
-]]>
-    </content>
-  </entry>
-  
-  
-  <entry>
-    <title type="html">Before/After</title>
-    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/08/04/before-after.html' />
-    <id>http://2010.danielsjourney.com/2011/08/04/before-after.html</id>
-    <updated>2011-08-04T00:00:00-05:00</updated>
-
-    <author>
-      <name>Daniel Miller</name>
-      <uri>http://danielsjourney.com</uri>
-      <email>dealingwith@gmail.com</email>
-    </author>
-
-    <summary>The Chemistry Set - Love (Dance on the one that brought you) I used to define my life in terms...</summary>
-    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
-      <![CDATA[<p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/ChemSet/05%20Love%20(Dance%20on%20the%20one%20that%20brought%20you).mp3">The Chemistry Set - Love (Dance on the one that brought you)</a></span></span></p>
-
-
-<p>I used to define my life in terms of before and after certain relationships. But the one that lasted from 2009 to 2010 has trumped everything and defined my life into a binary before/after that makes all others simply lumped into one amorphous before.</p>
-
-<p><a name="a"></a>But that time from <a href="http://www.youtube.com/watch?v=FJXiL-DPxbE">late 2007</a> to 2010 was a magical journey through love and contentment and family and fatherhood that I will always cherish&mdash;and I hope to be able to return to those emotions again. {<a href="#foot_a" class="foot">1</a>}</p>
-
-<p><a name="b"></a>Part of that time period involved <a href="http://dealingwith.wordpress.com/2008/01/12/many-thoughts-after-my-show-and-the-chemistry-set-show-last-night/">going</a> to <a href="http://tinyurl.com/3kfr956">Chemistry Set</a> shows with Carissa. Yesterday I mentioned my favorite song of all time, <em>Wake Me</em> by Tom Conlon. But I might have to rate the Chemistry Set as my favorite band of all time. {<a href="#foot_b" class="foot">2</a>} &hellip;If you weren&rsquo;t following the Dallas music scene in the first decade of this century you probably never heard of the Chemistry set. But I suggest you go grab both{<a href="#foot_c" class="foot">3</a>} their records while you still can. They disbanded a few years ago.</p>
-
-<p><a name="c"></a>Anyway. Listening to their music still makes me feel better. I miss them terribly. Carissa shot their drummer&rsquo;s wedding and we&rsquo;re still friends with them{<a href="#foot_d" class="foot">4</a>} (sadly they&rsquo;re in Fort Worth which might as well be California). We never knew any of the other band members although I think we both had a crush on Stephen Duncan.</p>
-
-<p class="date">August 03, 2011</p>
-
-
-
-
-<p class="postscript"><a name="foot_a">1</a> Obviously I feel them still. I guess I mean to be immersed in them in such a way as to be more fully engulfed in the moment and reality of current joy as opposed to allowing everything to be tainted by past loss. {<a href="#a" class="foot">back</a>}<br>
-<br>
-<a name="foot_b">2</a> It is my personal opinion that one should choose &ldquo;all time&rdquo; rankings based on one&rsquo;s own experience as well as allow the rankings to be as flexible as a moment&rsquo;s inspiration. Otherwise everyone&rsquo;s all time band would just be The Beatles and there would be nothing else interesting to talk about. {<a href="#b" class="foot">back</a>}<br>
-<br>
-<a name="foot_c">3</a> Here is <a href="http://www.cdbaby.com/cd/chemistryset2">Blue Monsters</a>. Good luck finding their debut. If you contact me I will probably hook you up, though. {<a href="#b" class="foot">back</a>}<br>
-<br>
-<a name="foot_d">4</a> See <a href="https://twitter.com/jawsgirly">jawsgirly</a> and <a href="https://twitter.com/jawshoeuh">jawshoeuh</a> {<a href="#c" class="foot">back</a>}</p>
-
-
-
-
-<script type="text/javascript">  
-  $(function(){
-    AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/ChemSet/01%20New%20Hope%20PA.mp3,http://2010.danielsjourney.com/files/ChemSet/05%20Love%20(Dance%20on%20the%20one%20that%20brought%20you).mp3,http://2010.danielsjourney.com/files/ChemSet/08%20Pilot%20kiss%20my%20karma.mp3,http://2010.danielsjourney.com/files/ChemSet/09%20T-rex%20devours%20the%20glitteratti.mp3",  
-        titles: "New Hope PA,Love (Dance on the one that brought you),Pilot kiss my karma,T-rex devours the glitteratti",  
-        artists: "The Chemistry Set"});
-  });
-</script>
-
-]]>
-    </content>
-  </entry>
-  
-  
-  <entry>
-    <title type="html">Get Over Yourself</title>
-    <link rel='alternate' type='text/html' href='http://2010.danielsjourney.com/2011/08/03/get-over-yourself.html' />
-    <id>http://2010.danielsjourney.com/2011/08/03/get-over-yourself.html</id>
-    <updated>2011-08-03T00:00:00-05:00</updated>
-
-    <author>
-      <name>Daniel Miller</name>
-      <uri>http://danielsjourney.com</uri>
-      <email>dealingwith@gmail.com</email>
-    </author>
-
-    <summary>Tom Conlon - Wake Me Some days I feel like I need a shirt that says: "I lost my daughter....</summary>
-    <content type='html' xml:lang='en' xml:base='http://danielsjourney.com/'>
-      <![CDATA[<p class="media"><span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/11%20Wake%20Me.mp3">Tom Conlon - Wake Me</a></span></span></p>
-
-
-<p>Some days I feel like I need a shirt that says: &ldquo;I lost my daughter. Get over yourself.&rdquo;</p>
-
-<hr>
-
-
-<p>Today was a bad day. It&rsquo;s a bad month to have a bad month if you know what I mean. The constant effing heat (30-some days over 100 degrees and no end in sight) combined with a ridiculous workload mean very little riding or time for sanity resets (of which riding was my primary).</p>
-
-<p>I&rsquo;m still having to deal with the cemetery because Margot&rsquo;s headstone is still not done. My handler there is very nice but emails have failed to transfer for whatever reasons and it takes me weeks to return normal phone calls yet alone these. The font I originally chose (Helvetica) was too big to fit even though we chose no additional text. Today I just went by there because I was nearby and knew that was going to be the quickest way to keep this god damned process moving forward. They had at least given me two options that were the closest and would fit. I picked something-gothic.</p>
-
-<p>It was a quick stop but I still found myself wrecked afterward&mdash;and headed to work. This song by my friend Tom Conlon left me sobbing as I drove down <a href="http://tinyurl.com/3rnm3sb">I75</a>. Don&rsquo;t get me wrong, it is probably my favorite song of all time. But the longing it conveys is so much more intense now. That this current life is but a dream that leads to the reality of the next should be some comfort to me* &hellip;Her wait for me is like a day. My wait is my lifetime.</p>
-
-<p>A lifetime of longing. The emotions all came to the front. It happens in the car so much more frequently than anywhere else.</p>
-
-<hr>
-
-
-<p>Then on the way home from work I stopped by Whole Foods for Necessary Supplies (for Frito-pie and <a href="http://www.deschutesbrewery.com/brew/inversion-ipa">sanity</a>) and for whatever reason it was filled with beautiful 1-2 year old girls. One right at the entrance who was obviously as full of wonder and joy at life as Margot was. Another played with the offerings in the open chiller in the first isle. Your boys aren&rsquo;t much trouble, your newborns even I can handle. But your 1 year old girls punch me in the chest, penetrate my ribcage and squeeze my heart until it bruises.</p>
-
-<p class="date">July 27, 2011</p>
-
-
-
-
-<p class="postscript">* maaan I have an entire post about this subject and a man I met about a month ago who was like a prophet to me. So far it has been too much to try and process in written words.
-
-<script type="text/javascript">  
-  $(function(){
-    AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/11%20Wake%20Me.mp3",  
-        titles: "Wake Me",  
-        artists: "Tom Conlon"});
-  });
-</script>
 
 ]]>
     </content>

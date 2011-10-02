@@ -100,13 +100,13 @@ header {
         padding-top: 16px;
         padding-right: 7px;
     }
-#content_container img, #content_container object {
+#content_container img, #content_container object, #content_container iframe {
     display: block;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 2px #ccc;
     -moz-box-shadow: 1px 1px 2px #ccc;
     -webkit-box-shadow: 1px 1px 2px #ccc;
-    margin-bottom: 10px;
+    margin-bottom: 1em;
 }
 #content_container .audioplayer object {
     border: 0px;
@@ -114,9 +114,9 @@ header {
     -moz-box-shadow: 0px 0px 0px;
     -webkit-box-shadow: 0px 0px 0px;
 }
-img.callout, #attribute, #content_container object, #content_container iframe {
+.callout, #attribute {
     float: left;
-    margin: 10px 0 0 50px;
+    margin: 10px 0 10px 50px;
 }
 #content object {
     float: none;

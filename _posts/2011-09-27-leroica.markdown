@@ -1,0 +1,10 @@
+---
+layout: post
+title: "L'Eroica"
+---
+
+<div class="media"><iframe src="http://player.vimeo.com/video/20622427?portrait=0" width="640" height="360" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe></div>
+
+> Finally we realize, that people nowadays still like cycling as a formative discipline...Cycling, above all, is about effort. It is also about adventure and travel but above all, the effort.
+
+<p class="date">September 27, 2011</p>

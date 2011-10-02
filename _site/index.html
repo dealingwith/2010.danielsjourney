@@ -16,19 +16,35 @@
 <body>
 
     <header>
-      &#8220;le fini d&eacute;fini par le non fini&#8221;
+      So what now? The problem with desire.
     </header>
     <div id="head_overlay">
     </div>
     <div id="content_container">
       <div id="content">
-        <p><img src="/images/RomanOpalka2.jpg" title="Roman Opalka"></p>
+        <p class="media"><iframe width="420" height="315" src="http://www.youtube.com/embed/HWG6VW9pkE4?rel=0" frameborder="0" allowfullscreen></iframe></p>
 
-<blockquote><p>In 1965, in his studio in Warsaw, Opa&#x142;ka began painting a process of counting &#x2013; from one to infinity. Starting in the top left-hand corner of the canvas and finishing in the bottom right-hand corner, the tiny numbers were painted in horizontal rows. Each new canvas, which the artist called a &lsquo;detail&rsquo;, took up counting where the last left off. Each &lsquo;detail&rsquo; is the same size (196 x 135 cm), the dimension of his studio door in Warsaw. All details have the same title, &ldquo;1965 / 1 &#x2013; &infin;&rdquo;; the concept had no end, and the artist pledged his life to its execution: &lsquo;All my work is a single thing, the description from number one to infinity. A single thing, a single life.&rsquo;</p>
 
-<p>The final number he wrote was 5,607,249</p></blockquote>
+<p>I now have a series of posts lined up but I&rsquo;m not sure if I&rsquo;ll finish any of them, so I&rsquo;m just going to post stuff as it becomes concise enough to post, which means it will probably be out of order and incoherent as a whole. Also please excuse me if on this post and possibly others I&rsquo;m just re-writing <a href="http://peterrollins.net/">Pete Rollins</a> in my own words and for my own benefit.</p>
 
-<p class="postscript">Via the internet via <a href="http://mlkshk.com/p/7NH7">ftrain</a>. Text from <a href="http://en.wikipedia.org/wiki/Roman_Opa%C5%82ka">wikipedia</a>. Image from <a href="http://opalka1965.com/en/index_en.php">the official website</a>.
+<p>&ldquo;Wiley Coyote Retires&rdquo; (which is NSFW unless you work somewhere awesome like Extra Sauce) does a really good job of addressing what happens when one achieves their desire, when their desire is achievable (for example, as we say in the technology startup world, &ldquo;fuck you money&rdquo;). Of course those who have had success rarely retire early to their <a href="http://www.youtube.com/watch?v=gqjGPIYJsh0">special island</a>, they usually insert themselves into others' brilliance by becoming an angel investor or venture capitalist or special advisor (which somehow seems like retiring from porn to become a fluffer), or they just go do <a href="http://denniscrowley.com/">the exact same thing over again</a>.</p>
+
+<p><a href="http://mlkshk.com/p/7TL4"><img src="http://mlkshk.com/r/7TL4"></a></p>
+
+<p>Or, as my former business partner Dan and I used to joke, they develop a mandatory coke habit. And the idea that having enough money means a freedom from anxiety about money <a href="http://www.dailymotion.com/video/x1xdq0_notorious-big-mo-money-mo-problem_music">just isn&rsquo;t true</a>. Besides, where would you be without all that misplaced anxiety? You&rsquo;d simply misplace it elsewhere. Billionaires and soccer moms and spoiled children are all pretty much the same thing.</p>
+
+<iframe width="490" height="279" src="http://www.youtube.com/embed/R8vJgYQU_lY?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<p><a href="http://peterrollins.net/?p=1795">Pete&rsquo;s answer to this problem is</a>:</p>
+
+<blockquote><p>Perhaps there is another possibility, if we are lucky enough to find it. And that is in finding and being with the one we love. In being with the one we love we gain what we desire while remaining at a distance from it. When we love someone they are present to us as a mystery. They are the opening to, and encounter with, otherness itself. They are a vast and endless ocean.</p></blockquote>
+
+<p>Which at the moment just leaves me here in my loss, and in my fears of potential loss. (Pete is probably talking about an existential love with some more abstract &ldquo;other&rdquo; but I&rsquo;ll allow him his own continued thinking on these matters and not conjecture further on his conclusions.)</p>
+
+<p>I feel like I&rsquo;m close to wrapping my head around a third way that might illuminate a way forward. This stuff gets all smashed together with meaning and identity formation&hellip; [to be continued]</p>
+
+<p class="date">October 02, 2011</p>
 
 
       </div><!--content-->
@@ -36,7 +52,7 @@
       
     </div><!--content_container-->
     
-    <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/09/25/le-fini.html" width="500"></fb:comments></div>
+    <div class="fbcomments"><fb:comments href="http://2010.danielsjourney.com/2011/10/02/desire.html" width="500"></fb:comments></div>
 
 
 <div id="nav"><a href="" id="prev">&#x2190; Prev</a> <a href="" id="next">Next &#x2192;</a></div>
@@ -72,6 +88,7 @@
       var $img = $("#content img:first");
       var $media = $("#content .media:first");
       if ($media.length > 0) {
+        $media.find(":first-child").addClass("callout");
         $('#content_container').prepend($media.html());
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          

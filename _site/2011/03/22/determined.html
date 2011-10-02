@@ -96,6 +96,7 @@ All aims get forgotten</blockquote></p>
       var $img = $("#content img:first");
       var $media = $("#content .media:first");
       if ($media.length > 0) {
+        $media.find(":first-child").addClass("callout");
         $('#content_container').prepend($media.html());
         $media.parent("p").length > 0 ? $media.parent("p").remove() : $media.remove();
       } else if ($img.attr('src') !== "undefined") {          

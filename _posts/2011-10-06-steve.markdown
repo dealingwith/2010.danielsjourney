@@ -44,3 +44,5 @@ title: "Steve"
 [#ThankYouSteve](http://twitter.com/#!/search/%23ThankYouSteve)
 
 <p class="date">October 06, 2011</p>
+
+<p class="postscript">Update: Wow, <a href="http://daringfireball.net/2011/10/universe_dented_grass_underfoot">John Gruber with a really beautiful and fitting piece, <span style="font-style:italic">Universe Dented, Grass Underfoot</span></a>.</p>

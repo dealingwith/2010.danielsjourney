@@ -3,7 +3,7 @@ layout: post
 title: "Steve"
 ---
 
-<img src="/images/steve-jobs-at-home-1982.jpg" title="">
+<img src="http://2010.danielsjourney.com/images/steve-jobs-at-home-1982.jpg" title="">
 
 > The problem is I'm older now, I'm 40 years old, and this stuff doesn't change the world. It really doesn't.
 

@@ -1,0 +1,36 @@
+---
+layout: post
+title: "Century"
+---
+
+<img src="http://farm7.static.flickr.com/6052/6274588147_7737f82279.jpg" title="Ate all the GUs, took all the Advil and electrolyte pills and the extra chamios creme saved my ass">
+
+Yesterday I rode 100 miles in one day for the first time ever. Considering how many miles I rode "back in the day" when I raced in high school and college, this is a little hard to believe, but although I'd ridden a couple 90 milers climbing to the top of Mt. Lemmon in Tucson before, I had never topped the mythical 100 mile mark.
+
+I'd been training for it for a while, gradually upping my milage every weekend for the last couple of months as well as scoping out roads. I didn't just want to ride one 50 mile loop twice, I wanted one single, solid 100 mile loop that left from my house. That meant decent roads with low traffic--neither are easy to come by in Dallas.
+
+On top of that it was rather windy on the scheduled day and I have two friends, Ean and Jeff, to thank for my successful trip around the loop. I drafted a lot. So much so I might need to set another goal of a solo century ride.
+
+![Proof!](http://farm7.static.flickr.com/6224/6274589513_9dfc697f83.jpg)
+
+<hr>
+
+At one point, somewhere in the last 25 miles of the ride, I was by myself in the hills southeast of Mesquite, and I started singing _Warriors of Love_ by my friend Salim Nourallah. It's off a record he's not released yet, except to those who pledged to it prior to its production.
+
+<span class="audioplayer"><span id="audioplayer_1"><a href="http://2010.danielsjourney.com/files/08%20Warriors%20of%20Love.mp3">Salim Nourallah - Warriors of Love</a></span></span>
+
+As I sung the first line of the chorus--_now is the time, to go the way of the warriors_--I felt chills flow across my body and I knew they weren't the "bonk chills", despite my fatigue.* 
+
+It felt very much like her presence. It is a feeling I desire every day. And it was a tiny blessing that I am grateful for.
+
+<p class="date">October 23, 2011</p>
+
+<p class="postscript">* ...those came about 5 miles later. They are distinct in that they actually feel cold, despite the heat.
+
+<script type="text/javascript">  
+  $(function(){
+    AudioPlayer.embed("audioplayer_1", {soundFile: "http://2010.danielsjourney.com/files/08%20Warriors%20of%20Love.mp3",  
+        titles: "Warriors of Love",  
+        artists: "Salim Nourallah"});
+  });
+</script>

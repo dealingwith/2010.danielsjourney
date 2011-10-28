@@ -3,7 +3,7 @@ layout: post
 title: "This is not a continuation of the last post"
 ---
 
-<img src="/images/commute-panda.jpg" title="">
+<img src="http://2010.danielsjourney.com/images/commute-panda.jpg" title="">
 
 Today I rode by bicycle to work for the second day in a row. I changed the gearing on this particular bike to be somewhat easy to pedal as well as making it a fixed gear bicycle* (it can be "flipped" between fixed and free). This makes it much easier to get started from a stop, especially given the total weight of bike, cargo-carrying accessories, and cargo itself combined. It also keeps me at a slow optimal speed and therefore a lower level of perspiration. The one thing the fixed gear specifically requires, however, is using the legs for braking power. And wow have my legs been sore from that!
 

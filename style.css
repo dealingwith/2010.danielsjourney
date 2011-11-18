@@ -9,7 +9,7 @@ html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pr
 /* my styles */
 
 body, html {
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Sorts Mill Goudy', Georgia, serif;
     overflow-x: hidden;
     background: #fffffe url('images/body_bg.png');
     -webkit-text-size-adjust: 200%;
